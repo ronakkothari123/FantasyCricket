@@ -3,4 +3,4 @@ My take on Cricket Fantasy
 v1.0
 
 --HOW TO USE--
-So far... no functionality.
+View your 5 players and bet on their success. Drafts come every month.
