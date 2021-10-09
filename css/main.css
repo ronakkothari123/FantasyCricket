@@ -577,6 +577,8 @@ body{
     justify-content:center;
     align-items:center;
     background:var(--light-color);
+    transition-duration:250ms;
+    cursor:pointer;
 }
 
 .fantasy-feature-icon > img{
@@ -586,4 +588,8 @@ body{
 .fantasy-feature-para{
     font-size:0.75vmax;
     text-align:center;
+}
+
+.fantasy-feature-icon:hover{
+    transform:scale(1.1);
 }
