@@ -6,12 +6,17 @@ const pfp = document.getElementById("pfp")
 
 const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"]
 
-function initializeComments(){
-
+function initialize(){
     var today = new Date();
     var hour = today.getHours()
     var minutes = today.getMinutes()
     var ampm = " A.M."
+
+    if(Math.trunc(Math.random()*2) == 0){
+        document.getElementById("header-news-div").classList.add('active')
+    } else{
+        document.getElementById("header-news-div").classList.add('inactive')
+    }
 
     if(hour > 12){
         hour -= 12
@@ -23,6 +28,10 @@ function initializeComments(){
     }
 
     document.getElementById("phone-time").innerHTML = hour + ":" + minutes + ampm;
+    initializeComments()
+}
+
+function initializeComments(){
 
     let displaceMent = 20;
     let offset = 10;
@@ -69,4 +78,4 @@ function initializeComments(){
     }
 }
 
-initializeComments()
+initialize()

@@ -171,13 +171,13 @@ body{
 
 @keyframes colorFlash {
     from{
-        background:var(--lighter-green);
-    }
-    50%{
         background:var(--light-green);
     }
+    50%{
+        background:var(--green);
+    }
     to{
-        background:var(--lighter-green);
+        background:var(--light-green);
     }
 }
 
@@ -231,7 +231,7 @@ body{
 #app-div{
     width:100vw;
     height:80vh;
-    background:var(--lighter-green);
+    background:var(--light-green);
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -367,7 +367,7 @@ body{
     position:relative;
 }
 
-#camera{
+.camera{
     background:#282828;
     width:1.5vmax;
     height:1.5vmax;
@@ -497,7 +497,7 @@ body{
 #fantasy-features{
     width:100vw;
     height:80vh;
-    background:var(--lighter-green);
+    background:var(--light-green);
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -509,7 +509,7 @@ body{
     height:80vh;
     background:white;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
 }
@@ -538,13 +538,14 @@ body{
     margin-left:1vmax;
 }
 
-#fantasy-features-parent > h1{
+#fantasy-features-parent > h1, #fantasy-instructions-header > h1{
     font-weight:900;
     font-size:3vmax;
+    color:black;
     margin:0;
 }
 
-#fantasy-features-parent > p{
+#fantasy-features-parent > p, #fantasy-instructions-header > h2{
     font-weight:400;
     font-size:1vmax;
     margin:0;
@@ -592,4 +593,142 @@ body{
 
 .fantasy-feature-icon:hover{
     transform:scale(1.1);
+}
+
+#fantasy-instructions-header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+#fantasy-instructions-tab-div{
+    box-shadow:0 0 0 1vmax var(--dark-color);
+    width:40vmax;
+    height:20vmax;
+    margin-top:3vmax;
+    border-radius:2vmax;
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+}
+
+#fantasy-instructions-tabs{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+.tab{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:7vmax;
+    height:4.5vmax;
+}
+
+.tab > img{
+    width:1.5vmax;
+    margin-top:0.5vmax;
+}
+
+.tab > p{
+    color:black;
+    font-size:0.75vmax;
+    font-weight:400;
+    margin:0.25vmax 0;
+}
+
+.active-tab-text{
+    color:var(--dark-green);
+    font-size:700;
+}
+
+.tab-line{
+    width:6vmax;
+    height:0.5vmax;
+    background:var(--dark-green);
+    margin:0.25vmax 0;
+    border-radius:0.25vmax;
+    opacity:0;
+    transition-duration:250ms;
+}
+
+.active-tab-line {
+    opacity:1;
+}
+
+#fantasy-instructions-content{
+    padding:1vmax 2vmax;
+    overflow:hidden;
+    width:36vmax;
+    height:13.5vmax;
+}
+
+.fantasy-content{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.fantasy-content-picture{
+    background:url("https://moneyball.insidesport.co/img/singleplayer/JasonHolder1.jpg");
+    width:12.5vmax;
+    height:12.5vmax;
+    border-radius:2vmax;
+    background-position:center;
+    background-repeat:none;
+    background-size:cover;
+}
+
+.fantasy-content-text{
+    width:21vmax;
+    height:12.5vmax;
+}
+
+.fantasy-content-text > h1{
+    font-size:2vmax;
+    font-weight:900;
+    margin:0;
+}
+
+.fantasy-content-text > p{
+    font-size:0.75vmax;
+    font-weight:300;
+    margin:0.5vmax 0;
+}
+
+.instructions-camera-parent{
+    background:black;
+    position:absolute;
+    width:2.5vmax;
+    height:10vmax;
+    right:0;
+    top:5vmax;
+    border-radius:1vmax 0 0 1vmax;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.camera-1{
+    background:#282828;
+    width:1.5vmax;
+    height:1.5vmax;
+    border-radius:2vmax;
+    position:absolute;
+    right:0.125vmax;
+}
+
+.inactive-content{
+    display:none;
 }
