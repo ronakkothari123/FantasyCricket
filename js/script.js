@@ -34,14 +34,14 @@ function initialize(){
 }
 
 function toggleTab(tab){
-    let activeTab = document.querySelectorAll(".active-content")
-    let activeTabLine = document.querySelectorAll('.active-tab-line')
-    activeTab[0].classList.remove('active-content')
-    activeTabLine[0].classList.remove('active-tab-line')
-    activeTab[0].classList.add('inactive-content')
-    tabs[tab].classList.remove('inactive-content')
-    tabs[tab].classList.add('active-content')
-    tabLines[tab].classList.add('active-tab-line')
+    let activeTab = document.querySelectorAll(".active-content");
+    let activeTabLine = document.querySelectorAll('.active-tab-line');
+    activeTab[0].classList.remove('active-content');
+    activeTabLine[0].classList.remove('active-tab-line');
+    activeTab[0].classList.add('inactive-content');
+    tabs[tab].classList.remove('inactive-content');
+    tabs[tab].classList.add('active-content');
+    tabLines[tab].classList.add('active-tab-line');
 }
 
 function initializeComments(){
