@@ -10,6 +10,7 @@
 body{
     font-family:"Be Vietnam Pro", sans-serif;
     background:white;
+    overflow-x:hidden;
     margin:0;
 }
 
@@ -17,8 +18,6 @@ body{
     display:flex;
     flex-direction:column;
     width:100vw;
-    height:100vh;
-    overflow-x:hidden;
 }
 
 #top-div{
@@ -41,7 +40,7 @@ body{
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    margin-left:1vmax;
+    margin-left:2vmax;
 }
 
 #navbar-header-div > h1{
@@ -94,11 +93,18 @@ body{
     background:var(--green);
 }
 
-#header-news-div{
-    width:100vw;
+.active{
     display:flex;
     flex-direction:column;
     align-items:center;
+}
+
+.inactive{
+    display:none;
+}
+
+#header-news-div{
+    width:100vw;
     background:var(--dark-color);
     color:white;
     font-size:1vmax;
@@ -204,3 +210,29 @@ body{
     margin:0.5vmax 0;
     font-size:0.75vmax;
 }
+
+#features-div{
+    width:100vw;
+    height:75vh;
+    background:var(--lighter-green);
+}
+
+::-webkit-scrollbar {
+    width:0.75vmax;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: lightgray;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--green); 
+    border-radius:0.375vmax;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-green); 
+  }

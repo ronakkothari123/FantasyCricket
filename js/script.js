@@ -1,6 +1,9 @@
 const comments = document.querySelectorAll(".comment");
 const commentImg = document.querySelectorAll(".comment-img")
 const starDivs = document.querySelectorAll(".star-div")
+const namePara = document.querySelectorAll(".comment-name")
+
+const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"]
 
 function initializeComments(){
     let displaceMent = 20;
@@ -39,6 +42,10 @@ function initializeComments(){
                 starDivs[k].appendChild(star)
             }
         }
+    }
+
+    for(let l = 0; l < namePara.length; l++){
+        namePara[l].innerHTML = names[Math.trunc(Math.random()*names.length)]
     }
 }
 
