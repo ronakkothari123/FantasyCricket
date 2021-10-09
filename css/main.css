@@ -632,6 +632,7 @@ body{
     align-items:center;
     width:7vmax;
     height:4.5vmax;
+    background:white;
 }
 
 .tab > img{
