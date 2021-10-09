@@ -230,7 +230,7 @@ body{
 
 #app-div{
     width:100vw;
-    height:80vh;
+    height:50vmax;
     background:var(--light-green);
     display:flex;
     flex-direction:row;
@@ -496,7 +496,7 @@ body{
 
 #fantasy-features{
     width:100vw;
-    height:80vh;
+    height:40vmax;
     background:var(--light-green);
     display:flex;
     flex-direction:row;
@@ -506,7 +506,7 @@ body{
 
 #fantasy-instructions{
     width:100vw;
-    height:80vh;
+    height:37.5vmax;
     background:white;
     display:flex;
     flex-direction:column;
