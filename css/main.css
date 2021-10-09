@@ -5,6 +5,7 @@
     --dark-green:#2ECC71;
     --light-gray:#E5E8E8;
     --light-purple:#E8DAEF;
+    --light-color:#000000;
     --dark-color:#0f1318;
 }
 
@@ -163,6 +164,21 @@ body{
     flex-direction:column;
     justify-content:center;
     position:relative;
+    animation-name:colorFlash;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorFlash {
+    from{
+        background:var(--lighter-green);
+    }
+    50%{
+        background:var(--light-green);
+    }
+    to{
+        background:var(--lighter-green);
+    }
 }
 
 .comment{
@@ -476,4 +492,98 @@ body{
     padding:1vmax 5vmax;
     width:90vw;
     font-size:0.75vmax;
+}
+
+#fantasy-features{
+    width:100vw;
+    height:80vh;
+    background:var(--lighter-green);
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+
+#fantasy-instructions{
+    width:100vw;
+    height:80vh;
+    background:white;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+
+#fantasy-graphic{
+    width:30vmax;
+    height:30vmax;
+    background:white;
+    margin:0 2vmax;
+    border-radius:2vmax;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    position:relative;
+}
+
+#fantasy-features-parent{
+    width:40vmax;
+    margin:0 1vmin;
+    border-radius:2vmax;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+    margin-left:1vmax;
+}
+
+#fantasy-features-parent > h1{
+    font-weight:900;
+    font-size:3vmax;
+    margin:0;
+}
+
+#fantasy-features-parent > p{
+    font-weight:400;
+    font-size:1vmax;
+    margin:0;
+    color:gray;
+}
+
+#fantasy-feature-list{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    margin-top:2vmax;
+}
+
+.fantasy-feature{
+    width:7vmax;
+    height:10vmax;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.fantasy-feature-icon{
+    width:6vmax;
+    height:6vmax;
+    border-radius:1vmax;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    background:var(--light-color);
+}
+
+.fantasy-feature-icon > img{
+    width:5vmax;
+}
+
+.fantasy-feature-para{
+    font-size:0.75vmax;
+    text-align:center;
 }

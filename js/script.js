@@ -34,7 +34,7 @@ function initializeComments(){
     }
 
     for(let j = 0; j < commentImg.length; j++){
-        commentImg[j].src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
+        commentImg[j].src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*50) + 1) + ".svg"
     }
 
     pfp.src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
