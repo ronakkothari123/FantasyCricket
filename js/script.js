@@ -2,22 +2,42 @@ const comments = document.querySelectorAll(".comment");
 const commentImg = document.querySelectorAll(".comment-img")
 const starDivs = document.querySelectorAll(".star-div")
 const namePara = document.querySelectorAll(".comment-name")
+const pfp = document.getElementById("pfp")
 
 const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"]
 
 function initializeComments(){
+
+    var today = new Date();
+    var hour = today.getHours()
+    var minutes = today.getMinutes()
+    var ampm = " A.M."
+
+    if(hour > 12){
+        hour -= 12
+        ampm = " P.M."
+    }
+
+    if(minutes < 10){
+        minutes = "0" + minutes;
+    }
+
+    document.getElementById("phone-time").innerHTML = hour + ":" + minutes + ampm;
+
     let displaceMent = 20;
-    let offset = 0;
+    let offset = 10;
 
     for(let i = 0; i < comments.length; i++){
         comments[i].style.right = (displaceMent + 10) + "%";
-        comments[i].style.top = ((35/comments.length) + 35 * i) + "%";
+        comments[i].style.top = ((35 + (-15 - offset/comments.length)*(comments.length - 1)) + (30 + offset)*i) + "%";
         displaceMent *= -1;
     }
 
     for(let j = 0; j < commentImg.length; j++){
         commentImg[j].src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
     }
+
+    pfp.src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
 
     console.log(starDivs.length)
 

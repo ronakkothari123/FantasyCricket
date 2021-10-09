@@ -3,7 +3,8 @@
     --light-green:#D5F5E3;
     --green:#ABEBC6;
     --dark-green:#2ECC71;
-
+    --light-gray:#E5E8E8;
+    --light-purple:#E8DAEF;
     --dark-color:#0f1318;
 }
 
@@ -211,10 +212,14 @@ body{
     font-size:0.75vmax;
 }
 
-#features-div{
+#app-div{
     width:100vw;
-    height:75vh;
+    height:80vh;
     background:var(--lighter-green);
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
 }
 
 ::-webkit-scrollbar {
@@ -236,3 +241,239 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: var(--dark-green); 
   }
+
+#phone-parent-div{
+    width:30vmax;
+    height:30vmax;
+    background:white;
+    margin:0 2vmax;
+    border-radius:2vmax;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    position:relative;
+}
+
+#feature-list-parent{
+    width:40vmax;
+    margin:0 1vmin;
+    border-radius:2vmax;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+    margin-left:1vmax;
+}
+
+#feature-list-parent > h1{
+    font-weight:900;
+    font-size:3vmax;
+    margin:0;
+}
+
+#feature-list-parent > p{
+    font-weight:400;
+    font-size:1vmax;
+    margin:0;
+    color:gray;
+}
+
+#feature-button-div{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    margin-top:3vmax;
+}
+
+
+.feature-button{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    background:var(--dark-color);
+    color:white;
+    cursor:pointer;
+    border-radius:1vmax;
+    padding:1vmax
+}
+
+
+.feature-button > img{
+    width:2vmax;
+    margin-right:1vmax;
+}
+
+.download-div{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.download-div > h1{
+    margin:0;
+    font-size:1.25vmax;
+    font-weight:500;
+}
+
+.download-div > p{
+    margin:0;
+    font-size:0.75vmax;
+    font-weight:300;
+}
+
+#phone{
+    border:0.75vmax solid black;
+    border-bottom:none;
+    width:20vmax;
+    height: 25vmax;
+    border-radius:1vmax 1vmax 0 0;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#camera-parent{
+    position:absolute;
+    top:-1px;
+    width:10vmax;
+    height:2vmax;
+    background:black;
+    border-radius:0 0 1vmax 1vmax;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+#camera{
+    background:#282828;
+    width:1.5vmax;
+    height:1.5vmax;
+    position:absolute;
+    top:-0.125vmax;
+    border-radius:1vmax;
+}
+
+#phone-time{
+    font-size:0.75vmax;
+    font-weight:400;
+    margin:0;
+    position:absolute;
+    top:0.5vmax;
+    left:0.8vmax;
+}
+
+#phone-notifs{
+    width:1.25vmax;
+    position:absolute;
+    top:0.25vmax;
+    right:3.5vmax;
+}
+
+#phone-battery{
+    width:1.5vmax;
+    transform:rotateZ(90deg);
+    position:absolute;
+    top:0.125vmax;
+    right:0.75vmax;
+}
+
+#phone-data{
+    width:1.25vmax;
+    position:absolute;
+    top:0.25vmax;
+    right:2.3vmax;
+}
+
+#phone-application{
+    width:16vmax;
+    height:22vmax;
+    padding:1vmax 2vmax;
+}
+
+#phone-header{
+    width:10vmax;
+    height:1vmax;
+    border-radius:1vmax;
+    background:var(--light-green);
+}
+
+#phone-list-parent{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin:0.5vmax 0;
+}
+
+.phone-list{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    margin:0.5vmax 0;
+}
+
+.phone-face{
+    width:3vmax;
+    height:3vmax;
+    background:var(--light-purple);
+    border-radius:2vmax;
+}
+
+.phone-headers{
+    display:flex;
+    flex-direction:column;
+    margin-left:0.5vmax;
+}
+
+.phone-subheader{
+    width:5vmax;
+    height:1vmax;
+    background:var(--light-gray);
+    border-radius:0.5vmax;
+}
+
+.phone-header{
+    margin-top:0.5vmax;
+    width:10vmax;
+    height:1vmax;
+    background:var(--light-gray);
+    border-radius:0.5vmax;
+}
+
+#phone-sentences{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+.phone-title{
+    width:10vmax;
+    height:1vmax;
+    border-radius:1vmax;
+    background:var(--light-green);
+    margin:0.5vmax 0;
+}
+
+.phone-subtitle{
+    margin-top:0.5vmax;
+    width:15vmax;
+    height:1vmax;
+    background:var(--light-gray);
+    border-radius:0.5vmax;
+}
+
+#footer{
+    color:white;
+    background:black;
+    padding:1vmax 5vmax;
+    width:90vw;
+    font-size:0.75vmax;
+}
