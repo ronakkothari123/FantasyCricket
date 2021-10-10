@@ -8,6 +8,8 @@ const tabLines = document.querySelectorAll('.tab-line')
 
 const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"]
 
+var darkTheme = false;
+
 function initialize(){
     var today = new Date();
     var hour = today.getHours()
@@ -31,6 +33,21 @@ function initialize(){
 
     document.getElementById("phone-time").innerHTML = hour + ":" + minutes + ampm;
     initializeComments()
+}
+
+function toggleTheme(){
+    darkTheme = !darkTheme;
+    if(darkTheme){
+        document.documentElement.style.setProperty('--text-color', '#fff');
+        document.documentElement.style.setProperty('--background-1', '#1b2028');
+        document.documentElement.style.setProperty('--background-2', '#0f1318');
+        document.getElementById('settings').src = "../FantasyCricket/icons/darkactive.svg"
+    } else{
+        document.documentElement.style.setProperty('--text-color', '#000');
+        document.documentElement.style.setProperty('--background-1', '#fff');
+        document.documentElement.style.setProperty('--background-2', '#EAFAF1');
+        document.getElementById('settings').src = "../FantasyCricket/icons/darkinactive.svg"
+    }
 }
 
 function toggleTab(tab){
