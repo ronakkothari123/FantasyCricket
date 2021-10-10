@@ -22,17 +22,21 @@
                 <div class="sidebar-line"></div>
             </div>
             <div class="notification-div">
-                <img src="icons/calendar.svg" alt="" class="sidebar-img" onclick="toggleSidebar(1)">
+                <img src="icons/person.svg" alt="" class="sidebar-img" onclick="toggleSidebar(1)">
+                <div class="sidebar-line inactive-line"></div>
+            </div>
+            <div class="notification-div">
+                <img src="icons/calendar.svg" alt="" class="sidebar-img" onclick="toggleSidebar(2)">
                 <p class="notif-p">4</p>
                 <div class="sidebar-line inactive-line"></div>
             </div>
             <div class="notification-div">
-                <img src="icons/message.svg" alt="" class="sidebar-img" onclick="toggleSidebar(2)">
+                <img src="icons/message.svg" alt="" class="sidebar-img" onclick="toggleSidebar(3)">
                 <p class="notif-p">9</p>
                 <div class="sidebar-line inactive-line"></div>
             </div>
             <div class="notification-div">
-                <img src="icons/notifs.svg" alt="" class="sidebar-img" onclick="toggleSidebar(3)">
+                <img src="icons/notifs.svg" alt="" class="sidebar-img" onclick="toggleSidebar(4)">
                 <p class="notif-p">13</p>
                 <div class="sidebar-line inactive-line"></div>
             </div>
@@ -52,6 +56,14 @@
                         <div class="navbar-friend-div" style="--friend-background:#F7DC6F;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
                         <div class="navbar-friend-div" style="--friend-background:#EC7063;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
                     </div>
+                    <img src="icons/dropdown.svg" alt="" id="friend-dropdown">
+                    <div id="add-friend-btn">+</div>
+                </div>
+            </div>
+            <div id="main-content">
+                <div class="main-content" id="dashboard-content">
+                    <h1>Welcome to Fantasy, Ronak!</h1>
+                    <h6>You have <span class="bold">6 notifications</span> to see!</h6>
                 </div>
             </div>
         </div>

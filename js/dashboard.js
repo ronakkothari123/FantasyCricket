@@ -14,7 +14,7 @@ function toggleSidebar(number){
 
 function initFriends(){
     for(let i = 0; i < friends.length; i++){
-        friends[i].src = "./icons/avatar/" + Math.trunc((Math.random() * 50) + 1) + ".svg"
+        friends[i].src = "./icons/avatars/" + Math.trunc((Math.random() * 50) + 1) + ".svg"
         console.log(friends[i].src)
     }
 }
