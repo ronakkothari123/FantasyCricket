@@ -20,6 +20,7 @@ body{
     overflow-x:hidden;
     margin:0;
     color:var(--text-color);
+    transition-duration:250ms;
 }
 
 #wrapper{
@@ -41,7 +42,7 @@ body{
     display:flex;
     flex-direction:row;
     align-items:center;
-    background:var(--background-2);
+    background:transparent;
 }
 
 #navbar-header-div{
@@ -205,6 +206,7 @@ body{
     display:flex;
     flex-direction:row;
     color:var(--text-color);
+    transition-duration:250ms;
 }
 
 #comment-img-div{
@@ -521,6 +523,7 @@ body{
     justify-content:center;
     align-items:center;
     background:var(--background-1);
+    transition-duration:250ms;
 }
 
 #fantasy-instructions{
