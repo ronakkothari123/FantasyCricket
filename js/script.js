@@ -37,14 +37,28 @@ function initialize(){
 
 function toggleTheme(){
     if(!darkTheme){
-        document.querySelector(':root').style.setProperty('--text-color', '#fffff');
+        document.querySelector(':root').style.setProperty('--text-color', 'white');
         document.querySelector(':root').style.setProperty('--background-1', '#1b2028');
-        document.querySelector(':root').style.setProperty('--background-2', '#0f1318');
+        document.querySelector(':root').style.setProperty('--background-2', '#171a1f');
+        document.querySelector(':root').style.setProperty('--lighter-green', '#58D68D');
+        document.querySelector(':root').style.setProperty('--light-green', '#2ECC71');
+        document.querySelector(':root').style.setProperty('--light-purple', '#8E44AD');
+        document.querySelector(':root').style.setProperty('--light-gray', '#7F8C8D');
+        document.querySelector(':root').style.setProperty('--border-color', '#111214');
+        document.querySelector(':root').style.setProperty('--green', '#2ECC71');
+        document.querySelector(':root').style.setProperty('--icon-brightness', 100);
         document.getElementById('settings').src = "./icons/darkactive.svg";
     } else{
-        document.querySelector(':root').style.setProperty('--text-color', '#000000');
+        document.querySelector(':root').style.setProperty('--text-color', 'black');
         document.querySelector(':root').style.setProperty('--background-1', '#ffffff');
         document.querySelector(':root').style.setProperty('--background-2', '#eafaf1');
+        document.querySelector(':root').style.setProperty('--icon-brightness', 0);
+        document.querySelector(':root').style.setProperty('--lighter-green', '#EAFAF1');
+        document.querySelector(':root').style.setProperty('--light-green', '#D5F5E3');
+        document.querySelector(':root').style.setProperty('--light-purple', '#C39BD3');
+        document.querySelector(':root').style.setProperty('--light-gray', '#BFC9CA');
+        document.querySelector(':root').style.setProperty('--border-color', '#cccccc');
+        document.querySelector(':root').style.setProperty('--green', '#ABEBC6');
         document.getElementById('settings').src = "./icons/darkinactive.svg";
     }
     darkTheme = !darkTheme;

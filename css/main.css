@@ -10,6 +10,7 @@
     --text-color:#000000;
     --background-1:#ffffff;
     --background-2:#EAFAF1;
+    --border-color:#cccccc;
     --accent-color:#2ECC71;
 }
 
@@ -25,6 +26,7 @@ body{
     display:flex;
     flex-direction:column;
     width:100vw;
+    color:var(--text-color)
 }
 
 #top-div{
@@ -60,6 +62,7 @@ body{
 #navbar-header-div > img{
     width:2vmax;
     cursor:pointer;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 #navbar > img{
@@ -75,10 +78,12 @@ body{
 
 #cart{
     right:3vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 #settings{
     right:1vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 #dashboard-btn{
@@ -135,6 +140,7 @@ body{
     flex-direction:row;
     justify-content: center;
     align-items:center;
+    background:var(--);
 }
 
 #main-header-div{
@@ -151,6 +157,7 @@ body{
     font-weight:900;
     font-size:4.5vmax;
     margin:0;
+    color:var(--text-color);
 }
 
 #main-header-div > p{
@@ -191,12 +198,13 @@ body{
     position:absolute;
     width:22vmax;
     height:7vmax;
-    background:white;
-    border:1px solid #eeeeee;
+    background:var(--background-1);
+    border:1px solid var(--background-1);
     border-radius:1vmax;
     padding:1vmax;
     display:flex;
     flex-direction:row;
+    color:var(--text-color);
 }
 
 #comment-img-div{
@@ -237,7 +245,7 @@ body{
 #app-div{
     width:100vw;
     height:50vmax;
-    background:var(background-2);
+    background:var(--background-1);
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -250,7 +258,7 @@ body{
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: lightgray;
+    background: var(--border-color);
   }
    
   /* Handle */
@@ -267,7 +275,7 @@ body{
 #phone-parent-div{
     width:30vmax;
     height:30vmax;
-    background:white;
+    background:var(--background-2);
     margin:0 2vmax;
     border-radius:2vmax;
     display:flex;
@@ -389,6 +397,7 @@ body{
     position:absolute;
     top:0.5vmax;
     left:0.8vmax;
+    color:var(--text-color);
 }
 
 #phone-notifs{
@@ -396,6 +405,7 @@ body{
     position:absolute;
     top:0.25vmax;
     right:3.5vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 #phone-battery{
@@ -404,6 +414,7 @@ body{
     position:absolute;
     top:0.125vmax;
     right:0.75vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 #phone-data{
@@ -411,6 +422,7 @@ body{
     position:absolute;
     top:0.25vmax;
     right:2.3vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 #phone-application{
@@ -503,17 +515,17 @@ body{
 #fantasy-features{
     width:100vw;
     height:40vmax;
-    background:var(--light-green);
     display:flex;
     flex-direction:row;
     justify-content:center;
     align-items:center;
+    background:var(--background-1);
 }
 
 #fantasy-instructions{
     width:100vw;
     height:37.5vmax;
-    background:white;
+    background:var(--background-2);
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -523,7 +535,7 @@ body{
 #fantasy-graphic{
     width:30vmax;
     height:30vmax;
-    background:white;
+    background:var(--background-2);
     margin:0 2vmax;
     border-radius:2vmax;
     display:flex;
@@ -644,10 +656,11 @@ body{
 .tab > img{
     width:1.5vmax;
     margin-top:0.5vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 .tab > p{
-    color:black;
+    color:var(--text-color);
     font-size:0.75vmax;
     font-weight:400;
     margin:0.25vmax 0;
