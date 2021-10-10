@@ -38,7 +38,7 @@ function initialize(){
 function toggleTheme(){
     darkTheme = !darkTheme;
     if(darkTheme){
-        document.documentElement.style.setProperty('--text-color', '#fff');
+        document.documentElement.style.setProperty('--text-color', '#fffff');
         document.documentElement.style.setProperty('--background-1', '#1b2028');
         document.documentElement.style.setProperty('--background-2', '#0f1318');
         document.getElementById('settings').src = "../FantasyCricket/icons/darkactive.svg";
