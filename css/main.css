@@ -3,8 +3,8 @@
     --light-green:#D5F5E3;
     --green:#ABEBC6;
     --dark-green:#2ECC71;
-    --light-gray:#E5E8E8;
-    --light-purple:#E8DAEF;
+    --light-gray:#BFC9CA;
+    --light-purple:#C39BD3;
     --light-color:#000000;
     --dark-color:#0f1318;
 }
@@ -417,7 +417,7 @@ body{
     width:10vmax;
     height:1vmax;
     border-radius:1vmax;
-    background:var(--light-green);
+    background:var(--green);
 }
 
 #phone-list-parent{
@@ -474,7 +474,7 @@ body{
     width:10vmax;
     height:1vmax;
     border-radius:1vmax;
-    background:var(--light-green);
+    background:var(--green);
     margin:0.5vmax 0;
 }
 
