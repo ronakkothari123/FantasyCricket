@@ -12,6 +12,7 @@
     --background-2:#f1f1f1;
     --border-color:#cccccc;
     --accent-color:#2ECC71;
+    --friend-background:#109028;
     --icon-brightness:0;
 }
 
@@ -38,7 +39,7 @@ body{
 }
 
 .sidebar-img{
-    margin:3vh 0;
+    margin:4vh 0;
     cursor:pointer;
     width:2vw;
     filter:invert(1) brightness(var(--icon-brightness));
@@ -46,6 +47,9 @@ body{
 
 .notification-div{
     position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 #main-div{
@@ -67,7 +71,7 @@ body{
     border-radius:0.5vmax;
     margin:0;
     position:absolute;
-    top:2vh;
+    top:3vh;
     right:-0.25vw;
 }
 
@@ -79,4 +83,81 @@ body{
 #logout-img{
     position:absolute;
     bottom:1vw;
+}
+
+.sidebar-line{
+    width:1.5vw;
+    height:0.5vw;
+    background:var(--accent-color);
+    position:absolute;
+    bottom:1vw;
+    border-radius:0.5vw;
+    transition-duration:250ms;
+}
+
+.inactive-line{
+    opacity:0;
+}
+
+#navbar{
+    width:90vw;
+    height:10vh;
+    padding:0 2.5vw;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    position:relative;
+}
+
+.navbar-input{
+    width:12.5vmax;
+    height:2vmax;
+    background:var(--background-1);
+    border-radius:0.5vmax;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    position:relative;
+}
+
+.navbar-input > input{
+    outline:none;
+    border:none;
+    margin-left:0.5vmax;
+    font-size:0.8vmax;
+    width:10vw;
+    color:gray;
+}
+
+.navbar-input > img{
+    width:1vmax;
+    position:absolute;
+    right:0.5vw;
+    filter:invert(1) brightness(0.5);
+    cursor:pointer;
+}
+
+#navbar-team{
+    position:absolute;
+    right:2.5vmax;
+    top:3vh;
+    display:flex;
+    flex-direction:row;
+}
+
+.navbar-friend-div{
+    width:2.5vmax;
+    height:2.5vmax;
+    border-radius:2vmax;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    background:var(--friend-background);
+    margin:0 -0.5vw;
+}
+
+.navbar-friend{
+    width:1.75vmax;
+    border-radius:1.25vmax;
 }

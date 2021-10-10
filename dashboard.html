@@ -18,29 +18,44 @@
         <div id="sidebar">
             <img src="icons/cricket.svg" alt="" class="sidebar-img" id="cricket-img">
             <div class="notification-div">
-                <img src="icons/dashboard.svg" alt="" class="sidebar-img">
+                <img src="icons/dashboard.svg" alt="" class="sidebar-img" onclick="toggleSidebar(0)">
                 <div class="sidebar-line"></div>
             </div>
             <div class="notification-div">
-                <img src="icons/calendar.svg" alt="" class="sidebar-img">
-                <p class="notif-p">2</p>
-                <div class="sidebar-line"></div>
+                <img src="icons/calendar.svg" alt="" class="sidebar-img" onclick="toggleSidebar(1)">
+                <p class="notif-p">4</p>
+                <div class="sidebar-line inactive-line"></div>
             </div>
             <div class="notification-div">
-                <img src="icons/message.svg" alt="" class="sidebar-img">
-                <p class="notif-p">1</p>
-                <div class="sidebar-line"></div>
+                <img src="icons/message.svg" alt="" class="sidebar-img" onclick="toggleSidebar(2)">
+                <p class="notif-p">9</p>
+                <div class="sidebar-line inactive-line"></div>
             </div>
             <div class="notification-div">
-                <img src="icons/notifs.svg" alt="" class="sidebar-img">
-                <p class="notif-p">3</p>
-                <div class="sidebar-line"></div>
+                <img src="icons/notifs.svg" alt="" class="sidebar-img" onclick="toggleSidebar(3)">
+                <p class="notif-p">13</p>
+                <div class="sidebar-line inactive-line"></div>
             </div>
             <img src="icons/logout.svg" alt="" class="sidebar-img" id="logout-img">
         </div>
         <div id="main-div">
-
+            <div id="navbar">
+                <div id="dashboard-navbar" class="navbar">
+                    <div class="navbar-input" id="dashboard-navbar-input">
+                        <input type="text" placeholder="Search Dashboard...">
+                        <img src="icons/search.svg" alt="">
+                    </div>
+                    <div id="navbar-team">
+                        <div class="navbar-friend-div" style="--friend-background:#85C1E9;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                        <div class="navbar-friend-div" style="--friend-background:#F8C471;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                        <div class="navbar-friend-div" style="--friend-background:#58D68D;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                        <div class="navbar-friend-div" style="--friend-background:#F7DC6F;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                        <div class="navbar-friend-div" style="--friend-background:#EC7063;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>
