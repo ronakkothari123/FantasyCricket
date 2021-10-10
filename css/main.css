@@ -7,7 +7,6 @@
     --light-purple:#C39BD3;
     --light-color:#000000;
     --dark-color:#0f1318;
-
     --text-color:#000000;
     --background-1:#ffffff;
     --background-2:#EAFAF1;
@@ -16,7 +15,7 @@
 
 body{
     font-family:"Be Vietnam Pro", sans-serif;
-    background:white;
+    background:var(--background-2);
     overflow-x:hidden;
     margin:0;
     color:var(--text-color);
@@ -40,7 +39,7 @@ body{
     display:flex;
     flex-direction:row;
     align-items:center;
-    background:white;
+    background:var(--background-2);
 }
 
 #navbar-header-div{
@@ -55,6 +54,7 @@ body{
     font-size:1.125vmax;
     font-weight:900;
     margin-left:0.5vmax;
+    color:var(--text-color);
 }
 
 #navbar-header-div > img{

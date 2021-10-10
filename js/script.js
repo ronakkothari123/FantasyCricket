@@ -37,18 +37,18 @@ function initialize(){
 
 function toggleTheme(){
     if(!darkTheme){
-        document.documentElement.style.setProperty('--text-color', '#fffff');
-        document.documentElement.style.setProperty('--background-1', '#1b2028');
-        document.documentElement.style.setProperty('--background-2', '#0f1318');
+        document.querySelector(':root').style.setProperty('--text-color', '#fffff');
+        document.querySelector(':root').style.setProperty('--background-1', '#1b2028');
+        document.querySelector(':root').style.setProperty('--background-2', '#0f1318');
         document.getElementById('settings').src = "./icons/darkactive.svg";
     } else{
-        document.documentElement.style.setProperty('--text-color', '#000');
-        document.documentElement.style.setProperty('--background-1', '#fff');
-        document.documentElement.style.setProperty('--background-2', '#EAFAF1');
+        document.querySelector(':root').style.setProperty('--text-color', '#000000');
+        document.querySelector(':root').style.setProperty('--background-1', '#ffffff');
+        document.querySelector(':root').style.setProperty('--background-2', '#eafaf1');
         document.getElementById('settings').src = "./icons/darkinactive.svg";
     }
     darkTheme = !darkTheme;
-    console.log(darkTheme)
+    console.log(getComputedStyle(document.documentElement).getPropertyValue('--background-2'))
 }
 
 function toggleTab(tab){
