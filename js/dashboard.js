@@ -25,8 +25,8 @@ function toggleDropdown(number){
 function initRoster(){
     for(let i = 0; i < rosterItem.length; i++){
         let playerName = players[Math.trunc(Math.random() * players.length)];
-        let newDiv = document.createElement('div')
-        let newDescDiv = document.createElement('div')
+        let newDiv = document.createElement('div');
+        let newDescDiv = document.createElement('div');
         let newHeader = document.createElement('h5')
         let newPara = document.createElement('p')
 
