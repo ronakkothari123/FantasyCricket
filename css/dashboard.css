@@ -323,18 +323,18 @@ body{
 }
 
 .small-roster{
-    width:6vmax;
-    height:6vmax;
+    width:5.5vmax;
+    height:5.5vmax;
 }
 
 .medium-roster{
-    width:6vmax;
-    height:12vmax;
+    width:5.5vmax;
+    height:11vmax;
 }
 
 .large-roster{
-    width:12vmax;
-    height:12vmax;
+    width:11vmax;
+    height:11vmax;
 }
 
 .roster-img{
@@ -351,7 +351,7 @@ body{
     position:relative;
     width:5vmax;
     height:5vmax;
-    margin:0.5vmax;
+    margin:0.25vmax;
     border-radius:2vmax;
     background:var(--background-1);
     display:flex;
