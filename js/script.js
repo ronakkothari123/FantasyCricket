@@ -19,7 +19,7 @@ function initialize(){
     if(Math.trunc(Math.random()*2) == 0){
         document.getElementById("header-news-div").classList.add('active')
     } else{
-        document.getElementById("header-news-div").classList.add('inactive')
+        document.getElementById("header-news-div").classList.add('inactive');
     }
 
     if(hour > 12){
