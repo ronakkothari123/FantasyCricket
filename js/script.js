@@ -50,8 +50,8 @@ function toggleTheme(){
         document.getElementById('settings').src = "./icons/darkactive.svg";
     } else{
         document.querySelector(':root').style.setProperty('--text-color', 'black');
-        document.querySelector(':root').style.setProperty('--background-1', '#ffffff');
-        document.querySelector(':root').style.setProperty('--background-2', '#eafaf1');
+        document.querySelector(':root').style.setProperty('--background-1', '#eafaf1');
+        document.querySelector(':root').style.setProperty('--background-2', '#ffffff');
         document.querySelector(':root').style.setProperty('--icon-brightness', 0);
         document.querySelector(':root').style.setProperty('--lighter-green', '#EAFAF1');
         document.querySelector(':root').style.setProperty('--light-green', '#D5F5E3');
