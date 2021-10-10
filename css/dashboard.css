@@ -42,7 +42,7 @@ body{
     margin:4vh 0;
     cursor:pointer;
     width:2vw;
-    filter:invert(1) brightness(var(--icon-brightness));
+    filter:invert(1) brightness(0.5);
 }
 
 .notification-div{
@@ -159,10 +159,19 @@ body{
 
 #friend-dropdown{
     position:absolute;
-    right:4vmax;
+    right:4.5vmax;
     top:1.25vmax;
     width:2vmax;
     cursor:pointer;
+    transition-duration:250ms;
+}
+
+.active-dropdown{
+    transform:rotateZ(-90deg);
+}
+
+.inactive-dropdown{
+    transform:rotateZ(0deg);
 }
 
 .navbar-friend{
@@ -187,6 +196,11 @@ body{
     cursor:pointer;
 }
 
+#add-friend-btn > img{
+    filter:invert(1) brightness(calc(1 - var(--icon-brightness)));
+    width:1.25vw;
+}
+
 #main-content{
     padding:0 2.5vw;
 }
@@ -207,4 +221,33 @@ body{
 .bold{
     color:black;
     font-weight:700;
+}
+
+.main-row{
+    width:90vw;
+    height:auto;
+    margin-top:1.5vmax;
+}
+
+.advertisement{
+    background:var(--background-1);
+    width:20vmax;
+    padding:1vmax;
+    border-radius:2vmax;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.advertisement-img{
+    width:20vmax;
+    height:10vmax;
+    border-radius:1vmax;
+    margin-bottom:0.5vw;
+}
+
+.advertisement-para{
+    font-size:0.75vw;
+    margin:0;
 }
