@@ -19,6 +19,7 @@ body{
     background:white;
     overflow-x:hidden;
     margin:0;
+    color:var(--text-color);
 }
 
 #wrapper{
