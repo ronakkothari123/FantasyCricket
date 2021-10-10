@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CFL - Cricket Fantasy League | Cricket Game Simulation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/logos/fc.jpg">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</body>
+</head>
+<body>
+    <div id="settings-modal-bg" class="modal-bg inactive-modal">
+        <div id="settings-modal" class="modal">
+            <h1 class="modal-header">Account Settings</h1>
+            <div class="connect-account-div">
+                <img src="icons/brands/google.svg" alt="Google" class="connect-account-img">
+                <p class="connect-account-para">Google+ is a service to increase the quality of its search engine results by enabling Google to factor in “social cues” to deliver search results</p>
+                <button class="connect-account-btn connect">Connect</button>
+            </div>
+            <div class="connect-account-div">
+                <img src="icons/brands/facebook.svg" alt="Google" class="connect-account-img">
+                <p class="connect-account-para">Facebook is a service which allows users, who sign-up for free profiles, to connect with friends, work colleagues or people they don't know, online.</p>
+                <button class="connect-account-btn disconnect">Disconnect</button>
+            </div>
+            <div class="connect-account-div">
+                <img src="icons/brands/linkedin.svg" alt="Google" class="connect-account-img">
+                <p class="connect-account-para">LinkedIn is an online platform that connects the world's professionals</p>
+                <button class="connect-account-btn connect">Connect</button>
+            </div>
+        </div>
+        <div id="settings-options" class="modal-options">
+            <img src="icons/account.svg" alt="Modal Option" class="modal-option">
+            <img src="icons/phonesettings.svg" alt="Modal Option" class="modal-option">
+            <img src="icons/darkactive.svg" alt="Modal Option" id="theme-icon" class="modal-option" onclick="toggleTheme()">
+            <img src="icons/close.svg" alt="Modal Option" class="modal-option" onclick="toggleModal(1)">
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="navbar">
+            <div id="navbar-header-div">
+                <img src="images/logos/icc.png" alt="Header Image" id="header-image">
+                <div id="navbar-header-text">
+                    <h2 id="navbar-subheader">The Official ICC's</h2>
+                    <h1 id="navbar-header">Cricket Fantasy League</h1>
+                </div>
+            </div>
+            <div id="input-search-div">
+                <input type="text" id="main-input">
+                <img src="icons/search.svg" alt="Search" id="search">
+            </div>
+            <button id="navbar-join">Join The <span class="accent">Fantasy</span></button>
+            <img src="icons/avatars/1.svg" alt="User" id="pfp">
+            <img src="icons/shop.svg" alt="Shopping Cart" id="cart">
+            <img src="icons/settings.svg" alt="URBAD" id="settings" onclick="toggleModal(1)">
+        </div>
+        <div id="main-div">
+            <div id="sidebar">
+                <!--Created Dynamically-->
+            </div>
+            <div id="main-content">
+                <div id="game">
+                    <div id="lawn-1">
+                        <div class="circle" id="dashed-1"></div>
+                        <div class="circle" id="dashed-2"></div>
+                        <div id="pitch">
+                            <div id="stump-1" class="stumps"></div>
+                            <div id="stump-2" class="stumps"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="your-team">
+                    <div id="your-team-players">
+                        <div class="your-team-header-div">
+                            <img src="images/logos/t20wc.png" alt="IMAGESI" class="your-team-main-image">
+                            <div class="your-team-headers">
+                                <h1 class="your-team-header">Your Fantasy Team</h1>
+                                <p class="your-team-subheader">Current Season: Indian Premier League T20</p>
+                            </div>
+                        </div>
+                        <p class="your-team-statistics-para">Team Name: Team VenusWarrior</p>
+                        <div class="your-team-players-showcase">
+                            <img src="" alt="Player Picture" class="player-picture">
+                            <img src="" alt="Player Picture" class="player-picture">
+                            <img src="" alt="Player Picture" class="player-picture">
+                            <img src="" alt="Player Picture" class="player-picture">
+                            <img src="" alt="Player Picture" class="player-picture">
+                        </div>
+                    </div>
+                    <div id="your-team-statistics">
+                        <div class="your-team-header-div">
+                            <img src="images/logos/ipl.png" alt="IMAGESI" class="your-team-main-image">
+                            <div class="your-team-headers">
+                                <h1 class="your-team-header">Statistics</h1>
+                                <p class="your-team-subheader">Your Team Profit</p>
+                            </div>
+                        </div>
+                        <p class="your-team-statistics-para">Team Name: Team VenusWarrior</p>
+                        <p class="your-team-statistics-para">Team Creation Date: 09/01/2021</p>
+                        <p class="your-team-statistics-para">Money Spent: <span class="red">$14657</span></p>
+                        <p class="your-team-statistics-para">Money Earned: <span class="green">$9656</span></p>
+                        <p class="your-team-statistics-para">Net Profit: <span class="red">-$5001</span></p>
+                        <br>
+                        <p class="your-team-statistics-para">Most Valuable Player: Harshal Patel</p>
+                        <p class="your-team-statistics-para">Least Valuable Player: Trent Boult</p>
+                        <button class="player-button" id="your-team-trade-btn">INITIATE <span class="accent">TRADE</span></button>
+                    </div>
+                </div>
+            </div>
+            <div id="game-information">
+                <!--Created Dynamically-->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/dashboard.js"></script>
+</html>

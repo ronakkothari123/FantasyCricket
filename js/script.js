@@ -8,6 +8,8 @@ const tabLines = document.querySelectorAll('.tab-line')
 
 const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"]
 
+var darkTheme = false;
+
 function initialize(){
     var today = new Date();
     var hour = today.getHours()
@@ -17,12 +19,12 @@ function initialize(){
     if(Math.trunc(Math.random()*2) == 0){
         document.getElementById("header-news-div").classList.add('active')
     } else{
-        document.getElementById("header-news-div").classList.add('inactive')
+        document.getElementById("header-news-div").classList.add('inactive');
     }
 
     if(hour > 12){
-        hour -= 12
-        ampm = " P.M."
+        hour -= 12;
+        ampm = " P.M.";
     }
 
     if(minutes < 10){
@@ -30,7 +32,40 @@ function initialize(){
     }
 
     document.getElementById("phone-time").innerHTML = hour + ":" + minutes + ampm;
-    initializeComments()
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggleTheme();
+    }
+    initializeComments();
+}
+
+function toggleTheme(){
+    if(!darkTheme){
+        document.querySelector(':root').style.setProperty('--text-color', 'white');
+        document.querySelector(':root').style.setProperty('--background-1', '#1b2028');
+        document.querySelector(':root').style.setProperty('--background-2', '#171a1f');
+        document.querySelector(':root').style.setProperty('--lighter-green', '#58D68D');
+        document.querySelector(':root').style.setProperty('--light-green', '#2ECC71');
+        document.querySelector(':root').style.setProperty('--light-purple', '#8E44AD');
+        document.querySelector(':root').style.setProperty('--light-gray', '#7F8C8D');
+        document.querySelector(':root').style.setProperty('--border-color', '#111214');
+        document.querySelector(':root').style.setProperty('--green', '#2ECC71');
+        document.querySelector(':root').style.setProperty('--icon-brightness', 100);
+        document.getElementById('settings').src = "./icons/darkactive.svg";
+    } else{
+        document.querySelector(':root').style.setProperty('--text-color', 'black');
+        document.querySelector(':root').style.setProperty('--background-1', '#eafaf1');
+        document.querySelector(':root').style.setProperty('--background-2', '#ffffff');
+        document.querySelector(':root').style.setProperty('--icon-brightness', 0);
+        document.querySelector(':root').style.setProperty('--lighter-green', '#EAFAF1');
+        document.querySelector(':root').style.setProperty('--light-green', '#D5F5E3');
+        document.querySelector(':root').style.setProperty('--light-purple', '#C39BD3');
+        document.querySelector(':root').style.setProperty('--light-gray', '#BFC9CA');
+        document.querySelector(':root').style.setProperty('--border-color', '#cccccc');
+        document.querySelector(':root').style.setProperty('--green', '#ABEBC6');
+        document.getElementById('settings').src = "./icons/darkinactive.svg";
+    }
+    darkTheme = !darkTheme;
+    console.log(getComputedStyle(document.documentElement).getPropertyValue('--background-2'))
 }
 
 function toggleTab(tab){
@@ -56,10 +91,10 @@ function initializeComments(){
     }
 
     for(let j = 0; j < commentImg.length; j++){
-        commentImg[j].src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*50) + 1) + ".svg"
+        commentImg[j].src = "./icons/avatars/" + (Math.floor(Math.random()*50) + 1) + ".svg"
     }
 
-    pfp.src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
+    pfp.src = "./icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
 
     console.log(starDivs.length)
 
@@ -67,19 +102,19 @@ function initializeComments(){
         let starAmount = Math.trunc(Math.random()*2) + 4;
         for(let l = 0; l < starAmount; l++){
             let star = document.createElement('img');
-            star.src = "../FantasyCricket/icons/fullstar.svg"
+            star.src = "./icons/fullstar.svg"
             star.classList.add('star')
             starDivs[k].appendChild(star)
         }
         if(starAmount == 4){
             if(Math.trunc(Math.random()*2) == 0){
                 let star = document.createElement('img');
-                star.src = "../FantasyCricket/icons/nostar.svg"
+                star.src = "./icons/nostar.svg"
                 star.classList.add('star')
                 starDivs[k].appendChild(star)
             } else {
                 let star = document.createElement('img');
-                star.src = "../FantasyCricket/icons/halfstar.svg"
+                star.src = "./icons/halfstar.svg"
                 star.classList.add('star')
                 starDivs[k].appendChild(star)
             }
