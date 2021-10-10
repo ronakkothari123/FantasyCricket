@@ -36,18 +36,19 @@ function initialize(){
 }
 
 function toggleTheme(){
-    darkTheme = !darkTheme;
-    if(darkTheme){
+    if(!darkTheme){
         document.documentElement.style.setProperty('--text-color', '#fffff');
         document.documentElement.style.setProperty('--background-1', '#1b2028');
         document.documentElement.style.setProperty('--background-2', '#0f1318');
-        document.getElementById('settings').src = "../FantasyCricket/icons/darkactive.svg";
+        document.getElementById('settings').src = "./icons/darkactive.svg";
     } else{
         document.documentElement.style.setProperty('--text-color', '#000');
         document.documentElement.style.setProperty('--background-1', '#fff');
         document.documentElement.style.setProperty('--background-2', '#EAFAF1');
-        document.getElementById('settings').src = "../FantasyCricket/icons/darkinactive.svg";
+        document.getElementById('settings').src = "./icons/darkinactive.svg";
     }
+    darkTheme = !darkTheme;
+    console.log(darkTheme)
 }
 
 function toggleTab(tab){
@@ -73,10 +74,10 @@ function initializeComments(){
     }
 
     for(let j = 0; j < commentImg.length; j++){
-        commentImg[j].src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*50) + 1) + ".svg"
+        commentImg[j].src = "./icons/avatars/" + (Math.floor(Math.random()*50) + 1) + ".svg"
     }
 
-    pfp.src = "../FantasyCricket/icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
+    pfp.src = "./icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
 
     console.log(starDivs.length)
 
@@ -84,19 +85,19 @@ function initializeComments(){
         let starAmount = Math.trunc(Math.random()*2) + 4;
         for(let l = 0; l < starAmount; l++){
             let star = document.createElement('img');
-            star.src = "../FantasyCricket/icons/fullstar.svg"
+            star.src = "./icons/fullstar.svg"
             star.classList.add('star')
             starDivs[k].appendChild(star)
         }
         if(starAmount == 4){
             if(Math.trunc(Math.random()*2) == 0){
                 let star = document.createElement('img');
-                star.src = "../FantasyCricket/icons/nostar.svg"
+                star.src = "./icons/nostar.svg"
                 star.classList.add('star')
                 starDivs[k].appendChild(star)
             } else {
                 let star = document.createElement('img');
-                star.src = "../FantasyCricket/icons/halfstar.svg"
+                star.src = "./icons/halfstar.svg"
                 star.classList.add('star')
                 starDivs[k].appendChild(star)
             }
