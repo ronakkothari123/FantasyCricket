@@ -23,8 +23,8 @@ function initialize(){
     }
 
     if(hour > 12){
-        hour -= 12
-        ampm = " P.M."
+        hour -= 12;
+        ampm = " P.M.";
     }
 
     if(minutes < 10){
@@ -32,7 +32,7 @@ function initialize(){
     }
 
     document.getElementById("phone-time").innerHTML = hour + ":" + minutes + ampm;
-    initializeComments()
+    initializeComments();
 }
 
 function toggleTheme(){
@@ -41,12 +41,12 @@ function toggleTheme(){
         document.documentElement.style.setProperty('--text-color', '#fff');
         document.documentElement.style.setProperty('--background-1', '#1b2028');
         document.documentElement.style.setProperty('--background-2', '#0f1318');
-        document.getElementById('settings').src = "../FantasyCricket/icons/darkactive.svg"
+        document.getElementById('settings').src = "../FantasyCricket/icons/darkactive.svg";
     } else{
         document.documentElement.style.setProperty('--text-color', '#000');
         document.documentElement.style.setProperty('--background-1', '#fff');
         document.documentElement.style.setProperty('--background-2', '#EAFAF1');
-        document.getElementById('settings').src = "../FantasyCricket/icons/darkinactive.svg"
+        document.getElementById('settings').src = "../FantasyCricket/icons/darkinactive.svg";
     }
 }
 
