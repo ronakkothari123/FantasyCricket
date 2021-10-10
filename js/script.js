@@ -32,6 +32,9 @@ function initialize(){
     }
 
     document.getElementById("phone-time").innerHTML = hour + ":" + minutes + ampm;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggleTheme();
+    }
     initializeComments();
 }
 
