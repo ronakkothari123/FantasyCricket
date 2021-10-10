@@ -1,12 +1,14 @@
-const comments = document.querySelectorAll(".comment");
-const commentImg = document.querySelectorAll(".comment-img")
-const starDivs = document.querySelectorAll(".star-div")
-const namePara = document.querySelectorAll(".comment-name")
-const pfp = document.getElementById("pfp")
-const tabs = document.querySelectorAll(".fantasy-content")
-const tabLines = document.querySelectorAll('.tab-line')
+const comments = document.querySelectorAll(".comment");;
+const commentImg = document.querySelectorAll(".comment-img");
+const starDivs = document.querySelectorAll(".star-div");
+const namePara = document.querySelectorAll(".comment-name");
+const pfp = document.getElementById("pfp");
+const tabs = document.querySelectorAll(".fantasy-content");
+const tabLines = document.querySelectorAll('.tab-line');
+const contentPicture = document.querySelectorAll('.fantasy-content-picture');
 
-const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"]
+const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"];
+const players = ["KaneWilliamson", "TrentBoult", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle"];
 
 var darkTheme = false;
 
@@ -35,6 +37,11 @@ function initialize(){
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         toggleTheme();
     }
+
+    for(let i = 0; i < contentPicture.length; i++){
+        contentPicture[i].style.backgroundImage = "url('https://moneyball.insidesport.co/img/singleplayer/" + players[i] + "1.jpg')";
+    }
+
     initializeComments();
 }
 
