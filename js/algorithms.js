@@ -1,13 +1,13 @@
 function calculateScore(playerObj) {
     let score;
     if (playerObj.type == "batsman") {
-        score = calculateBatterScore(playerObj.runs)
+        score = calculateBatterScore(playerObj.runs);
     } else if (playerObj.type == "bowler") {
-        score = calculateBowlerScore(playerObj.wickets, playerObj.economy, playerObj.wides, playerObj.noBalls, playerObj.oversBowled)
+        score = calculateBowlerScore(playerObj.wickets, playerObj.economy, playerObj.wides, playerObj.noBalls, playerObj.oversBowled);
     } else if (playerObj.type == "fielder") {
-        score = calculateFielderScore(playerObj.catches, playerObj.runouts, playerObj.droppedCatches)
+        score = calculateFielderScore(playerObj.catches, playerObj.runouts, playerObj.droppedCatches);
     } else if (playerObj.type == "keeper") {
-        score = calculateFielderScore(playerObj.catches, playerObj.runouts, playerObj.droppedCatches)
+        score = calculateFielderScore(playerObj.catches, playerObj.runouts, playerObj.droppedCatches);
     }
     return score;
 }

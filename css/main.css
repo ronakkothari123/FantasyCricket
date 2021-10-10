@@ -228,6 +228,7 @@ body{
 
 .star{
     width:1.125vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 .comment-div > h1{
