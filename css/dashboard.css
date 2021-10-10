@@ -227,6 +227,14 @@ body{
     width:90vw;
     height:auto;
     margin-top:1.5vmax;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.main-row > *{
+    margin-left:0.5vmax;
 }
 
 .advertisement{
@@ -250,4 +258,36 @@ body{
 .advertisement-para{
     font-size:0.75vw;
     margin:0;
+}
+
+.content-btns{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    width:14vmax;
+}
+
+.content-btn{
+    width:5vmax;
+    height:5vmax;
+    margin:0.5vmax;
+    border-radius:2vmax;
+    background:var(--background-1);
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition-duration:250ms;
+}
+
+.content-btn:hover{
+    transform:scale(1.1);
+}
+
+.content-btn-img{
+    filter:invert(1) brightness(calc(0.5));
+    width:2.5vmax;
 }
