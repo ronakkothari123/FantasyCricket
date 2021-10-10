@@ -547,7 +547,7 @@ body{
 #fantasy-features-parent > h1, #fantasy-instructions-header > h1{
     font-weight:900;
     font-size:3vmax;
-    color:black;
+    color:var(--text-color);
     margin:0;
 }
 
