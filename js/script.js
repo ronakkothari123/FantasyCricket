@@ -1,12 +1,14 @@
-const comments = document.querySelectorAll(".comment");
-const commentImg = document.querySelectorAll(".comment-img")
-const starDivs = document.querySelectorAll(".star-div")
-const namePara = document.querySelectorAll(".comment-name")
-const pfp = document.getElementById("pfp")
-const tabs = document.querySelectorAll(".fantasy-content")
-const tabLines = document.querySelectorAll('.tab-line')
+const comments = document.querySelectorAll(".comment");;
+const commentImg = document.querySelectorAll(".comment-img");
+const starDivs = document.querySelectorAll(".star-div");
+const namePara = document.querySelectorAll(".comment-name");
+const pfp = document.getElementById("pfp");
+const tabs = document.querySelectorAll(".fantasy-content");
+const tabLines = document.querySelectorAll('.tab-line');
+const contentPicture = document.querySelectorAll('.fantasy-content-picture');
 
-const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"]
+const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"];
+const players = ["KaneWilliamson", "TrentBoult", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle"];
 
 var darkTheme = false;
 
@@ -19,7 +21,7 @@ function initialize(){
     if(Math.trunc(Math.random()*2) == 0){
         document.getElementById("header-news-div").classList.add('active')
     } else{
-        document.getElementById("header-news-div").classList.add('inactive')
+        document.getElementById("header-news-div").classList.add('inactive');
     }
 
     if(hour > 12){
@@ -32,6 +34,14 @@ function initialize(){
     }
 
     document.getElementById("phone-time").innerHTML = hour + ":" + minutes + ampm;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggleTheme();
+    }
+
+    for(let i = 0; i < contentPicture.length; i++){
+        contentPicture[i].style.backgroundImage = "url('https://moneyball.insidesport.co/img/singleplayer/" + players[i] + "1.jpg')";
+    }
+
     initializeComments();
 }
 
@@ -50,8 +60,8 @@ function toggleTheme(){
         document.getElementById('settings').src = "./icons/darkactive.svg";
     } else{
         document.querySelector(':root').style.setProperty('--text-color', 'black');
-        document.querySelector(':root').style.setProperty('--background-1', '#ffffff');
-        document.querySelector(':root').style.setProperty('--background-2', '#eafaf1');
+        document.querySelector(':root').style.setProperty('--background-1', '#eafaf1');
+        document.querySelector(':root').style.setProperty('--background-2', '#ffffff');
         document.querySelector(':root').style.setProperty('--icon-brightness', 0);
         document.querySelector(':root').style.setProperty('--lighter-green', '#EAFAF1');
         document.querySelector(':root').style.setProperty('--light-green', '#D5F5E3');

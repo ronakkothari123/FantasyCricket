@@ -8,8 +8,8 @@
     --light-color:#000000;
     --dark-color:#0f1318;
     --text-color:#000000;
-    --background-1:#ffffff;
-    --background-2:#EAFAF1;
+    --background-1:#EAFAF1;
+    --background-2:#ffffff;
     --border-color:#cccccc;
     --accent-color:#2ECC71;
 }
@@ -20,6 +20,7 @@ body{
     overflow-x:hidden;
     margin:0;
     color:var(--text-color);
+    transition-duration:250ms;
 }
 
 #wrapper{
@@ -41,7 +42,7 @@ body{
     display:flex;
     flex-direction:row;
     align-items:center;
-    background:var(--background-2);
+    background:transparent;
 }
 
 #navbar-header-div{
@@ -205,6 +206,7 @@ body{
     display:flex;
     flex-direction:row;
     color:var(--text-color);
+    transition-duration:250ms;
 }
 
 #comment-img-div{
@@ -228,6 +230,7 @@ body{
 
 .star{
     width:1.125vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 .comment-div > h1{
@@ -520,6 +523,7 @@ body{
     justify-content:center;
     align-items:center;
     background:var(--background-1);
+    transition-duration:250ms;
 }
 
 #fantasy-instructions{
@@ -695,8 +699,12 @@ body{
 .fantasy-content{
     display:flex;
     flex-direction:row;
-    justify-content:space-around;
+    justify-content:center;
     align-items:center;
+    position:absolute;
+    bottom:1.5vmax;
+    opacity:1;
+    transition-duration:250ms;
 }
 
 .fantasy-content-picture{
@@ -712,10 +720,11 @@ body{
 .fantasy-content-text{
     width:21vmax;
     height:12.5vmax;
+    margin-left:1vmax;
 }
 
 .fantasy-content-text > h1{
-    font-size:2vmax;
+    font-size:1.75vmax;
     font-weight:900;
     margin:0;
 }
@@ -750,5 +759,5 @@ body{
 }
 
 .inactive-content{
-    display:none;
+    opacity:0;
 }
