@@ -46,8 +46,8 @@
             <div id="navbar">
                 <div id="dashboard-navbar" class="navbar">
                     <div class="navbar-input" id="dashboard-navbar-input">
-                        <input type="text" placeholder="Search Dashboard...">
-                        <img src="icons/search.svg" alt="">
+                        <input type="text" id="navbar-input" placeholder="Search Dashboard...">
+                        <img src="icons/erase.svg" alt="" onMouseDown="document.getElementById('navbar-input').value = ''">
                     </div>
                     <div id="navbar-team">
                         <div class="navbar-friend-div" style="--friend-background:#85C1E9;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
@@ -60,10 +60,13 @@
                     <div id="add-friend-btn">
                         <img src="icons/friends.svg" alt="">
                     </div>
+                    <div id="settings-btn">
+                        <img src="icons/settings.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div id="main-content">
-                <div class="main-content" id="dashboard-content">
+                <div class="main-content active-main-content" id="dashboard-content">
                     <h1>Welcome to Fantasy, Ronak!</h1>
                     <h6>You have <span class="bold" id="dashbaord-notifs">13 notifications</span> to see!</h6>
                     <div class="main-row">
@@ -76,6 +79,17 @@
                             <div class="content-btn" onclick="toggleSidebar(2)"><img src="icons/calendar.svg" alt="" class="content-btn-img"></div>
                             <div class="content-btn" onclick="toggleSidebar(3)"><img src="icons/message.svg" alt="" class="content-btn-img"></div>
                             <div class="content-btn" onclick="toggleSidebar(4)"><img src="icons/notifs.svg" alt="" class="content-btn-img"></div>
+                        </div>
+                        <div id="dashboard-upcoming-events">
+                            <h2>Upcoming Events:</h2>
+                            <h6>You have <span class="bold">4 upcoming events</span> to see. <span class="bold" onclick="toggleSidebar(2)" style="cursor:pointer;">View Calendar</span>.</h6>
+                            <div class="dashboard-event">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">7:00 A.M. - 1:00 P.M</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Delhi vs. Kolkata</h1>
+                                <p>Delhi Capitals vs. Kolkata Knight Riders Playoffs Match</p>
+                            </div>
                         </div>
                     </div>
                     <div class="main-row">
@@ -115,11 +129,24 @@
                                     <div class="roster-item"></div>
                                     <div class="roster-item"></div>
                                     <div class="roster-item"></div>
-                                    <p class="roster-para">Bench</p>
+                                    <p class="roster-para">Benched</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="main-content inactive-main-content" id="players-content">
+                    
+                </div>
+                <div class="main-content inactive-main-content" id="calendar-content">
+                    <h1>Your Personal Calendar</h1>
+                    <h6>You have <span class="bold">4 upcoming events</span> to see!</h6>
+                </div>
+                <div class="main-content inactive-main-content" id="message-content">
+                    
+                </div>
+                <div class="main-content inactive-main-content" id="notifications-content">
+                    
                 </div>
             </div>
         </div>

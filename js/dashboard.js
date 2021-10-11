@@ -3,6 +3,7 @@ const friends = document.querySelectorAll('.navbar-friend');
 const dropdown = document.querySelectorAll('.dropdown')
 const rosterItem = document.querySelectorAll('.roster-item');
 const rosterDisplayOption = document.querySelectorAll('.roster-display-option')
+const mainContent = document.querySelectorAll('.main-content')
 
 const fatRoster = document.querySelectorAll('.fat-roster')
 const largeRoster = document.querySelectorAll('.large-roster')
@@ -10,7 +11,9 @@ const mediumRoster = document.querySelectorAll('.medium-roster')
 const smallRoster = document.querySelectorAll('.small-roster')
 const rosterPara = document.querySelectorAll('.roster-para')
 
-const players = ["TrentBoult", "KaneWilliamson", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle", "YuzvendraChahal", "ShahrukhKhan", "RavindraJadeja", "DavidWarner", "RishabhPant"]
+const players = ["TrentBoult", "KaneWilliamson", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle", "YuzvendraChahal", "ShahrukhKhan", "RavindraJadeja", "DavidWarner", "RishabhPant", "JasonRoy", "YashasviJaiswal", "MoeenAli", "PrithviShaw"]
+const pageType = ["Dashboard", "Players", "Calendar", "Messages", "Notifications"]
+const navbarInputValue = ["","","","",""]
 
 let activeSidebar = 0;
 let activeRosterOption = 0;
@@ -98,13 +101,20 @@ function initRoster(){
         newDiv.style.zIndex = (rosterItem.length + 1) - j
         newDiv.appendChild(newDescDiv)
         rosterItem[j].insertAdjacentElement('beforebegin', newDiv);
-        console.log('sdf')
     }
 }
 
 function toggleSidebar(number){
     sidebarLine[activeSidebar].classList.add('inactive-line')
     sidebarLine[number].classList.remove('inactive-line');
+    mainContent[activeSidebar].classList.remove('active-main-content')
+    mainContent[number].classList.remove('inactive-main-content')
+    mainContent[number].classList.add('active-main-content')
+    mainContent[activeSidebar].classList.add('inactive-main-content')
+    document.getElementById('navbar-input').placeholder = "Search " + pageType[number] + "..."
+    navbarInputValue[activeSidebar] = document.getElementById('navbar-input').value;
+    document.getElementById('navbar-input').value = navbarInputValue[number]
+
     activeSidebar = number;
 }
 

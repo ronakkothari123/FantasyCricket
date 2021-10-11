@@ -144,7 +144,7 @@ body{
 
 #navbar-team{
     position:absolute;
-    right:6.5vmax;
+    right:8.5vmax;
     top:1.25vmax;
     display:flex;
     flex-direction:row;
@@ -164,7 +164,7 @@ body{
 
 #friend-dropdown{
     position:absolute;
-    right:4.5vmax;
+    right:6.5vmax;
     top:1.25vmax;
     width:2vmax;
     cursor:pointer;
@@ -172,11 +172,11 @@ body{
 }
 
 .active-dropdown{
-    transform:rotateZ(-90deg);
+    transform:rotateZ(0deg);
 }
 
 .inactive-dropdown{
-    transform:rotateZ(0deg);
+    transform:rotateZ(-90deg);
 }
 
 .navbar-friend{
@@ -189,7 +189,7 @@ body{
     height:2vmax;
     position:absolute;
     top:1.25vmax;
-    right:1.5vmax;
+    right:4vmax;
     background:var(--dark-color);
     color:white;
     font-size:2vmax;
@@ -201,6 +201,28 @@ body{
     cursor:pointer;
 }
 
+#settings-btn{
+    width:2vmax;
+    height:2vmax;
+    position:absolute;
+    top:1.25vmax;
+    right:1.5vmax;
+    background:var(--background-1);
+    color:white;
+    font-size:2vmax;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    border-radius:1vmax;
+    cursor:pointer;
+}
+
+#settings-btn > img{
+    filter:invert(1) brightness(var(--icon-brightness));
+    width:1.25vw;
+}
+
 #add-friend-btn > img{
     filter:invert(1) brightness(calc(1 - var(--icon-brightness)));
     width:1.25vw;
@@ -210,13 +232,30 @@ body{
     padding:0 2.5vw;
 }
 
+.inactive-main-content{
+    opacity:0;
+    height:0;
+}
+
+.main-content{
+    transition-duration:250ms;
+}
+
 .main-content > h1{
     margin:0;
     font-size:1.5vmax;
     font-weight:500;
+    color:var(--text-color);
 }
 
-.main-content > h6 {
+#dashboard-upcoming-events > h2{
+    margin:0;
+    font-size:1.25vmax;
+    font-weight:500;
+    color:var(--text-color);
+}
+
+.main-content > h6, #dashboard-upcoming-events > h6 {
     margin:0.25vmax 0;
     color:gray;
     font-size:0.75vmax;
@@ -359,16 +398,15 @@ body{
     border-radius:2.5vmax;
     cursor:pointer;
     filter:grayscale(1);
-    transition-duration:250ms;
+    transition:transform 500ms;
     width:4vmax;
     height:4vmax;
     border:0.5vmax solid var(--background-1);
     margin:0 0.25vmax;
 }
 
-.roster-item > .roster-img{
-    width:4vmax;
-    height:4vmax;
+.roster-img:hover{
+    transform:scale(1.1);
 }
 
 .roster-para{
@@ -383,7 +421,6 @@ body{
     position:absolute;
     background:white;
     border-radius:1vmax;
-    transition:transform 500ms, opacity 500ms, margin 1ms ease-in-out 500ms;
     transform:translateX(-1vmax);
     width:8vmax;
     padding:0.5vmax;
@@ -392,11 +429,12 @@ body{
     display:flex;
     margin-left: -100vmax;
     flex-direction:column;
+    transition:transform 500ms ease-in-out 500ms, opacity 500ms, margin 10ms ease-in-out 1;
 }
 
 .roster-img:hover > .roster-desc{
     transform:translateX(5vmax);
-    transition:transform 500ms, opacity 500ms;
+    transition:transform 500ms ease-in-out 1s, opacity 500ms ease-in-out 1s;
     margin:0;
     opacity:1;
 }
@@ -481,4 +519,66 @@ body{
 .roster-variation-para{
     left:0;
     top:0.75vmax;
+}
+
+.active-main-content{
+    opacity:1;
+    height:auto;
+}
+
+.dashboard-event{
+    background:var(--background-1);
+    width:23vmax;
+    height:4vmax;
+    position:relative;
+    padding: 1vmax;
+    border-radius:1vmax;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-end;
+    margin-top:1vmax;
+}
+
+.dashboard-event > h1{
+    font-size:1.125vmax;
+    font-weight:700;
+    margin:0;
+}
+
+.dashboard-event > p{
+    font-size:0.75vmax;
+    font-weight:400;
+    margin:0;
+}
+
+.dashboard-event-color{
+    width:0.75vmax;
+    height:0.75vmax;
+    position:absolute;
+    top:1vmax;
+    left:1vmax;
+    background:var(--green);
+    border-radius:0.375vmax;
+}
+
+.dashboard-event-time{
+    font-size:0.75vmax;
+    color:gray;
+    margin:0;
+    margin-left:2vmax;
+    position:absolute;
+    top:1vmax;
+    left:1vmax;
+}
+
+.dashboard-event-dots{
+    position:absolute;
+    top:0.5vmax;
+    right:1vmax;
+    margin:0;
+    font-size:0.75vmax;
+    letter-spacing:0.1vmax;
+    cursor:pointer;
+    color:gray;
 }
