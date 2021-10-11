@@ -18,7 +18,9 @@
 
 body{
     font-family:"Be Vietnam Pro", sans-serif;
+    background:var(--background-2);
     margin:0;
+    overflow:hidden;
 }
 
 #wrapper{
@@ -36,6 +38,10 @@ body{
     justify-content:center;
     align-items:center;
     position:relative;
+    background:var(--background-1);
+    position:sticky;
+    top:0;
+    left:0;
 }
 
 .sidebar-img{
@@ -55,7 +61,6 @@ body{
 #main-div{
     width:95vw;
     height:100vh;
-    background:var(--background-2);
 }
 
 .notif-p{
@@ -341,14 +346,21 @@ body{
     height:11vmax;
 }
 
+.fat-roster{
+    width:11vmax;
+    height:11vmax;
+    margin-left:2vmax;
+}
+
 .roster-img{
-    width:4vmax;
-    height:4vmax;
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
     border-radius:2vmax;
     cursor:pointer;
+    filter:grayscale(1);
+    transition-duration:250ms;
+    z-index:2;
 }
 
 .roster-item{
@@ -362,6 +374,12 @@ body{
     flex-direction:row;
     justify-content:center;
     align-items:center;
+    z-index:1;
+}
+
+.roster-item > .roster-img{
+    width:4vmax;
+    height:4vmax;
 }
 
 .roster-para{
@@ -400,14 +418,14 @@ body{
     margin:0;
 }
 
-#bench{
-    margin-left:2vmax;
-}
-
 .roster-img:hover > .roster-desc{
     transform:translateX(5vmax);
     margin:0;
     opacity:1;
+}
+
+.roster-img:hover{
+    filter:grayscale(0);
 }
 
 #roster-display-options{
@@ -421,7 +439,7 @@ body{
     flex-direction:row;
     align-items:center;
     justify-content:center;
-    border:2px solid var(--border-color);
+    /*border:2px solid var(--border-color);*/
     width:1.5vmax;
     height:1.5vmax;
     border-radius:0.5vmax;
@@ -430,11 +448,52 @@ body{
     transition-duration:250ms;
 }
 
-.active-display-option{
-    box-shadow:0 0 0.5vmax 0 black;
-}
-
 .roster-display-option > img{
     width:1.25vmax;
-    filter:invert(1) brightness(calc(0.5));
+    filter:invert(1) brightness(calc(0.75 - var(--icon-brightness)/2));
+}
+
+.active-display-option > img{
+    filter:invert(1) brightness(var(--icon-brightness));
+}
+
+.roster-variation-large{
+    width:13.5vmax;
+    height:3.5vmax;
+    padding-left:3vmax;
+}
+
+.roster-variation-medium{
+    width:10vmax;
+    height:3.5vmax;
+    padding-left:3vmax;
+}
+
+.roster-variation-small{
+    width:6.5vmax;
+    height:3.5vmax;
+    padding-left:3vmax;
+}
+
+.roster-variation-fat{
+    width:17vmax;
+    height:3.5vmax;
+    margin-left:0;
+    margin-top:1vmax;
+    padding-left:3vmax;
+}
+
+.roster-variation-item{
+    width:3vmax;
+    height:3vmax;
+}
+
+.roster-variation-para{
+    left:0;
+    top:0.75vmax;
+}
+
+.roster-variation-item > .roster-img{
+    width:2.25vmax;
+    height:2.25vmax;
 }

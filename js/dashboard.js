@@ -4,7 +4,13 @@ const dropdown = document.querySelectorAll('.dropdown')
 const rosterItem = document.querySelectorAll('.roster-item');
 const rosterDisplayOption = document.querySelectorAll('.roster-display-option')
 
-const players = ["TrentBoult", "KaneWilliamson", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle"]
+const fatRoster = document.querySelectorAll('.fat-roster')
+const largeRoster = document.querySelectorAll('.large-roster')
+const mediumRoster = document.querySelectorAll('.medium-roster')
+const smallRoster = document.querySelectorAll('.small-roster')
+const rosterPara = document.querySelectorAll('.roster-para')
+
+const players = ["TrentBoult", "KaneWilliamson", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle", "YuzvendraChahal", "ShahrukhKhan", "RavindraJadeja", "DavidWarner", "RishabhPant"]
 
 let activeSidebar = 0;
 let activeRosterOption = 0;
@@ -18,6 +24,38 @@ function toggleDisplayOption(number){
     rosterDisplayOption[activeRosterOption].classList.remove('active-display-option')
     rosterDisplayOption[number].classList.add('active-display-option')
     activeRosterOption = number;
+
+    if(number == 1){
+        document.getElementById('roster-players').style.flexDirection = 'column'
+        for(let i = 0; i < largeRoster.length; i++){
+            largeRoster[i].classList.add('roster-variation-large')
+        } for(let i = 0; i < mediumRoster.length; i++){
+            mediumRoster[i].classList.add('roster-variation-medium')
+        } for(let i = 0; i < smallRoster.length; i++){
+            smallRoster[i].classList.add('roster-variation-small')
+        } for(let i = 0; i < fatRoster.length; i++){
+            fatRoster[i].classList.add('roster-variation-fat')
+        } for(let i = 0; i < rosterPara.length; i++){
+            rosterPara[i].classList.add('roster-variation-para')
+        } for(let i = 0; i < rosterItem.length; i++){
+            rosterItem[i].classList.add('roster-variation-item')
+        }
+    } else {
+        document.getElementById('roster-players').style.flexDirection = 'row'
+        for(let i = 0; i < largeRoster.length; i++){
+            largeRoster[i].classList.remove('roster-variation-large')
+        } for(let i = 0; i < mediumRoster.length; i++){
+            mediumRoster[i].classList.remove('roster-variation-medium')
+        } for(let i = 0; i < smallRoster.length; i++){
+            smallRoster[i].classList.remove('roster-variation-small')
+        } for(let i = 0; i < fatRoster.length; i++){
+            fatRoster[i].classList.remove('roster-variation-fat')
+        } for(let i = 0; i < rosterPara.length; i++){
+            rosterPara[i].classList.remove('roster-variation-para')
+        } for(let i = 0; i < rosterItem.length; i++){
+            rosterItem[i].classList.remove('roster-variation-item')
+        }
+    }
 }
 
 function toggleDropdown(number){
