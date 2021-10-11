@@ -345,7 +345,7 @@ body{
     background-repeat:no-repeat;
     background-size:cover;
     border-radius:2vmax;
-    z-index:1;
+    cursor:pointer;
 }
 
 .roster-item{
@@ -359,8 +359,6 @@ body{
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    cursor:pointer;
-    z-index:0;
 }
 
 .roster-para{
@@ -375,13 +373,16 @@ body{
     position:relative;
     background:white;
     border-radius:1vmax;
-    transition-duration:500ms;
+    transition:transform 500ms, opacity 500ms;
     width:8vmax;
     padding:0.5vmax;
     z-index:100;
     opacity:0;
     display:flex;
+    margin-left: -9999vmax;
     flex-direction:column;
+    position:relative;
+    z-index:40;
 }
 
 .roster-h5{
@@ -400,8 +401,8 @@ body{
     margin-left:2vmax;
 }
 
-.roster-item:hover > .roster-img > .roster-desc{
+.roster-img:hover > .roster-desc{
     transform:translateX(5vmax);
-    z-index:1;
+    margin:0;
     opacity:1;
 }
