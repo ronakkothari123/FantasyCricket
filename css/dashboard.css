@@ -356,25 +356,14 @@ body{
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
-    border-radius:2vmax;
+    border-radius:2.5vmax;
     cursor:pointer;
     filter:grayscale(1);
     transition-duration:250ms;
-    z-index:2;
-}
-
-.roster-item{
-    position:relative;
-    width:5vmax;
-    height:5vmax;
-    margin:0.25vmax;
-    border-radius:2vmax;
-    background:var(--background-1);
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    z-index:1;
+    width:4vmax;
+    height:4vmax;
+    border:0.5vmax solid var(--background-1);
+    margin:0 0.25vmax;
 }
 
 .roster-item > .roster-img{
@@ -391,19 +380,25 @@ body{
 }
 
 .roster-desc{
-    position:relative;
+    position:absolute;
     background:white;
     border-radius:1vmax;
-    transition:transform 500ms, opacity 500ms;
+    transition:transform 500ms, opacity 500ms, margin 1ms ease-in-out 500ms;
+    transform:translateX(-1vmax);
     width:8vmax;
     padding:0.5vmax;
     z-index:100;
     opacity:0;
     display:flex;
-    margin-left: -9999vmax;
+    margin-left: -100vmax;
     flex-direction:column;
-    position:relative;
-    z-index:40;
+}
+
+.roster-img:hover > .roster-desc{
+    transform:translateX(5vmax);
+    transition:transform 500ms, opacity 500ms;
+    margin:0;
+    opacity:1;
 }
 
 .roster-h5{
@@ -416,12 +411,6 @@ body{
     font-size:0.75vmax;
     font-weight:400;
     margin:0;
-}
-
-.roster-img:hover > .roster-desc{
-    transform:translateX(5vmax);
-    margin:0;
-    opacity:1;
 }
 
 .roster-img:hover{
@@ -484,16 +473,12 @@ body{
 }
 
 .roster-variation-item{
-    width:3vmax;
-    height:3vmax;
+    width:2.25vmax;
+    height:2.25vmax;
+    border:0.375vmax solid white;
 }
 
 .roster-variation-para{
     left:0;
     top:0.75vmax;
-}
-
-.roster-variation-item > .roster-img{
-    width:2.25vmax;
-    height:2.25vmax;
 }

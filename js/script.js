@@ -83,7 +83,6 @@ function toggleTheme(){
         document.getElementById('settings').src = "./icons/darkinactive.svg";
     }
     darkTheme = !darkTheme;
-    console.log(getComputedStyle(document.documentElement).getPropertyValue('--background-2'))
 }
 
 function toggleTab(tab){

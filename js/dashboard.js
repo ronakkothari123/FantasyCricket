@@ -38,7 +38,7 @@ function toggleDisplayOption(number){
         } for(let i = 0; i < rosterPara.length; i++){
             rosterPara[i].classList.add('roster-variation-para')
         } for(let i = 0; i < rosterItem.length; i++){
-            rosterItem[i].classList.add('roster-variation-item')
+            document.querySelectorAll('.roster-img')[i].classList.add('roster-variation-item')
         }
     } else {
         document.getElementById('roster-players').style.flexDirection = 'row'
@@ -53,7 +53,7 @@ function toggleDisplayOption(number){
         } for(let i = 0; i < rosterPara.length; i++){
             rosterPara[i].classList.remove('roster-variation-para')
         } for(let i = 0; i < rosterItem.length; i++){
-            rosterItem[i].classList.remove('roster-variation-item')
+            document.querySelectorAll('.roster-img')[i].classList.remove('roster-variation-item')
         }
     }
 }
@@ -85,8 +85,7 @@ function initRoster(){
         }
 
         playerNameWithSpace = setCharAt(playerName, positions[1], ' ' + playerName[positions[1]])
-        console.log(playerNameWithSpace, positions[1])
-
+        
         newDescDiv.classList.add('roster-desc')
         newHeader.classList.add('roster-h5')
         newPara.classList.add('roster-p')
@@ -96,8 +95,10 @@ function initRoster(){
         newDescDiv.appendChild(newPara)
         newDiv.classList.add('roster-img');
         newDiv.style.backgroundImage = "url('https://moneyball.insidesport.co/img/singleplayer/" + playerName + "1.jpg')";
+        newDiv.style.zIndex = (rosterItem.length + 1) - j
         newDiv.appendChild(newDescDiv)
-        rosterItem[j].appendChild(newDiv);
+        rosterItem[j].insertAdjacentElement('beforebegin', newDiv);
+        console.log('sdf')
     }
 }
 
