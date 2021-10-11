@@ -80,7 +80,14 @@
                     </div>
                     <div class="main-row">
                         <div id="your-roster">
-                            <h1>Your Team Roster:</h1>
+                            <h1>Your Team Roster: <span id="roster-display-options">
+                                <div class="roster-display-option active-display-option" onclick="toggleDisplayOption(0)">
+                                    <img src="icons/group.svg" alt="">
+                                </div>
+                                <div class="roster-display-option">
+                                    <img src="icons/details.svg" alt="" onclick="toggleDisplayOption(1)">
+                                </div>
+                            </span></h1>
                             <div id="roster-players">
                                 <div class="large-roster">
                                     <div class="roster-item"></div>

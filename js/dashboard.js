@@ -2,14 +2,22 @@ const sidebarLine = document.querySelectorAll('.sidebar-line');
 const friends = document.querySelectorAll('.navbar-friend');
 const dropdown = document.querySelectorAll('.dropdown')
 const rosterItem = document.querySelectorAll('.roster-item');
+const rosterDisplayOption = document.querySelectorAll('.roster-display-option')
 
 const players = ["TrentBoult", "KaneWilliamson", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle"]
 
 let activeSidebar = 0;
+let activeRosterOption = 0;
 
 function initialize(){
     initFriends();
     initRoster();
+}
+
+function toggleDisplayOption(number){
+    rosterDisplayOption[activeRosterOption].classList.remove('active-display-option')
+    rosterDisplayOption[number].classList.add('active-display-option')
+    activeRosterOption = number;
 }
 
 function toggleDropdown(number){

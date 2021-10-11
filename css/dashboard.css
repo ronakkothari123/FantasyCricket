@@ -304,6 +304,9 @@ body{
     margin:0;
     font-size:1.25vmax;
     font-weight:500;   
+    display:flex;
+    flex-direction:row;
+    align-items:center;
 }
 
 #roster-players{
@@ -405,4 +408,33 @@ body{
     transform:translateX(5vmax);
     margin:0;
     opacity:1;
+}
+
+#roster-display-options{
+    display:flex;
+    flex-direction:row;
+}
+
+.roster-display-option{
+    background-color: var(--background-1);
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    border:2px solid var(--border-color);
+    width:1.5vmax;
+    height:1.5vmax;
+    border-radius:0.5vmax;
+    margin-left:0.25vmax;
+    cursor:pointer;
+    transition-duration:250ms;
+}
+
+.active-display-option{
+    box-shadow:0 0 0.5vmax 0 black;
+}
+
+.roster-display-option > img{
+    width:1.25vmax;
+    filter:invert(1) brightness(calc(0.5));
 }
