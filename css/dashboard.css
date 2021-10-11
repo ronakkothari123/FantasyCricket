@@ -516,6 +516,13 @@ body{
     border:0.375vmax solid white;
 }
 
+.roster-variation-item:hover > .roster-desc{
+    transform:translateX(3vmax);
+    transition:transform 500ms ease-in-out 1s, opacity 500ms ease-in-out 1s;
+    margin:0;
+    opacity:1;
+}
+
 .roster-variation-para{
     left:0;
     top:0.75vmax;
