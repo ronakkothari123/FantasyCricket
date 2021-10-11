@@ -699,8 +699,12 @@ body{
 .fantasy-content{
     display:flex;
     flex-direction:row;
-    justify-content:space-around;
+    justify-content:center;
     align-items:center;
+    position:absolute;
+    bottom:1.5vmax;
+    opacity:1;
+    transition-duration:250ms;
 }
 
 .fantasy-content-picture{
@@ -716,10 +720,11 @@ body{
 .fantasy-content-text{
     width:21vmax;
     height:12.5vmax;
+    margin-left:1vmax;
 }
 
 .fantasy-content-text > h1{
-    font-size:2vmax;
+    font-size:1.75vmax;
     font-weight:900;
     margin:0;
 }
@@ -754,5 +759,5 @@ body{
 }
 
 .inactive-content{
-    display:none;
+    opacity:0;
 }
