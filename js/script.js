@@ -10,7 +10,7 @@ const contentPicture = document.querySelectorAll('.fantasy-content-picture');
 const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"];
 const players = ["KaneWilliamson", "TrentBoult", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle"];
 
-const commentTitle = ["Amazing Support", "Excellent Product", "Bundles of Fun", "Easy-To-Use", "Premium Version Please!", "Great Job Developers", "Please Sign Up!"]
+const commentTitle = ["Amazing Support", "Excellent Product", "Bundles of Fun", "Easy-To-Use", "Premium Version Please!", "Great Job Developers", "Please Sign Up!"];
 const commentDesc = [
     "There are a few problems as I am one of the first users of this product, but the support team is incredibly nice! A+ from me!",
     "I've looked long and hard for a Fantasy Cricket website, and this just topped all expectation. I will continue to use this all the time!",
@@ -19,7 +19,7 @@ const commentDesc = [
     "I need a Premium Version of this product. It is just so good, that I would love to pay money for an even better version of it!",
     "This website is so amazingly made. Everything from the frontend, to the algorithms, to the servers. Kudos to the Devs!",
     "To the one person reading this, please sign up to this service. It will be more fun if more people are playing! Don't think, just sign up!"
-]
+];
 
 var darkTheme = false;
 
