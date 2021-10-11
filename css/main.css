@@ -9,7 +9,7 @@
     --dark-color:#0f1318;
     --text-color:#000000;
     --background-1:#EAFAF1;
-    --background-2:#ffffff;
+    --background-2:#ffffffinstruction;
     --border-color:#cccccc;
     --accent-color:#2ECC71;
 }
@@ -626,7 +626,7 @@ body{
 }
 
 #fantasy-instructions-tab-div{
-    box-shadow:0 0 0 1vmax var(--dark-color);
+    box-shadow:0 0 0 1vmax black;
     width:40vmax;
     height:20vmax;
     margin-top:3vmax;
