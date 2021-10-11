@@ -10,6 +10,17 @@ const contentPicture = document.querySelectorAll('.fantasy-content-picture');
 const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"];
 const players = ["KaneWilliamson", "TrentBoult", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle"];
 
+const commentTitle = ["Amazing Support", "Excellent Product", "Bundles of Fun", "Easy-To-Use", "Premium Version Please!", "Great Job Developers", "Please Sign Up!"]
+const commentDesc = [
+    "There are a few problems as I am one of the first users of this product, but the support team is incredibly nice! A+ from me!",
+    "I've looked long and hard for a Fantasy Cricket website, and this just topped all expectation. I will continue to use this all the time!",
+    "I've been using this product for a while now and I found nothing wrong with it. This is an amazing product and it deserves more people using it!",
+    "This service has amazing developers for the service fee. The GUI and the instructions and the buttons makes it fun to use!",
+    "I need a Premium Version of this product. It is just so good, that I would love to pay money for an even better version of it!",
+    "This website is so amazingly made. Everything from the frontend, to the algorithms, to the servers. Kudos to the Devs!",
+    "To the one person reading this, please sign up to this service. It will be more fun if more people are playing! Don't think, just sign up!"
+]
+
 var darkTheme = false;
 
 function initialize(){
@@ -104,6 +115,15 @@ function initializeComments(){
     pfp.src = "./icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
 
     console.log(starDivs.length)
+    let randomComment = Math.trunc(Math.random() * commentTitle.length)
+    document.getElementById('comment-header-1').innerHTML = commentTitle[randomComment]
+    document.getElementById('comment-para-1').innerHTML = commentDesc[randomComment]
+
+    commentTitle.splice(randomComment, 1)
+    commentDesc.splice(randomComment, 1)
+    randomComment = Math.trunc(Math.random() * commentTitle.length)
+    document.getElementById('comment-header-2').innerHTML = commentTitle[randomComment]
+    document.getElementById('comment-para-2').innerHTML = commentDesc[randomComment]
 
     for(let k = 0; k < starDivs.length; k++){
         let starAmount = Math.trunc(Math.random()*2) + 4;
