@@ -8,7 +8,7 @@
 
 body{
     font-family:"Be Vietnam Pro", sans-serif;
-    background:var(--background-2);
+    background:var(--background-1);
     margin:0;
     overflow:hidden;
 }
@@ -63,6 +63,7 @@ body{
 
 .modal-text > img{
     width:5vw;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 .modal-text > h1{
@@ -78,6 +79,7 @@ body{
     font-weight:700;
     cursor:pointer;
     margin:0;
+    color:var(--text-color);
 }
 
 .modal-text > p{
@@ -105,6 +107,7 @@ form > input{
     border-radius:1vw;
     padding:1vh 1vw;
     font-size:1.75vh;
+    background:var(--background-1);
 }
 
 form > input:focus{
@@ -174,4 +177,14 @@ form > input:focus{
     border-radius:1vw;
     padding:1vh 1vw;
     font-size:1.75vh;
+    background:var(--background-1);
+}
+
+#theme-toggler{
+    position:absolute;
+    top:1vmax;
+    right:1vmax;
+    width:3vw;
+    z-index:3;
+    cursor:pointer;
 }
