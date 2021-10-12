@@ -202,3 +202,72 @@ form > input:focus{
     z-index:5;
     cursor:pointer;
 }
+
+@media(max-width:700px){
+    .modal-graphic-div{
+        display:none;
+    }
+
+    .modal{
+        background:var(--accent);
+    }
+
+    .modal-main{
+        width:50vw;
+        height:85vh;
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items:center;
+        background:var(--background-1);
+        border-radius:5vw;
+        box-shadow:0 0 1vw 0 var(--background-1);
+    }
+
+    .modal-text{
+        justify-content: center;
+        align-items:center;
+    }
+
+    .modal-text > img{
+        width:10vw;
+    }
+
+    .modal-text > h1{
+        text-align:center;
+        font-size:4vw;
+    }
+
+    .modal-text > p{
+        font-size:1.5vw;
+    }
+
+    form{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    form > input{
+        width:40vw;
+        text-align:center;
+    }
+
+    .action-para{
+        text-align:center;
+        font-size:1.5vw;
+    }
+
+    .submit-input{
+        width:40vw;
+        font-size:3vw;
+    }
+
+    #signup-password{
+        width:40vw;
+    }
+
+    #visibility-eye{
+        margin-left:-5vw;;
+    }
+}

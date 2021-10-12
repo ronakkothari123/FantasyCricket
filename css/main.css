@@ -761,3 +761,13 @@ body{
 .inactive-content{
     opacity:0;
 }
+
+.footer-column{
+
+}
+
+.footer-column > h1{
+    font-size:2vmax;
+    font-weight:300;
+    margin:0;
+}
