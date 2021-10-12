@@ -178,7 +178,7 @@ form > input:focus{
     margin-left:1vw;
     outline:none;
     border:1px solid var(--border-color);
-    color:gray;
+    color:var(--text-color);
     width:18vw;
     height:2vh;
     border-radius:1vw;
