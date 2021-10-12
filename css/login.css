@@ -11,6 +11,7 @@ body{
     background:var(--background-1);
     margin:0;
     overflow:hidden;
+    transition-duration:250ms;
 }
 
 .accent{
@@ -64,6 +65,7 @@ body{
 .modal-text > img{
     width:5vw;
     filter:invert(1) brightness(var(--icon-brightness));
+    transition-duration:250ms;
 }
 
 .modal-text > h1{
@@ -72,6 +74,7 @@ body{
     margin:0;
     color:var(--text-color);
     margin-top:4vh;
+    transition-duration:250ms;
 }
 
 .action-para{
@@ -80,6 +83,7 @@ body{
     cursor:pointer;
     margin:0;
     color:var(--text-color);
+    transition-duration:250ms;
 }
 
 .modal-text > p{
@@ -108,6 +112,7 @@ form > input{
     padding:1vh 1vw;
     font-size:1.75vh;
     background:var(--background-1);
+    transition-duration:250ms;
 }
 
 form > input:focus{
@@ -123,6 +128,7 @@ form > input:focus{
     background:var(--accent);
     color:var(--text-color);
     cursor:pointer;
+    transition-duration:250ms;
 }
 
 .modal-graphic-div{
@@ -143,6 +149,7 @@ form > input:focus{
     background:var(--background-1);
     left:-4vw;
     border-radius:4vw;
+    transition-duration:250ms;
 }
 
 #sign-up-form{
