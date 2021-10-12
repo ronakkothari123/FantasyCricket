@@ -25,7 +25,7 @@ const main = async () => {
     app.listen(PORT, () => console.log(`Alive on  http://localhost:${PORT}`));
 
     app.use(express.json());
-    app.use("/users", userRouter);
+    app.use("/user", userRouter);
 
     // Testing
     // const user = Context.em.create(User, { name: "Ronak", password: "Ronak" });
