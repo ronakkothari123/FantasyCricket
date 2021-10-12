@@ -148,8 +148,8 @@ function setCharAt(str,index,chr) {
 }
 
 function createCalendarNode(startTime, calendarItem, day, color){
-    let newDiv = document.createElement('div')
-    newDiv.classList.add('calendar-node')
+    let newDiv = document.createElement('div');
+    newDiv.classList.add('calendar-node');
     newDiv.style.top = (startTime - 2) * 2.5 + "vmax"
     newDiv.style.left = 7.13 * (day) + 7 + "vmax"
     newDiv.style.background = color;
