@@ -23,7 +23,7 @@ const main = async () => {
     await orm.getMigrator().up();
     app.listen(PORT, () => console.log(`Alive on  http://localhost:${PORT}`));
     app.use(express_1.default.json());
-    app.use("/users", user_1.default);
+    app.use("/user", user_1.default);
     app.get("/", (_, res) => {
         res.send("Hello, World");
     });
