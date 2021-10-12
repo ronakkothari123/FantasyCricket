@@ -1,0 +1,177 @@
+:root{
+    --icon-brightness:1;
+    --text-color:#000000;
+    --background-1:#ffffff;
+    --border-color:#cccccc;
+    --accent:#2ECC71;
+}
+
+body{
+    font-family:"Be Vietnam Pro", sans-serif;
+    background:var(--background-2);
+    margin:0;
+    overflow:hidden;
+}
+
+.accent{
+    color:var(--accent);
+    cursor:pointer;
+}
+
+#wrapper{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+.modal{
+    width:100vw;
+    height:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition-duration:250ms;
+    z-index:0;
+}
+
+.active-modal{
+    height:100vw;
+    opacity:1;
+    z-index:1
+}
+
+.modal-main{
+    width:50vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-text{
+    width:35vw;
+    height:75vh;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.modal-text > img{
+    width:5vw;
+}
+
+.modal-text > h1{
+    font-size:3vw;
+    font-weight:900;
+    margin:0;
+    color:var(--text-color);
+    margin-top:4vh;
+}
+
+.action-para{
+    font-size:0.75vw;
+    font-weight:700;
+    cursor:pointer;
+    margin:0;
+}
+
+.modal-text > p{
+    font-size:0.75vw;
+    color:gray;
+    margin:0;
+}
+
+form{
+    margin:5vh 0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-between;
+    height:25vh;
+}
+
+form > input{
+    margin-left:1vw;
+    outline:none;
+    border:1px solid var(--border-color);
+    color:gray;
+    width:18vw;
+    height:2vh;
+    border-radius:1vw;
+    padding:1vh 1vw;
+    font-size:1.75vh;
+}
+
+form > input:focus{
+    border: 1px solid var(--accent)
+}
+
+.submit-input {
+    width:10vw;
+    height:5vh;
+    outline:none;
+    border:none;
+    font-size:1vw;
+    background:var(--accent);
+    color:var(--text-color);
+    cursor:pointer;
+}
+
+.modal-graphic-div{
+    width:50vw;
+    height:100vh;
+    background:var(--accent);
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+.transition{
+    position:absolute;
+    width:8vw;
+    height:40vh;
+    background:var(--background-1);
+    left:-4vw;
+    border-radius:4vw;
+}
+
+#sign-up-form{
+    height:50vh;
+    position:relative;
+}
+
+#sign-up-main{
+    height:80vh;
+}
+
+#password-thing{
+    display:flex;
+    flex-direction:row;
+    align-items:center
+}
+
+#visibility-eye{
+    filter:invert(1) brightness(0.5);
+    width:3vh;
+    cursor:pointer;
+    margin-left:-2vw;
+}
+
+#signup-password{
+    margin-left:1vw;
+    outline:none;
+    border:1px solid var(--border-color);
+    color:gray;
+    width:18vw;
+    height:2vh;
+    border-radius:1vw;
+    padding:1vh 1vw;
+    font-size:1.75vh;
+}
