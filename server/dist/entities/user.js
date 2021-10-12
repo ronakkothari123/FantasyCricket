@@ -22,19 +22,19 @@ __decorate([
     __metadata("design:type", Number)
 ], User.prototype, "id", void 0);
 __decorate([
-    core_1.Property(),
+    core_1.Property({ type: "date" }),
     __metadata("design:type", Object)
 ], User.prototype, "createdAt", void 0);
 __decorate([
-    core_1.Property({ onUpdate: () => new Date() }),
+    core_1.Property({ onUpdate: () => new Date(), type: "date" }),
     __metadata("design:type", Object)
 ], User.prototype, "updatedAt", void 0);
 __decorate([
-    core_1.Property(),
+    core_1.Property({ type: "text" }),
     __metadata("design:type", String)
 ], User.prototype, "name", void 0);
 __decorate([
-    core_1.Property(),
+    core_1.Property({ type: "text" }),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 User = __decorate([

@@ -5,15 +5,15 @@ export class User {
     @PrimaryKey()
     id!: number;
 
-    @Property()
+    @Property({ type: "date" })
     createdAt = new Date();
 
-    @Property({ onUpdate: () => new Date() })
+    @Property({ onUpdate: () => new Date(), type: "date" })
     updatedAt = new Date();
 
-    @Property()
+    @Property({ type: "text" })
     name: string;
 
-    @Property()
+    @Property({ type: "text" })
     password: string;
 }

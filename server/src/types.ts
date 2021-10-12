@@ -1,4 +1,5 @@
-export interface MyConfig {
-    user: string | undefined;
-    password: string | undefined;
+import { IDatabaseDriver, Connection, EntityManager } from "@mikro-orm/core";
+
+export interface MyContext {
+    em: EntityManager<IDatabaseDriver<Connection>> | undefined;
 }

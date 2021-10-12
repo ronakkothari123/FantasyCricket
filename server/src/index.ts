@@ -3,24 +3,32 @@ import { MikroORM } from "@mikro-orm/core";
 import mikroOrmConfig from "./mikro-orm.config";
 import "reflect-metadata";
 import dotenv from "dotenv";
+import { MyContext } from "./types";
+import userRouter from "./routers/user";
 
 dotenv.config();
 const app = express();
 const PORT = 5000;
 
-const main = async () => {
-    mikroOrmConfig.user = process.env.PG_USER;
-    mikroOrmConfig.password = process.env.PG_PASSWORD;
+export const Context: MyContext = {
+    em: undefined,
+};
 
-    const orm = await MikroORM.init(
-        mikroOrmConfig as Parameters<typeof MikroORM.init>[0]
-    );
+const main = async () => {
+    const orm = await MikroORM.init(mikroOrmConfig);
     console.log(process.env.PG_USER);
+
+    Context.em = orm.em;
+
     await orm.getMigrator().up();
 
     app.listen(PORT, () => console.log(`Alive on  http://localhost:${PORT}`));
 
     app.use(express.json());
+    app.use("/users", userRouter);
+
+    // Testing
+    // const user = Context.em.create(User, { name: "Ronak", password: "Ronak" });
 
     app.get("/", (_, res) => {
         res.send("Hello, World");
