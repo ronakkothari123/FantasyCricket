@@ -83,7 +83,7 @@
                         <div id="dashboard-upcoming-events">
                             <h2>Upcoming Events:</h2>
                             <h6>You have <span class="bold">4 upcoming events</span> to see. <span class="bold" onclick="toggleSidebar(2)" style="cursor:pointer;">View Calendar</span>.</h6>
-                            <div class="dashboard-event">
+                            <div class="dashboard-event" style="--event-color:#2980B9;">
                                 <div class="dashboard-event-color"></div>
                                 <div class="dashboard-event-time">7:00 A.M. - 1:00 P.M</div>
                                 <div class="dashboard-event-dots">...</div>
@@ -141,6 +141,57 @@
                 <div class="main-content inactive-main-content" id="calendar-content">
                     <h1>Your Personal Calendar</h1>
                     <h6>You have <span class="bold">4 upcoming events</span> to see!</h6>
+                    <div id="calendar-div">
+                        <div id="upcoming-events-div">
+                            <div class="upcoming-event" style="--event-color:#2980B9;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">7:00 A.M. - 11:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Delhi vs. Kolkata</h1>
+                                <p>Delhi Capitals vs. Kolkata Knight Riders Playoffs Match</p>
+                            </div>
+                            <div class="upcoming-event" style="--event-color:#2980B9;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">7:00 A.M. - 11:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Winner vs. Chennai</h1>
+                                <p>Winning Team vs. Chennai Super Kings IPL Finals</p>
+                            </div>
+                            <div class="upcoming-event" style="--event-color:#EC7063;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">3:00 A.M. - 7:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Oman vs. Papua New Guinea</h1>
+                                <p>Oman Cricket Team vs. Papua New Guinea Team T20WC</p>
+                            </div>
+                            <div class="upcoming-event" style="--event-color:#EC7063;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">7:00 A.M. - 11:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Bangladesh vs. Scotland</h1>
+                                <p>Bangladesh Cricket Team vs. Scotland Cricket Team T20WC</p>
+                            </div>
+                            <div class="upcoming-event" style="--event-color:#EC7063;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">3:00 A.M. - 7:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Ireland vs. Netherlands</h1>
+                                <p>Ireland Cricket Team vs. Netherlands Cricket Team T20WC</p>
+                            </div>
+                        </div>
+                        <div id="calendar">
+                            <div id="calendar-week">
+                                <div class="calendar-week">Sunday</div>
+                                <div class="calendar-week">Monday</div>
+                                <div class="calendar-week">Tuesday</div>
+                                <div class="calendar-week">Wednesday</div>
+                                <div class="calendar-week">Thursday</div>
+                                <div class="calendar-week">Friday</div>
+                                <div class="calendar-week">Saturday</div>
+                            </div>
+                            <div id="calendar-times"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="main-content inactive-main-content" id="message-content">
                     

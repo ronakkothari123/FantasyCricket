@@ -14,6 +14,9 @@
     --accent-color:#2ECC71;
     --friend-background:#109028;
     --icon-brightness:0;
+
+    --event-color:#123456;
+    --calendar-background:#654321;
 }
 
 body{
@@ -547,13 +550,13 @@ body{
     margin-top:1vmax;
 }
 
-.dashboard-event > h1{
+.dashboard-event > h1, .upcoming-event > h1{
     font-size:1.125vmax;
     font-weight:700;
     margin:0;
 }
 
-.dashboard-event > p{
+.dashboard-event > p, .upcoming-event > p{
     font-size:0.75vmax;
     font-weight:400;
     margin:0;
@@ -565,7 +568,7 @@ body{
     position:absolute;
     top:1vmax;
     left:1vmax;
-    background:var(--green);
+    background:var(--event-color);
     border-radius:0.375vmax;
 }
 
@@ -588,4 +591,103 @@ body{
     letter-spacing:0.1vmax;
     cursor:pointer;
     color:gray;
+}
+
+.upcoming-event{
+    background:var(--background-2);
+    width:23vmax;
+    height:4vmax;
+    position:relative;
+    padding: 1vmax;
+    border-radius:1vmax;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-end;
+}
+
+#calendar-div{
+    display:flex;
+    flex-direction:row;
+    margin-top:1.5vmax;
+}
+
+#upcoming-events-div{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--background-1);
+    width:25vmax;
+    height:34vmax;
+    padding:1vmax;
+    border-radius:2vmax;
+}
+
+#calendar{
+    width:58vmax;
+    height:34vmax;
+    border:1vmax solid var(--background-1);
+    background:var(--background-2);
+    margin-left:1vmax;
+    border-radius:2vmax;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    position:relative;
+}
+
+#calendar-week{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    margin-top:1vmax;
+    width:50vmax;
+    margin-right:1vmax;
+}
+
+.calendar-week{
+    width:7vmax;
+    background:var(--background-1);
+    text-align:center;
+    border-radius:1vmax;
+    font-size:0.75vmax;
+}
+
+#calendar-times{
+    position:absolute;
+    top:2vmax;
+    left:1vmax;
+    height:31vmax;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+}
+
+#calendar-times > div{
+    width:5.5vmax;
+    font-size:0.75vmax;
+    background:var(--background-1);
+    text-align:center;
+    border-radius:1vmax;
+}
+
+.calendar-node{
+    background:var(--calendar-background);
+    width:5vmax;
+    height:8.5vmax;
+    padding:1vmax;
+    position:absolute;
+    top:5vmax;
+    left:14vmax;
+    border-radius:1vmax;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:0.8vmax;
+    font-weight:700;
 }

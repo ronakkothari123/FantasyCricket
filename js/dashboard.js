@@ -21,6 +21,24 @@ let activeRosterOption = 0;
 function initialize(){
     initFriends();
     initRoster();
+    initTimetable();
+}
+
+function initTimetable(){
+
+    let time = " A.M."
+    let timeNumber = 3;
+
+    for(let i = 3; i < 16; i++){
+        let newDiv = document.createElement('div');
+        if(timeNumber > 12){
+            time = " P.M."
+            timeNumber = 1;
+        }
+        newDiv.appendChild(document.createTextNode(timeNumber + ":00" + time))
+        document.getElementById('calendar-times').appendChild(newDiv)
+        timeNumber += 1;
+    }
 }
 
 function toggleDisplayOption(number){
@@ -128,5 +146,19 @@ function setCharAt(str,index,chr) {
     if(index > str.length-1) return str;
     return str.substring(0,index) + chr + str.substring(index+1);
 }
+
+function createCalendarNode(startTime, calendarItem, day, color){
+    let newDiv = document.createElement('div')
+    newDiv.classList.add('calendar-node')
+    newDiv.style.top = (startTime - 2) * 2.5 + "vmax"
+    newDiv.style.left = 7.13 * (day) + 7 + "vmax"
+    newDiv.style.background = color;
+    newDiv.appendChild(document.createTextNode(calendarItem))
+    document.getElementById('calendar').appendChild(newDiv)
+}
+
+createCalendarNode(7, "Bangalore vs. Kolkata", 1, "#2980B9")
+createCalendarNode(7, "Delhi vs. Kolkata", 3, "#2980B9")
+createCalendarNode(7, "TBD vs. Chennai", 6, "#2980B9")
 
 initialize()
