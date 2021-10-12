@@ -5,8 +5,8 @@ let passwordVisiblity = false;
 let darkTheme = false;
 
 function toggleModal(number){
-    modals[activeModal].classList.remove('active-modal')
-    modals[number].classList.add('active-modal')
+    modals[activeModal].classList.remove('active-modal');
+    modals[number].classList.add('active-modal');
 
     activeModal = number;
 }
