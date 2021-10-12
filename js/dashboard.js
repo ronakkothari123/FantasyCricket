@@ -22,6 +22,19 @@ function initialize(){
     initFriends();
     initRoster();
     initTimetable();
+    initCalendar();
+}
+
+function initCalendar(){
+    let today = new Date();
+    let date = today.getDate();
+
+    date -= today.getDay();
+    date /= 10;
+
+    for(let i = 0; i < calendarWeek.length; i++){
+        calendarWeek[i].innerHTML += ' - ' + date + i;
+    }
 }
 
 function initTimetable(){
@@ -149,14 +162,18 @@ function setCharAt(str,index,chr) {
 
 function createCalendarNode(startTime, calendarItem, day, color){
     let newDiv = document.createElement('div');
+    let newDivColor = document.createElement('div');
     newDiv.classList.add('calendar-node');
     newDiv.style.top = (startTime - 2) * 2.5 + "vmax"
     newDiv.style.left = 7.13 * (day) + 7 + "vmax"
-    newDiv.style.background = color;
+    newDivColor.style.background = color;
+    newDivColor.classList.add('new-div-color');
     newDiv.appendChild(document.createTextNode(calendarItem))
+    newDiv.appendChild(newDivColor);
     document.getElementById('calendar').appendChild(newDiv)
 }
 
+createCalendarNode(7, "Delhi vs. Chennai", 0, "#2980B9")
 createCalendarNode(7, "Bangalore vs. Kolkata", 1, "#2980B9")
 createCalendarNode(7, "Delhi vs. Kolkata", 3, "#2980B9")
 createCalendarNode(7, "TBD vs. Chennai", 6, "#2980B9")

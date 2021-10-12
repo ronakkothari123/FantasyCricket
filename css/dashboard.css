@@ -16,7 +16,6 @@
     --icon-brightness:0;
 
     --event-color:#123456;
-    --calendar-background:#654321;
 }
 
 body{
@@ -675,7 +674,7 @@ body{
 }
 
 .calendar-node{
-    background:var(--calendar-background);
+    background:var(--background-1);
     width:5vmax;
     height:8.5vmax;
     padding:1vmax;
@@ -684,10 +683,17 @@ body{
     left:14vmax;
     border-radius:1vmax;
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
     font-size:0.8vmax;
     font-weight:700;
+}
+
+.new-div-color{
+    width:1vw;
+    height:1vw;
+    border-radius:0.5vw;
+    margin-top:3vh;
 }

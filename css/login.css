@@ -164,7 +164,8 @@ form > input:focus{
 #password-thing{
     display:flex;
     flex-direction:row;
-    align-items:center
+    align-items:center;
+    transition-duration:250ms;
 }
 
 #visibility-eye{
@@ -185,6 +186,7 @@ form > input:focus{
     padding:1vh 1vw;
     font-size:1.75vh;
     background:var(--background-1);
+    transition-duration:250ms;
 }
 
 #theme-toggler{
