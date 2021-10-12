@@ -8,7 +8,7 @@
 
 body{
     font-family:"Be Vietnam Pro", sans-serif;
-    background:var(--background-1);
+    background:linear-gradient(90deg, var(--background-1) 50%, var(--accent) 5%);
     margin:0;
     overflow:hidden;
     transition-duration:250ms;
@@ -28,20 +28,25 @@ body{
 
 .modal{
     width:100vw;
-    height:0;
+    height:100vh;
     display:flex;
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    opacity:0;
-    transition-duration:250ms;
+    transition-duration:500ms;
     z-index:0;
+    overflow-y:hidden;
+    background:var(--background-1);
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
 }
 
 .active-modal{
-    height:100vw;
+    height:100vh;
+    z-index:3;
     opacity:1;
-    z-index:1
 }
 
 .modal-main{
@@ -194,6 +199,6 @@ form > input:focus{
     top:1vmax;
     right:1vmax;
     width:3vw;
-    z-index:3;
+    z-index:5;
     cursor:pointer;
 }
