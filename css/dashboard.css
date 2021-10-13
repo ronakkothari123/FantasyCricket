@@ -403,7 +403,7 @@ body{
     border-radius:2.5vmax;
     cursor:pointer;
     filter:grayscale(1);
-    transition:transform 500ms;
+    transition:transform 500ms, filter 500ms;
     width:4vmax;
     height:4vmax;
     border:0.5vmax solid var(--background-1);
