@@ -243,7 +243,7 @@ body{
     transition-duration:250ms;
 }
 
-.main-content > h1{
+.main-content > h1, #your-team > h1, .main-content-button-div-header > h1, #profile-desc > h1{
     margin:0;
     font-size:1.5vmax;
     font-weight:500;
@@ -257,7 +257,7 @@ body{
     color:var(--text-color);
 }
 
-.main-content > h6, #dashboard-upcoming-events > h6 {
+.main-content > h6, #your-team > h6, #dashboard-upcoming-events > h6, .main-content-button-div-header > h6, #profile-desc > h6 {
     margin:0.25vmax 0;
     color:gray;
     font-size:0.75vmax;
@@ -696,4 +696,199 @@ body{
     height:1vw;
     border-radius:0.5vw;
     margin-top:3vh;
+}
+
+.main-content-button-div{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.main-content-button-div-div{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    margin-left:1vmax;
+}
+
+.content-btn-2{
+    width:3vmax;
+    height:3vmax;
+    margin:0.5vmax;
+    border-radius:1.25vmax;
+    background:var(--background-1);
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition-duration:250ms;
+}
+
+.content-btn-2 > img{
+    width:2vmax;
+}
+
+#settings-modal{
+    position:absolute;
+    top:4vmax;
+    right:1.5vmax;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    background:var(--background-1);
+    padding:0.5vmax;
+    border-radius:1vmax;
+    transition-duration:250ms;
+    z-index:10;
+}
+
+#settings-modal > img{
+    margin:0 auto;
+    width:1.5vmax;
+    margin-top:0.5vmax;
+}
+
+.setting{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    font-size:0.75vmax;
+    z-index:15;
+    cursor:pointer;
+}
+
+.setting > p{
+    margin:0;
+}
+
+.setting > img{
+    width:1.25vmax;
+    margin-right:0.5vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
+}
+
+#pfp-div{
+    display:none;
+}
+
+#profile-banner{
+    width:75vmax;
+    height:12.5vmax;
+    border-radius:2vmax;
+    position:relative;
+}
+
+#profile-picture-div{
+    width:15vmax;
+    height:15vmax;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    border-radius:7.5vmax;
+    position:absolute;
+    top:-5vmax;
+    left:5vmax;
+    background:var(--background-1);
+}
+
+#profile-picture{
+    width:12.5vmax;
+    border-radius:6.25vmax;
+}
+
+.no-display{
+    opacity:0;
+}
+
+.yes-display{
+    opacity:1;
+}
+
+#profile-desc > h1{
+    font-size:1.5vmax;
+}
+
+#profile-background-pattern{
+    width:75vmax;
+    height:12.5vmax;
+    border-radius:2vmax;
+    margin-top:5vmax;
+    background-image:url('https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble.png');
+}
+
+#profile-desc > * {
+    text-align:center;
+}
+
+#profile-desc{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:20vmax;
+    margin-left:2.5vmax;
+    margin-top:1vmax;
+    position:relative;
+}
+
+#profile-desc > button{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+    width:15vmax;
+    height:2vmax;
+    margin:0.5vmax 0;
+    background:var(--background-1);
+    outline:none;
+    border:none;
+    border-radius:0.5vmax;
+    cursor:pointer;
+    z-index:20;
+    transition-duration:50ms;
+}
+
+#profile-desc > button > p{
+    font-size:1vmax;
+    margin:0;
+    font-weight:500;
+}
+
+#profile-desc > button > img{
+    margin-right:0.25vmax;
+    width:1.25vmax;
+}
+
+#profile-desc > button:active{
+    box-shadow: 0 0 0.5vmax 0 var(--text-color) inset;
+}
+
+.profile-desc-picture-text-div{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+}
+
+.profile-desc-picture-text-div > p{
+    margin:0.25vmax 0;
+    color:gray;
+    font-size:0.75vmax;
+    font-weight:400;
+}
+
+.profile-desc-picture-text-div > img{
+    filter:invert(1) brightness(0.5);
+    width:1.25vmax;
+    margin-right:0.25vmax;
+}
+
+#your-team{
+    position:absolute;
+    top:0;
+    right:-15vmax;
 }

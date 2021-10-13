@@ -10,19 +10,41 @@ const largeRoster = document.querySelectorAll('.large-roster')
 const mediumRoster = document.querySelectorAll('.medium-roster')
 const smallRoster = document.querySelectorAll('.small-roster')
 const rosterPara = document.querySelectorAll('.roster-para')
+const calendarWeek = document.querySelectorAll('.calendar-week')
 
 const players = ["TrentBoult", "KaneWilliamson", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle", "YuzvendraChahal", "ShahrukhKhan", "RavindraJadeja", "DavidWarner", "RishabhPant", "JasonRoy", "YashasviJaiswal", "MoeenAli", "PrithviShaw"]
-const pageType = ["Dashboard", "Players", "Calendar", "Messages", "Notifications"]
-const navbarInputValue = ["","","","",""]
+const pageType = ["Dashboard", "Players", "Calendar", "Messages", "Notifications", "Your Profile"]
+const navbarInputValue = ["","","","","",""]
+const patterns = [
+    "https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble.png",
+    "https://www.toptal.com/designers/subtlepatterns/patterns/moroccan-flower.png",
+    "https://www.toptal.com/designers/subtlepatterns/patterns/y-so-serious-white.png",
+    "https://www.toptal.com/designers/subtlepatterns/patterns/geometric-leaves.png",
+    "https://www.toptal.com/designers/subtlepatterns/patterns/webb.png"
+]
+
+const profileBanner = document.getElementById('profile-banner');
 
 let activeSidebar = 0;
 let activeRosterOption = 0;
+let settingsModalActive = false;
 
 function initialize(){
     initFriends();
     initRoster();
     initTimetable();
     initCalendar();
+}
+
+function toggleSettings(){
+    settingsModalActive = !settingsModalActive;
+    if(settingsModalActive){
+        document.getElementById('settings-modal').classList.remove('no-display')
+        document.getElementById('settings-modal').classList.add('yes-display')
+    } else {
+        document.getElementById('settings-modal').classList.add('no-display')
+        document.getElementById('settings-modal').classList.remove('yes-display')
+    }
 }
 
 function initCalendar(){
@@ -52,6 +74,11 @@ function initTimetable(){
         document.getElementById('calendar-times').appendChild(newDiv)
         timeNumber += 1;
     }
+
+    let profileColor = "";
+    profileColor = profileBanner.style.background;
+    profileBanner.style.background = 'rgba(' + profileColor.slice(4,profileColor.length-1) + ', 0.5)';
+    document.getElementById('profile-background-pattern').style.backgroundImage = 'url(' + patterns[Math.trunc(Math.random() * patterns.length)] + ')'
 }
 
 function toggleDisplayOption(number){

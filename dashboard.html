@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
+    <div id="settings-modal" class="no-display"">
+        <div class="setting" onclick="toggleSidebar(5); toggleSettings()">
+            <img src="icons/user.svg" alt="">
+            <p>Your Profile</p>
+        </div>
+        <div class="setting">
+            <img src="icons/darkinactive.svg" alt="">
+            <p>Theme</p>
+        </div>
+    </div>
     <div id="wrapper">
         <div id="sidebar">
             <img src="icons/cricket.svg" alt="" class="sidebar-img" id="cricket-img" onclick="toggleSidebar(0)">
@@ -40,6 +50,11 @@
                 <p class="notif-p">13</p>
                 <div class="sidebar-line inactive-line"></div>
             </div>
+            <div class="notification-div" id="pfp-div">
+                <img src="icons/user.svg" alt="" class="sidebar-img" onclick="toggleSidebar(5)">
+                <p class="notif-p">13</p>
+                <div class="sidebar-line inactive-line"></div>
+            </div>
             <img src="icons/logout.svg" alt="" class="sidebar-img" id="logout-img" onclick="window.location.replace('index.html');">
         </div>
         <div id="main-div">
@@ -61,7 +76,7 @@
                         <img src="icons/friends.svg" alt="">
                     </div>
                     <div id="settings-btn">
-                        <img src="icons/settings.svg" alt="">
+                        <img src="icons/settings.svg" alt="" onclick="toggleSettings()">
                     </div>
                 </div>
             </div>
@@ -139,8 +154,18 @@
                     
                 </div>
                 <div class="main-content inactive-main-content" id="calendar-content">
-                    <h1>Your Personal Calendar</h1>
-                    <h6>You have <span class="bold">4 upcoming events</span> to see!</h6>
+                    <div class="main-content-button-div">
+                        <div class="main-content-button-div-header">
+                            <h1>Your Personal Calendar</h1>
+                            <h6>You have <span class="bold">4 upcoming events</span> to see!</h6>
+                        </div>
+                        <div class="main-content-button-div-div">
+                            <div class="content-btn-2" onclick="toggleSidebar(0)"><img src="icons/dashboard.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn-2" onclick="toggleSidebar(2)"><img src="icons/calendar.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn-2" onclick="toggleSidebar(3)"><img src="icons/message.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn-2" onclick="toggleSidebar(4)"><img src="icons/notifs.svg" alt="" class="content-btn-img"></div>
+                        </div>
+                    </div>
                     <div id="calendar-div">
                         <div id="upcoming-events-div">
                             <div class="upcoming-event" style="--event-color:#2980B9;">
@@ -198,6 +223,37 @@
                 </div>
                 <div class="main-content inactive-main-content" id="notifications-content">
                     
+                </div>
+                <div class="main-content inactive-main-content" id="profile-content">
+                    <div id="profile-background-pattern">
+                        <div id="profile-banner" style="background:#bdeffc;">
+                            <div id="profile-picture-div">
+                                <img src="icons/avatars/12.svg" alt="" id="profile-picture">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile-desc">
+                        <h1>Ronak's Profile</h1>
+                        <h6>Username: <span class="bold">ronakkothari123</span></h6>
+                        <h6>Creation Date: <span class="bold">October 6th, 2021</span></h6>
+                        <h6>I am a Washington based Cricket Enthusiast that enjoys playing Fantasy Cricket and looking to make friends using this amazing app. The developers of this app are so handsome.</h6>
+                        <button>
+                            <img src="icons/edit.svg" alt="">
+                            <p>Edit Profile</p>
+                        </button>
+                        <div class="profile-desc-picture-text-div">
+                            <img src="icons/location.svg" alt="">
+                            <p>Sammamish, Washington</p>
+                        </div>
+                        <div class="profile-desc-picture-text-div">
+                            <img src="icons/email.svg" alt="">
+                            <p>rk.ronakjkothari@gmail.com</p>
+                        </div>
+                        <div id="your-team">
+                            <h1>Your Fantasy Team:</h1>
+                            <h6><span class="bold">League: </span>T20 World Cup</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
