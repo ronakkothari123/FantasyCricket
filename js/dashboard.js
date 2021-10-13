@@ -35,6 +35,9 @@ function initialize(){
     initRoster();
     initTimetable();
     initCalendar();
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        toggleTheme();
+    }
 }
 
 function toggleTheme(){
