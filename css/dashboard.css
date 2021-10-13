@@ -424,7 +424,7 @@ body{
 
 .roster-desc{
     position:absolute;
-    background:white;
+    background:var(--background-1);
     border-radius:1vmax;
     transform:translateX(-1vmax);
     width:8vmax;
