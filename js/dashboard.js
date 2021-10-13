@@ -28,12 +28,32 @@ const profileBanner = document.getElementById('profile-banner');
 let activeSidebar = 0;
 let activeRosterOption = 0;
 let settingsModalActive = false;
+let darkTheme = false;
 
 function initialize(){
     initFriends();
     initRoster();
     initTimetable();
     initCalendar();
+}
+
+function toggleTheme(){
+    darkTheme = !darkTheme;
+    if(darkTheme){
+        document.querySelector(':root').style.setProperty('--text-color', 'white');
+        document.querySelector(':root').style.setProperty('--background-1', '#1b2028');
+        document.querySelector(':root').style.setProperty('--background-2', '#171a1f');
+        document.querySelector(':root').style.setProperty('--border-color', '#171a1f');
+        document.querySelector(':root').style.setProperty('--icon-brightness', 1);
+        document.getElementById('setting-img').src = "./icons/darkactive.svg"
+    } else {
+        document.querySelector(':root').style.setProperty('--text-color', 'black');
+        document.querySelector(':root').style.setProperty('--background-1', '#ffffff');
+        document.querySelector(':root').style.setProperty('--background-2', '#f1f1f1');
+        document.querySelector(':root').style.setProperty('--border-color', '#cccccc');
+        document.querySelector(':root').style.setProperty('--icon-brightness', 0);
+        document.getElementById('setting-img').src = "./icons/darkinactive.svg"
+    }
 }
 
 function toggleSettings(){

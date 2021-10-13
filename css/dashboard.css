@@ -23,6 +23,7 @@ body{
     background:var(--background-2);
     margin:0;
     overflow:hidden;
+    color:var(--text-color);
 }
 
 #wrapper{
@@ -134,6 +135,7 @@ body{
     font-size:0.8vmax;
     width:10vw;
     color:gray;
+    background:transparent;
 }
 
 .navbar-input > img{
@@ -171,6 +173,7 @@ body{
     width:2vmax;
     cursor:pointer;
     transition-duration:250ms;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 .active-dropdown{
@@ -226,7 +229,7 @@ body{
 }
 
 #add-friend-btn > img{
-    filter:invert(1) brightness(calc(1 - var(--icon-brightness)));
+    filter:invert(1) brightness(1);
     width:1.25vw;
 }
 
@@ -265,7 +268,7 @@ body{
 }
 
 .bold{
-    color:black;
+    color:var(--text-color);
     font-weight:700;
 }
 
@@ -856,15 +859,17 @@ body{
     font-size:1vmax;
     margin:0;
     font-weight:500;
+    color:var(--text-color);
 }
 
 #profile-desc > button > img{
     margin-right:0.25vmax;
     width:1.25vmax;
+    filter:invert(1) brightness(var(--icon-brightness));
 }
 
 #profile-desc > button:active{
-    box-shadow: 0 0 0.5vmax 0 var(--text-color) inset;
+    box-shadow: 0 0 0.5vmax 0 black inset;
 }
 
 .profile-desc-picture-text-div{
