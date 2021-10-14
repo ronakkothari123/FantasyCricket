@@ -33,7 +33,7 @@ body{
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    transition-duration:500ms;
+    transition-duration:250ms;
     z-index:0;
     overflow-y:hidden;
     background:var(--background-1);
