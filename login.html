@@ -43,12 +43,18 @@
                     <h1>Sign up to Join the <span class="accent">Fantasy League</span>!</h1>
                     <p>Please login to access your private dashboard</p>
                     <form action="" id="sign-up-form">
-                        <input type="text" id="signup-username" placeholder="Username">
+                        <div id="username-thing">
+                            <input type="text" id="signup-username" placeholder="Username" oninput="checkInputValue()">
+                            <p id="username-characters">15</p>
+                        </div>
                         <div id="password-thing">
                             <input type="password" id="signup-password" placeholder="Password">
                             <img src="icons/eye_off.svg" alt="" id="visibility-eye" onclick="togglePassword()">
                         </div>
-                        <input type="email" placeholder="Email Address">
+                        <div id="email-thing">
+                            <input type="email" placeholder="Email Address" id="signup-email">
+                            <div id="email-confirm-div"></div>
+                        </div>
                         <input type="name" placeholder="Full Real Name">
                         <p class="action-para">Forgot Password?</p>
                         <input type="submit" class="submit-input">

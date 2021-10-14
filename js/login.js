@@ -1,6 +1,7 @@
 const modals = document.querySelectorAll('.modal');
 
 let activeModal = 0;
+let characterLimit = 20;
 let passwordVisiblity = false;
 let darkTheme = false;
 
@@ -9,6 +10,22 @@ function toggleModal(number){
     modals[number].classList.add('active-modal');
 
     activeModal = number;
+}
+
+function checkInputValue(){
+    const username = document.getElementById('signup-username')
+    const limitp = document.getElementById('username-characters')
+
+    if(username.value.length > characterLimit || username.value.includes(" ")){
+        username.value = username.value.substring(0, username.value.length - 1)
+    }
+
+    limitp.innerHTML = characterLimit - username.value.length;
+    limitp.style.color = "gray";
+
+    if(username.value.length >= characterLimit){
+        limitp.style.color = "crimson";
+    }
 }
 
 function togglePassword(){
@@ -26,6 +43,13 @@ function initialize(){
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         toggleTheme();
     }
+
+    document.getElementById('username-characters').innerHTML = characterLimit - document.getElementById('signup-username').value.length;
+}
+
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
 
 function toggleTheme(){
@@ -42,6 +66,14 @@ function toggleTheme(){
         document.querySelector(':root').style.setProperty('--border-color', '#cccccc');
         document.querySelector(':root').style.setProperty('--icon-brightness', 0);
         document.getElementById('theme-toggler').src = "./icons/darkinactive.svg"
+    }
+}
+
+document.getElementById('signup-email').onblur = function(){
+    if(validateEmail(document.getElementById('signup-email').value)){
+        document.getElementById('email-confirm-div').style.background = "#2ECC71"
+    } else {
+        document.getElementById('email-confirm-div').style.background = "crimson"
     }
 }
 

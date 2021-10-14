@@ -166,7 +166,7 @@ form > input:focus{
     height:80vh;
 }
 
-#password-thing{
+#password-thing, #username-thing, #email-thing{
     display:flex;
     flex-direction:row;
     align-items:center;
@@ -180,7 +180,7 @@ form > input:focus{
     margin-left:-2vw;
 }
 
-#signup-password{
+#signup-password, #signup-username, #signup-email{
     margin-left:1vw;
     outline:none;
     border:1px solid var(--border-color);
@@ -201,6 +201,21 @@ form > input:focus{
     width:3vw;
     z-index:5;
     cursor:pointer;
+}
+
+#email-confirm-div{
+    width:1vw;
+    height:1vw;
+    margin-left:-1.5vw;
+    background:gray;
+    border-radius:0.5vw;
+    transition-duration:1s;
+}
+
+#username-characters{
+    font-size:0.75vmax;
+    color:gray;
+    margin-left:-1.3vw;
 }
 
 @media(max-width:700px){
@@ -263,11 +278,21 @@ form > input:focus{
         font-size:3vw;
     }
 
-    #signup-password{
+    #signup-password, #signup-username, #signup-email{
         width:40vw;
     }
 
-    #visibility-eye{
+    #visibility-eye, #username-characters, #email-confirm-div{
         margin-left:-5vw;;
+    }
+
+    #username-characters{
+        font-size:2vw;
+    }
+
+    #email-confirm-div{
+        width:2vw;
+        height:2vw;
+        border-radius:1vw;
     }
 }

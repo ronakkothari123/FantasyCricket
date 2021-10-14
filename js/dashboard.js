@@ -20,7 +20,8 @@ const patterns = [
     "https://www.toptal.com/designers/subtlepatterns/patterns/moroccan-flower.png",
     "https://www.toptal.com/designers/subtlepatterns/patterns/y-so-serious-white.png",
     "https://www.toptal.com/designers/subtlepatterns/patterns/geometric-leaves.png",
-    "https://www.toptal.com/designers/subtlepatterns/patterns/webb.png"
+    "https://www.toptal.com/designers/subtlepatterns/patterns/webb.png",
+    "https://www.toptal.com/designers/subtlepatterns/patterns/round.png"
 ]
 
 const profileBanner = document.getElementById('profile-banner');
