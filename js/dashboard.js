@@ -13,6 +13,7 @@ const rosterPara = document.querySelectorAll('.roster-para')
 const calendarWeek = document.querySelectorAll('.calendar-week')
 
 const players = ["TrentBoult", "KaneWilliamson", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle", "YuzvendraChahal", "ShahrukhKhan", "RavindraJadeja", "DavidWarner", "RishabhPant", "JasonRoy", "YashasviJaiswal", "MoeenAli", "PrithviShaw"]
+const playersDiv = []
 const pageType = ["Dashboard", "Players", "Calendar", "Messages", "Notifications", "Your Profile"]
 const navbarInputValue = ["","","","","",""]
 const patterns = [
@@ -153,6 +154,17 @@ function toggleDropdown(number){
     }  
 }
 
+function profileRoster(){
+    let rosterItem = document.querySelectorAll('.profile-team-item')
+
+    for(let i = 0; i < playersDiv.length; i++){
+        let rosterNode = document.createElement('div');
+        rosterNode.classList.add('profile-team-node')
+        rosterNode.style.backgroundImage = "url('https://moneyball.insidesport.co/img/singleplayer/" + playersDiv[i] + "1.jpg')";
+        rosterItem[i].insertAdjacentElement('beforebegin', rosterNode)
+    }
+}
+
 function initRoster(){
     for(let j = 0; j < rosterItem.length; j++){
         let playerName = players[Math.trunc(Math.random() * players.length)];
@@ -161,6 +173,8 @@ function initRoster(){
         let newDescDiv = document.createElement('div');
         let newHeader = document.createElement('h5')
         let newPara = document.createElement('p')
+
+        playersDiv.push(playerName);
 
         var positions = [];
         for(let i = 0; i < playerName.length; i++){
@@ -184,6 +198,8 @@ function initRoster(){
         newDiv.appendChild(newDescDiv)
         rosterItem[j].insertAdjacentElement('beforebegin', newDiv);
     }
+
+    profileRoster()
 }
 
 function toggleSidebar(number){
