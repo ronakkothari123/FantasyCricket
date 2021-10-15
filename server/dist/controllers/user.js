@@ -24,7 +24,7 @@ exports.GetAll = GetAll;
 const SignUp = async (req, res) => {
     var _a, _b;
     const { name, password } = req.body;
-    const existingUser = await ((_a = index_1.Context.em) === null || _a === void 0 ? void 0 : _a.findOne(user_1.User, { name }));
+    const existingUser = await ((_a = index_1.Context.em) === null || _a === void 0 ? void 0 : _a.findOne(user_1.User, { name: name }));
     if (existingUser) {
         res.json({ error: "That username already exists" });
         return;
