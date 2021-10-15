@@ -3,18 +3,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Login = exports.SignUp = exports.GetAll = exports.GetUser = void 0;
+exports.Delete = exports.Login = exports.SignUp = exports.GetAll = exports.GetOne = void 0;
 const index_1 = require("../index");
 const user_1 = require("../entities/user");
 const argon2_1 = __importDefault(require("argon2"));
-const GetUser = async (req, res) => {
+const GetOne = async (req, res) => {
     var _a;
     const user = await ((_a = index_1.Context.em) === null || _a === void 0 ? void 0 : _a.findOne(user_1.User, {
         id: parseInt(req.params.id),
     }));
     res.json({ name: user === null || user === void 0 ? void 0 : user.name }).status(200);
 };
-exports.GetUser = GetUser;
+exports.GetOne = GetOne;
 const GetAll = async (_, res) => {
     var _a;
     const users = await ((_a = index_1.Context.em) === null || _a === void 0 ? void 0 : _a.find(user_1.User, {}));
@@ -22,11 +22,16 @@ const GetAll = async (_, res) => {
 };
 exports.GetAll = GetAll;
 const SignUp = async (req, res) => {
-    var _a;
+    var _a, _b;
     const { name, password } = req.body;
+    const existingUser = await ((_a = index_1.Context.em) === null || _a === void 0 ? void 0 : _a.findOne(user_1.User, { name }));
+    if (existingUser) {
+        res.json({ error: "That username already exists" });
+        return;
+    }
     const hashedPassword = await argon2_1.default.hash(password);
     const user = index_1.Context.em.create(user_1.User, { name, password: hashedPassword });
-    await ((_a = index_1.Context.em) === null || _a === void 0 ? void 0 : _a.persistAndFlush(user));
+    await ((_b = index_1.Context.em) === null || _b === void 0 ? void 0 : _b.persistAndFlush(user));
     res.json({ name }).status(200);
 };
 exports.SignUp = SignUp;
@@ -46,4 +51,10 @@ const Login = async (req, res) => {
     }
 };
 exports.Login = Login;
+const Delete = async (req, res) => {
+    var _a;
+    await ((_a = index_1.Context.em) === null || _a === void 0 ? void 0 : _a.nativeDelete(user_1.User, { id: parseInt(req.params.id) }));
+    res.send("Success");
+};
+exports.Delete = Delete;
 //# sourceMappingURL=user.js.map
