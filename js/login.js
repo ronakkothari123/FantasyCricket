@@ -1,5 +1,7 @@
 const modals = document.querySelectorAll(".modal");
 
+const PORT = 5000;
+
 let activeModal = 0;
 let characterLimit = 20;
 let passwordVisiblity = false;
@@ -104,5 +106,25 @@ document.getElementById("signup-email").onblur = function () {
             "crimson";
     }
 };
+
+async function SignUp() {
+    console.log("signing up");
+    if (validateEmail(document.getElementById("signup-email").value)) {
+        const data = await (
+            await fetch(`http://localhost:${PORT}/user/create`, {
+                body: {
+                    name: document.getElementById("signup-username").value,
+                    password: document.getElementById("signup-password").value,
+                },
+            })
+        ).json();
+
+        if (data.error !== undefined) {
+            console.log(data);
+        } else {
+            console.log("Error ", data.error);
+        }
+    }
+}
 
 initialize();
