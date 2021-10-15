@@ -71,15 +71,15 @@ function toggleTheme(){
         document.getElementById('settings').src = "./icons/darkactive.svg";
     } else{
         document.querySelector(':root').style.setProperty('--text-color', 'black');
-        document.querySelector(':root').style.setProperty('--background-1', '#eafaf1');
+        document.querySelector(':root').style.setProperty('--background-1', '#ABEBC6');
         document.querySelector(':root').style.setProperty('--background-2', '#ffffff');
         document.querySelector(':root').style.setProperty('--icon-brightness', 0);
-        document.querySelector(':root').style.setProperty('--lighter-green', '#EAFAF1');
-        document.querySelector(':root').style.setProperty('--light-green', '#D5F5E3');
+        document.querySelector(':root').style.setProperty('--lighter-green', '#2ECC71');
+        document.querySelector(':root').style.setProperty('--light-green', '#2ECC71');
         document.querySelector(':root').style.setProperty('--light-purple', '#C39BD3');
         document.querySelector(':root').style.setProperty('--light-gray', '#BFC9CA');
         document.querySelector(':root').style.setProperty('--border-color', '#cccccc');
-        document.querySelector(':root').style.setProperty('--green', '#ABEBC6');
+        document.querySelector(':root').style.setProperty('--green', '#2ECC71');
         document.getElementById('settings').src = "./icons/darkinactive.svg";
     }
     darkTheme = !darkTheme;
