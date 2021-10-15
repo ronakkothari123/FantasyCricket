@@ -1,4 +1,7 @@
 const modals = document.querySelectorAll(".modal");
+const modalDivs = document.querySelectorAll(".modal-bg")
+
+let activeModals = [];
 
 let activeModal = 0;
 let characterLimit = 20;
@@ -53,6 +56,11 @@ function initialize() {
     document.getElementById("username-characters").innerHTML =
         characterLimit -
         document.getElementById("signup-username").value.length;
+    
+    for(let i = 0; i < modalDivs.length; i++){
+        activeModals[i] = 0;
+    }
+    toggleModal(0)
 }
 
 function validateEmail(email) {
@@ -92,6 +100,19 @@ function toggleTheme() {
             .style.setProperty("--icon-brightness", 0);
         document.getElementById("theme-toggler").src =
             "./icons/darkinactive.svg";
+    }
+}
+
+function toggleModal(number){
+    if(activeModals[number] == 0){
+        modalDivs[number].classList.add('active-modal-div')
+        activeModals[number] = 1;
+
+        console.log(activeModals)
+        console.log(modalDivs[number].classList)
+    } else {
+        modalDivs[number].classList.remove('active-modal-div')
+        activeModals[number] = 0;
     }
 }
 

@@ -14,7 +14,14 @@
 
     <link rel="stylesheet" href="css/login.css">
 </head>
-<body
+<body>
+    <div class="modal-bg" id="email-exists-modal-bg">
+        <div class="modal-div">
+            <img src="icons/close.svg" alt="" class="close-btn" onclick="toggleModal(0)">
+            <h1>Email Creation Failed</h1>
+            <p><span class="accent">Reason:</span> User Email Exists</p>
+        </div>
+    </div>
     <div id="wrapper">
         <img src="icons/darkinactive.svg" alt="" id="theme-toggler" onclick="toggleTheme()">
         <div id="log-in" class="modal active-modal">
