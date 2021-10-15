@@ -1,298 +1,310 @@
-:root{
-    --icon-brightness:1;
-    --text-color:#000000;
-    --background-1:#ffffff;
-    --border-color:#cccccc;
-    --accent:#2ECC71;
+:root {
+    --icon-brightness: 1;
+    --text-color: #000000;
+    --background-1: #ffffff;
+    --border-color: #cccccc;
+    --accent: #2ecc71;
 }
 
-body{
-    font-family:"Be Vietnam Pro", sans-serif;
-    background:linear-gradient(90deg, var(--background-1) 50%, var(--accent) 5%);
-    margin:0;
-    overflow:hidden;
-    transition-duration:250ms;
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background: linear-gradient(
+        90deg,
+        var(--background-1) 50%,
+        var(--accent) 5%
+    );
+    margin: 0;
+    overflow: hidden;
+    transition-duration: 250ms;
 }
 
-.accent{
-    color:var(--accent);
-    cursor:pointer;
+.accent {
+    color: var(--accent);
+    cursor: pointer;
 }
 
-#wrapper{
-    width:100vw;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.modal{
-    width:100vw;
-    height:100vh;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items:center;
-    transition-duration:250ms;
-    z-index:0;
-    overflow-y:hidden;
-    background:var(--background-1);
-    position:absolute;
-    top:0;
-    left:0;
-    opacity:0;
+.modal {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 250ms;
+    z-index: 0;
+    overflow-y: hidden;
+    background: var(--background-1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
-.active-modal{
-    height:100vh;
-    z-index:3;
-    opacity:1;
+.active-modal {
+    height: 100vh;
+    z-index: 3;
+    opacity: 1;
 }
 
-.modal-main{
-    width:50vw;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+.modal-main {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.modal-text{
-    width:35vw;
-    height:75vh;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:center;
+.modal-text {
+    width: 35vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.modal-text > img{
-    width:5vw;
-    filter:invert(1) brightness(var(--icon-brightness));
-    transition-duration:250ms;
+.modal-text > img {
+    width: 5vw;
+    filter: invert(1) brightness(var(--icon-brightness));
+    transition-duration: 250ms;
 }
 
-.modal-text > h1{
-    font-size:3vw;
-    font-weight:900;
-    margin:0;
-    color:var(--text-color);
-    margin-top:4vh;
-    transition-duration:250ms;
+.modal-text > h1 {
+    font-size: 3vw;
+    font-weight: 900;
+    margin: 0;
+    color: var(--text-color);
+    margin-top: 4vh;
+    transition-duration: 250ms;
 }
 
-.action-para{
-    font-size:0.75vw;
-    font-weight:700;
-    cursor:pointer;
-    margin:0;
-    color:var(--text-color);
-    transition-duration:250ms;
+.action-para {
+    font-size: 0.75vw;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0;
+    color: var(--text-color);
+    transition-duration: 250ms;
 }
 
-.modal-text > p{
-    font-size:0.75vw;
-    color:gray;
-    margin:0;
+.modal-text > p {
+    font-size: 0.75vw;
+    color: gray;
+    margin: 0;
 }
 
-form{
-    margin:5vh 0;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:space-between;
-    height:25vh;
+form {
+    margin: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 25vh;
 }
 
-form > input{
-    margin-left:1vw;
-    outline:none;
-    border:1px solid var(--border-color);
-    color:var(--text-color);
-    width:18vw;
-    height:2vh;
-    border-radius:1vw;
-    padding:1vh 1vw;
-    font-size:1.75vh;
-    background:var(--background-1);
-    transition-duration:250ms;
+form > input {
+    margin-left: 1vw;
+    outline: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    width: 18vw;
+    height: 2vh;
+    border-radius: 1vw;
+    padding: 1vh 1vw;
+    font-size: 1.75vh;
+    background: var(--background-1);
+    transition-duration: 250ms;
 }
 
-form > input:focus{
-    border: 1px solid var(--accent)
+form > input:focus {
+    border: 1px solid var(--accent);
 }
 
 .submit-input {
-    width:10vw;
-    height:5vh;
-    outline:none;
-    border:none;
-    font-size:1vw;
-    background:var(--accent);
-    color:var(--text-color);
-    cursor:pointer;
-    transition-duration:250ms;
+    width: 10vw;
+    height: 5vh;
+    outline: none;
+    border: none;
+    font-size: 1vw;
+    background: var(--accent);
+    color: var(--text-color);
+    cursor: pointer;
+    transition-duration: 250ms;
 }
 
-.modal-graphic-div{
-    width:50vw;
-    height:100vh;
-    background:var(--accent);
-    position:relative;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
+.modal-graphic-div {
+    width: 50vw;
+    height: 100vh;
+    background: var(--accent);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.transition{
-    position:absolute;
-    width:8vw;
-    height:40vh;
-    background:var(--background-1);
-    left:-4vw;
-    border-radius:4vw;
-    transition-duration:250ms;
+.transition {
+    position: absolute;
+    width: 8vw;
+    height: 40vh;
+    background: var(--background-1);
+    left: -4vw;
+    border-radius: 4vw;
+    transition-duration: 250ms;
 }
 
-#sign-up-form{
-    height:50vh;
-    position:relative;
+#sign-up-form {
+    height: 50vh;
+    position: relative;
 }
 
-#sign-up-main{
-    height:80vh;
+#sign-up-main {
+    height: 80vh;
 }
 
-#password-thing, #username-thing, #email-thing{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    transition-duration:250ms;
+#password-thing,
+#username-thing,
+#email-thing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition-duration: 250ms;
 }
 
-#visibility-eye{
-    filter:invert(1) brightness(0.5);
-    width:3vh;
-    cursor:pointer;
-    margin-left:-2vw;
+#visibility-eye {
+    filter: invert(1) brightness(0.5);
+    width: 3vh;
+    cursor: pointer;
+    margin-left: -2vw;
 }
 
-#signup-password, #signup-username, #signup-email{
-    margin-left:1vw;
-    outline:none;
-    border:1px solid var(--border-color);
-    color:var(--text-color);
-    width:18vw;
-    height:2vh;
-    border-radius:1vw;
-    padding:1vh 1vw;
-    font-size:1.75vh;
-    background:var(--background-1);
-    transition-duration:250ms;
+#signup-password,
+#signup-username,
+#signup-email {
+    margin-left: 1vw;
+    outline: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    width: 18vw;
+    height: 2vh;
+    border-radius: 1vw;
+    padding: 1vh 1vw;
+    font-size: 1.75vh;
+    background: var(--background-1);
+    transition-duration: 250ms;
 }
 
-#theme-toggler{
-    position:absolute;
-    top:1vmax;
-    right:1vmax;
-    width:3vw;
-    z-index:5;
-    cursor:pointer;
+#theme-toggler {
+    position: absolute;
+    top: 1vmax;
+    right: 1vmax;
+    width: 3vw;
+    z-index: 5;
+    cursor: pointer;
 }
 
-#email-confirm-div{
-    width:1vw;
-    height:1vw;
-    margin-left:-1.5vw;
-    background:gray;
-    border-radius:0.5vw;
-    transition-duration:1s;
+#email-confirm-div {
+    width: 1vw;
+    height: 1vw;
+    margin-left: -1.5vw;
+    background: gray;
+    border-radius: 0.5vw;
+    transition-duration: 1s;
 }
 
-#username-characters{
-    font-size:0.75vmax;
-    color:gray;
-    margin-left:-1.3vw;
+#username-characters {
+    font-size: 0.75vmax;
+    color: gray;
+    margin-left: -1.3vw;
 }
 
-@media(max-width:700px){
-    .modal-graphic-div{
-        display:none;
+@media (max-width: 700px) {
+    .modal-graphic-div {
+        display: none;
     }
 
-    .modal{
-        background:var(--accent);
+    .modal {
+        background: var(--accent);
     }
 
-    .modal-main{
-        width:50vw;
-        height:85vh;
-        display:flex;
-        flex-direction:row;
+    .modal-main {
+        width: 50vw;
+        height: 85vh;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
-        align-items:center;
-        background:var(--background-1);
-        border-radius:5vw;
-        box-shadow:0 0 1vw 0 var(--background-1);
+        align-items: center;
+        background: var(--background-1);
+        border-radius: 5vw;
+        box-shadow: 0 0 1vw 0 var(--background-1);
     }
 
-    .modal-text{
+    .modal-text {
         justify-content: center;
-        align-items:center;
+        align-items: center;
     }
 
-    .modal-text > img{
-        width:10vw;
+    .modal-text > img {
+        width: 10vw;
     }
 
-    .modal-text > h1{
-        text-align:center;
-        font-size:4vw;
+    .modal-text > h1 {
+        text-align: center;
+        font-size: 4vw;
     }
 
-    .modal-text > p{
-        font-size:1.5vw;
+    .modal-text > p {
+        font-size: 1.5vw;
     }
 
-    form{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    form > input{
-        width:40vw;
-        text-align:center;
+    form > input {
+        width: 40vw;
+        text-align: center;
     }
 
-    .action-para{
-        text-align:center;
-        font-size:1.5vw;
+    .action-para {
+        text-align: center;
+        font-size: 1.5vw;
     }
 
-    .submit-input{
-        width:40vw;
-        font-size:3vw;
+    .submit-input {
+        width: 40vw;
+        font-size: 3vw;
     }
 
-    #signup-password, #signup-username, #signup-email{
-        width:40vw;
+    #signup-password,
+    #signup-username,
+    #signup-email {
+        width: 40vw;
     }
 
-    #visibility-eye, #username-characters, #email-confirm-div{
-        margin-left:-5vw;;
+    #visibility-eye,
+    #username-characters,
+    #email-confirm-div {
+        margin-left: -5vw;
     }
 
-    #username-characters{
-        font-size:2vw;
+    #username-characters {
+        font-size: 2vw;
     }
 
-    #email-confirm-div{
-        width:2vw;
-        height:2vw;
-        border-radius:1vw;
+    #email-confirm-div {
+        width: 2vw;
+        height: 2vw;
+        border-radius: 1vw;
     }
 }

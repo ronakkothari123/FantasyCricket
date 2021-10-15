@@ -11,7 +11,7 @@ require("reflect-metadata");
 const dotenv_1 = __importDefault(require("dotenv"));
 const user_1 = __importDefault(require("./routers/user"));
 dotenv_1.default.config();
-const app = express_1.default();
+const app = (0, express_1.default)();
 const PORT = 5000;
 exports.Context = {
     em: undefined,
