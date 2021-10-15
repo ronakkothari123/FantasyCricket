@@ -62,7 +62,7 @@ function initialize() {
     for(let i = 0; i < modalDivs.length; i++){
         activeModals[i] = 0;
     }
-    toggleModal(0)
+    toggleModal2(0)
 }
 
 function validateEmail(email) {
@@ -105,7 +105,7 @@ function toggleTheme() {
     }
 }
 
-function toggleModal(number){
+function toggleModal2(number){
     if(activeModals[number] == 0){
         modalDivs[number].classList.add('active-modal-div')
         activeModals[number] = 1;
