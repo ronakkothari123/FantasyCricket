@@ -14,8 +14,8 @@ const calendarWeek = document.querySelectorAll('.calendar-week')
 
 const players = ["TrentBoult", "KaneWilliamson", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle", "YuzvendraChahal", "ShahrukhKhan", "RavindraJadeja", "DavidWarner", "RishabhPant", "JasonRoy", "YashasviJaiswal", "MoeenAli", "PrithviShaw"]
 const playersDiv = []
-const pageType = ["Dashboard", "Players", "Calendar", "Messages", "Notifications", "Your Profile"]
-const navbarInputValue = ["","","","","",""]
+const pageType = ["Dashboard", "Players", "Calendar", "Messages", "Notifications", "Your Profile", "Your Feed"]
+const navbarInputValue = []
 const patterns = [
     "https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble.png",
     "https://www.toptal.com/designers/subtlepatterns/patterns/moroccan-flower.png",
@@ -33,6 +33,9 @@ let settingsModalActive = false;
 let darkTheme = false;
 
 function initialize(){
+    for(let i = 0; i < mainContent.length; i++){
+        navbarInputValue.push("")
+    }
     initFriends();
     initRoster();
     initTimetable();

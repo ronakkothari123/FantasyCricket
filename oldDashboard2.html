@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFL Dashboard | Cricket Game Simulation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/logos/fc.jpg">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div id="settings-modal" class="no-display"">
+        <div class="setting" onclick="toggleSidebar(5); toggleSettings()">
+            <img src="icons/user.svg" alt="">
+            <p>Your Profile</p>
+        </div>
+        <div class="setting" onclick="toggleTheme()">
+            <img src="icons/darkinactive.svg" alt="" id="setting-img">
+            <p>Theme</p>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="sidebar">
+            <img src="icons/cricket.svg" alt="" class="sidebar-img" id="cricket-img" onclick="toggleSidebar(0)">
+            <div class="notification-div">
+                <img src="icons/dashboard.svg" alt="" class="sidebar-img" onclick="toggleSidebar(0)">
+                <div class="sidebar-line"></div>
+            </div>
+            <div class="notification-div">
+                <img src="icons/person.svg" alt="" class="sidebar-img" onclick="toggleSidebar(1)">
+                <div class="sidebar-line inactive-line"></div>
+            </div>
+            <div class="notification-div">
+                <img src="icons/calendar.svg" alt="" class="sidebar-img" onclick="toggleSidebar(2)">
+                <p class="notif-p">4</p>
+                <div class="sidebar-line inactive-line"></div>
+            </div>
+            <div class="notification-div">
+                <img src="icons/message.svg" alt="" class="sidebar-img" onclick="toggleSidebar(3)">
+                <p class="notif-p">9</p>
+                <div class="sidebar-line inactive-line"></div>
+            </div>
+            <div class="notification-div">
+                <img src="icons/notifs.svg" alt="" class="sidebar-img" onclick="toggleSidebar(4)">
+                <p class="notif-p">13</p>
+                <div class="sidebar-line inactive-line"></div>
+            </div>
+            <div class="notification-div" id="pfp-div">
+                <img src="icons/user.svg" alt="" class="sidebar-img" onclick="toggleSidebar(5)">
+                <p class="notif-p">13</p>
+                <div class="sidebar-line inactive-line"></div>
+            </div>
+            <div class="notification-div">
+                <img src="icons/news.svg" alt="" class="sidebar-img" onclick="toggleSidebar(6)">
+                <p class="notif-p">1</p>
+                <div class="sidebar-line inactive-line"></div>
+            </div>
+            <img src="icons/logout.svg" alt="" class="sidebar-img" id="logout-img" onclick="window.location.replace('index.html');">
+        </div>
+        <div id="main-div">
+            <div id="navbar">
+                <div id="dashboard-navbar" class="navbar">
+                    <div class="navbar-input" id="dashboard-navbar-input">
+                        <input type="text" id="navbar-input" placeholder="Search Dashboard...">
+                        <img src="icons/erase.svg" alt="" onMouseDown="document.getElementById('navbar-input').value = ''">
+                    </div>
+                    <div id="navbar-team">
+                        <div class="navbar-friend-div" style="--friend-background:#85C1E9;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                        <div class="navbar-friend-div" style="--friend-background:#F8C471;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                        <div class="navbar-friend-div" style="--friend-background:#58D68D;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                        <div class="navbar-friend-div" style="--friend-background:#F7DC6F;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                        <div class="navbar-friend-div" style="--friend-background:#EC7063;"><img src="icons/avatars/11.svg" alt="" class="navbar-friend"></div>
+                    </div>
+                    <img src="icons/dropdown.svg" alt="" id="friend-dropdown" class="dropdown inactive-dropdown" onclick="toggleDropdown(0)">
+                    <div id="add-friend-btn">
+                        <img src="icons/friends.svg" alt="">
+                    </div>
+                    <div id="settings-btn">
+                        <img src="icons/settings.svg" alt="" onclick="toggleSettings()">
+                    </div>
+                </div>
+            </div>
+            <div id="main-content">
+                <div class="main-content active-main-content" id="dashboard-content">
+                    <h1>Welcome to Fantasy, Ronak!</h1>
+                    <h6>You have <span class="bold" id="dashbaord-notifs">13 notifications</span> to see!</h6>
+                    <div class="main-row">
+                        <div class="advertisement">
+                            <img src="https://media.cntraveler.com/photos/60e612ae0a709e97d73d9c60/3:1/w_5760,h_1920,c_limit/Beach%20Vacation%20Packing%20List-2021_GettyImages-1030311160.jpg" alt="" class="advertisement-img" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');">
+                            <p class="advertisement-para">Advertisement: Find Exotic Beaches Near You!</p>
+                        </div>
+                        <div class="content-btns">
+                            <div class="content-btn" onclick="toggleSidebar(1)"><img src="icons/person.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn" onclick="toggleSidebar(2)"><img src="icons/calendar.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn" onclick="toggleSidebar(3)"><img src="icons/message.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn" onclick="toggleSidebar(4)"><img src="icons/notifs.svg" alt="" class="content-btn-img"></div>
+                        </div>
+                        <div id="dashboard-upcoming-events">
+                            <h2>Upcoming Events:</h2>
+                            <h6>You have <span class="bold">4 upcoming events</span> to see. <span class="bold" onclick="toggleSidebar(2)" style="cursor:pointer;">View Calendar</span>.</h6>
+                            <div class="dashboard-event" style="--event-color:#2980B9; cursor:pointer;"  onclick="toggleSidebar(2)">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">7:00 A.M. - 1:00 P.M</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Delhi vs. Kolkata</h1>
+                                <p>Delhi Capitals vs. Kolkata Knight Riders Playoffs Match</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-row">
+                        <div id="your-roster">
+                            <h1>Your Team Roster: <span id="roster-display-options">
+                                <div class="roster-display-option active-display-option" onclick="toggleDisplayOption(0)">
+                                    <img src="icons/group.svg" alt="">
+                                </div>
+                                <div class="roster-display-option">
+                                    <img src="icons/details.svg" alt="" onclick="toggleDisplayOption(1)">
+                                </div>
+                            </span></h1>
+                            <div id="roster-players">
+                                <div class="large-roster">
+                                    <div class="roster-item"></div>
+                                    <div class="roster-item"></div>
+                                    <div class="roster-item"></div>
+                                    <p class="roster-para">Bowlers</p>
+                                </div>
+                                <div class="large-roster">
+                                    <div class="roster-item"></div>
+                                    <div class="roster-item"></div>
+                                    <div class="roster-item"></div>
+                                    <p class="roster-para">Batsmen</p>
+                                </div>
+                                <div class="medium-roster">
+                                    <div class="roster-item"></div>
+                                    <div class="roster-item"></div>
+                                    <p class="roster-para">Fielders</p>
+                                </div>
+                                <div class="small-roster">
+                                    <div class="roster-item"></div>
+                                    <p class="roster-para">Keepers</p>
+                                </div>
+                                <div class="fat-roster" id="bench">
+                                    <div class="roster-item"></div>
+                                    <div class="roster-item"></div>
+                                    <div class="roster-item"></div>
+                                    <div class="roster-item"></div>
+                                    <p class="roster-para">Benched</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content inactive-main-content" id="players-content">
+                    
+                </div>
+                <div class="main-content inactive-main-content" id="calendar-content">
+                    <div class="main-content-button-div">
+                        <div class="main-content-button-div-header">
+                            <h1>Your Personal Calendar</h1>
+                            <h6>You have <span class="bold">4 upcoming events</span> to see!</h6>
+                        </div>
+                        <div class="main-content-button-div-div">
+                            <div class="content-btn-2" onclick="toggleSidebar(0)"><img src="icons/dashboard.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn-2" onclick="toggleSidebar(2)"><img src="icons/calendar.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn-2" onclick="toggleSidebar(3)"><img src="icons/message.svg" alt="" class="content-btn-img"></div>
+                            <div class="content-btn-2" onclick="toggleSidebar(4)"><img src="icons/notifs.svg" alt="" class="content-btn-img"></div>
+                        </div>
+                    </div>
+                    <div id="calendar-div">
+                        <div id="upcoming-events-div">
+                            <div class="upcoming-event" style="--event-color:#2980B9;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">7:00 A.M. - 11:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Delhi vs. Kolkata</h1>
+                                <p>Delhi Capitals vs. Kolkata Knight Riders Playoffs Match</p>
+                            </div>
+                            <div class="upcoming-event" style="--event-color:#2980B9;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">7:00 A.M. - 11:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Winner vs. Chennai</h1>
+                                <p>Winning Team vs. Chennai Super Kings IPL Finals</p>
+                            </div>
+                            <div class="upcoming-event" style="--event-color:#EC7063;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">3:00 A.M. - 7:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Oman vs. Papua New Guinea</h1>
+                                <p>Oman Cricket Team vs. Papua New Guinea Team T20WC</p>
+                            </div>
+                            <div class="upcoming-event" style="--event-color:#EC7063;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">7:00 A.M. - 11:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Bangladesh vs. Scotland</h1>
+                                <p>Bangladesh Cricket Team vs. Scotland Cricket Team T20WC</p>
+                            </div>
+                            <div class="upcoming-event" style="--event-color:#EC7063;">
+                                <div class="dashboard-event-color"></div>
+                                <div class="dashboard-event-time">3:00 A.M. - 7:00 A.M.</div>
+                                <div class="dashboard-event-dots">...</div>
+                                <h1>Ireland vs. Netherlands</h1>
+                                <p>Ireland Cricket Team vs. Netherlands Cricket Team T20WC</p>
+                            </div>
+                        </div>
+                        <div id="calendar">
+                            <div id="calendar-week">
+                                <div class="calendar-week">Sunday</div>
+                                <div class="calendar-week">Monday</div>
+                                <div class="calendar-week">Tuesday</div>
+                                <div class="calendar-week">Wednesday</div>
+                                <div class="calendar-week">Thursday</div>
+                                <div class="calendar-week">Friday</div>
+                                <div class="calendar-week">Saturday</div>
+                            </div>
+                            <div id="calendar-times"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content inactive-main-content" id="message-content">
+                    <div id="message-preview-div">
+                        <div id="message-preview">
+                            <div class="message">
+                                <div class="message-read"></div>
+                                <p class="message-date">October 42th, 2021</p>
+                                <p class="message-header">Where are your shoes?</p>
+                                <p class="message-para-preview">Something about something or something is something about something which is nothing about something which isn't nothing about something which evidently is nothing about something which therefore leads to the conclusion of something about nothing is something about somthing which is nothing about something which is nothing about nothing.</p>
+                            </div>
+                        </div>
+                        <div id="send-message">
+                            <input type="text" id="send-header">
+                            <input type="text" id="send-content">
+                        </div>
+                    </div>
+                    <div id="message-main">
+                        <div id="open-headers">
+                            <p id="open-date">October 42th, 2021</p>
+                            <p id="open-header">Where are your shoes?</p>
+                        </div>
+                        <p id="open-para">Something about something or something is something about something which is nothing about something which isn't nothing about something which evidently is nothing about something which therefore leads to the conclusion of something about nothing is something about somthing which is nothing about something which is nothing about nothing.</p>
+                    </div>
+                </div>
+                <div class="main-content inactive-main-content" id="notifications-content">
+                    
+                </div>
+                <div class="main-content inactive-main-content" id="profile-content">
+                    <div id="profile-background-pattern">
+                        <div id="profile-banner" style="background:#bdeffc;">
+                            <div id="profile-picture-div">
+                                <img src="icons/avatars/12.svg" alt="" id="profile-picture">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile-text">
+                        <div id="profile-desc">
+                            <h1>Ronak's Profile</h1>
+                            <h6>Username: <span class="bold">ronakkothari123</span></h6>
+                            <h6>Creation Date: <span class="bold">October 6th, 2021</span></h6>
+                            <h6>I am a Washington based Cricket Enthusiast that enjoys playing Fantasy Cricket and looking to make friends using this amazing app. The developers of this app are so handsome.</h6>
+                            <button>
+                                <img src="icons/edit.svg" alt="">
+                                <p>Edit Profile</p>
+                            </button>
+                            <div class="profile-desc-picture-text-div">
+                                <img src="icons/location.svg" alt="">
+                                <p>Sammamish, Washington</p>
+                            </div>
+                            <div class="profile-desc-picture-text-div">
+                                <img src="icons/email.svg" alt="">
+                                <p>rk.ronakjkothari@gmail.com</p>
+                            </div>
+                        </div>
+                        <div id="your-team">
+                            <h1>Ronak's Fantasy Team:</h1>
+                            <h6><span class="bold">League: </span>T20 World Cup</h6>
+                            <div id="profile-team">
+                                <div id="profile-column-1">
+                                    <div class="profile-team-div">
+                                        <div class="profile-team-list">
+                                            <div class="profile-team-item"></div>
+                                            <div class="profile-team-item"></div>
+                                            <div class="profile-team-item"></div>
+                                        </div>
+                                        <p>Batters</p>
+                                    </div>
+                                    <div class="profile-team-div">
+                                        <div class="profile-team-list">
+                                            <div class="profile-team-item"></div>
+                                            <div class="profile-team-item"></div>
+                                            <div class="profile-team-item"></div>
+                                        </div>
+                                        <p>Bowlers</p>
+                                    </div>
+                                    <div class="profile-team-div">
+                                        <div class="profile-team-list">
+                                            <div class="profile-team-item"></div>
+                                            <div class="profile-team-item"></div>
+                                        </div>
+                                        <p>Fielders</p>
+                                    </div>
+                                    <div class="profile-team-div">
+                                        <div class="profile-team-list">
+                                            <div class="profile-team-item"></div>
+                                        </div>
+                                        <p>Keepers</p>
+                                    </div>
+                                </div>
+                                <div id="profile-column-2">
+                                    <div class="profile-team-div">
+                                        <div class="profile-team-list">
+                                            <div class="profile-team-item"></div>
+                                            <div class="profile-team-item"></div>
+                                            <div class="profile-team-item"></div>
+                                            <div class="profile-team-item"></div>
+                                        </div>
+                                        <p>Benched</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="profile-friends">
+                            <h1>Ronak's Friends</h1>
+                            <div class="profile-friend">
+                                <img class="profile-friend-image" src="icons/avatars/17.svg" alt="">
+                                <div class="profile-text">
+                                    <h1>Shrihun S.</h1>
+                                    <p>SankShr24</p>
+                                </div>
+                            </div>
+                            <div class="profile-friend">
+                                <img class="profile-friend-image" src="icons/avatars/36.svg" alt="">
+                                <div class="profile-text">
+                                    <h1>Advay P.</h1>
+                                    <p>advape24</p>
+                                </div>
+                            </div>
+                            <div class="profile-friend">
+                                <img class="profile-friend-image" src="icons/avatars/47.svg" alt="">
+                                <div class="profile-text">
+                                    <h1>Aditya K.</h1>
+                                    <p>adityakompella123</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content inactive-main-content" id="news-content">
+                    <div id="popular-channels">
+                        <div class="popular-channel">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/310vvusqwQL.png" alt="Channel">
+                            <p>NDTV</p>
+                        </div>
+                        <div class="popular-channel">
+                            <img src="https://www.electronicpay.in/wp-content/uploads/2019/07/toi.jpg" alt="Channel">
+                            <p>Times of India</p>
+                        </div>
+                        <div class="popular-channel">
+                            <img src="https://seeklogo.com/images/Z/zee-news-logo-DA42E27EC5-seeklogo.com.png" alt="Channel">
+                            <p>ZeeNews</p>
+                        </div>
+                        <div class="popular-channel">
+                            <img src="https://pbs.twimg.com/profile_images/567914960550785024/PK2cvhFz_400x400.jpeg" alt="Channel">
+                            <p>InsideSport</p>
+                        </div>
+                        <div class="popular-channel">
+                            <img src="https://play-lh.googleusercontent.com/khSx9Y5MO2NitLPy7UqAltlGKLdjFU_IbACyX8e-j-lYqdlggCF9ug4KK1V-wSPHyQw" alt="Channel">
+                            <p>News18</p>
+                        </div>
+                    </div>
+                    <div id="news-articles">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
