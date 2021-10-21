@@ -108,14 +108,18 @@ document.getElementById("signup-email").onblur = function () {
 };
 
 async function SignUp() {
-    console.log("signing up");
     if (validateEmail(document.getElementById("signup-email").value)) {
         const data = await (
             await fetch(`http://localhost:${PORT}/user/create`, {
-                body: {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
                     name: document.getElementById("signup-username").value,
                     password: document.getElementById("signup-password").value,
-                },
+                }),
             })
         ).json();
 

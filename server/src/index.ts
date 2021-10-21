@@ -5,6 +5,7 @@ import "reflect-metadata";
 import dotenv from "dotenv";
 import { MyContext } from "./types";
 import userRouter from "./routers/user";
+import cors from "cors";
 
 dotenv.config();
 const app = express();
@@ -25,6 +26,11 @@ const main = async () => {
     app.listen(PORT, () => console.log(`Alive on  http://localhost:${PORT}`));
 
     app.use(express.json());
+    app.use(
+        cors({
+            origin: "*",
+        })
+    );
     app.use("/user", userRouter);
 
     // Testing
