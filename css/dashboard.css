@@ -208,7 +208,7 @@ body{
 #profile-stats{
     border:1px solid var(--background-2);
     border-radius:1vw;
-    padding:2vmin 2vmin;
+    padding:2vmin;
     margin:0 0.5vw;
     width:15vw;
 }
@@ -271,4 +271,80 @@ body{
 #profile-buttons > button > p{
     font-size:1vw;
     margin:0;
+}
+
+#recent-activity{
+    margin-top:2vmin;
+    border:1px solid var(--background-2);
+    border-radius:2vmin;
+    padding:2vmin;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+#recent-activity > p{
+    margin:0;
+    color:gray;
+    font-size:0.75vw;
+    cursor:pointer;
+}
+
+#recent-activity > p:hover{
+    text-decoration:underline;
+}
+
+#recent-activity > h2{
+    margin:0;
+    color:gray;
+    font-size:0.75vw;
+    font-weight:700;
+}
+
+#personal-information{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+    margin-top:2vmin;
+}
+
+#personal-information > div{
+    border:1px solid var(--background-2);
+    border-radius:2vmin;
+    width:17vw;
+    margin:0 0.5vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:2vmin;
+}
+
+#personal-information > div > p{
+    font-size:0.75vw;
+    text-align:center;
+    color:gray;
+    margin:0;
+}
+
+#personal-information > div > div{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    width:10vw;
+}
+
+#interest-sports > div > img{
+    width:1.5vw;
+    filter:invert(0.5);
+    cursor:pointer;
+}
+
+#interest-leagues > div > img{
+    width:4vw;
+    filter:grayscale(1);
+    cursor:pointer;
 }
