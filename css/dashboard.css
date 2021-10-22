@@ -10,11 +10,12 @@ body{
     font-family:"Be Vietnam Pro", sans-serif;
     background:var(--background-2);
     color:var(--text-color);
+    overflow-x:hidden;
 }
 
 #navbar{
     width:95vw;
-    height:25vmin;
+    height:35vmin;
     background:var(--accent);
     display:flex;
     flex-direction:column;
@@ -97,15 +98,20 @@ body{
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:center;
-    margin-top:-15vmin;
+    margin-top:-28vmin;
 }
 
 #main-content > div{
-    background:var(--background-1);
     width:35vw;
+    margin:0 3.5vw;
+}
+
+#main-content > div > div{
+    background:var(--background-1);
     padding:5vmin 5vmin;
     border-radius:2vw;
-    margin:0 1vw;
+    width:35vw;
+    margin-bottom:2vw;
 }
 
 #pfp{
@@ -348,3 +354,105 @@ body{
     filter:grayscale(1);
     cursor:pointer;
 }
+
+
+::-webkit-scrollbar {
+    width:0.75vmax;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--background-2);
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent); 
+    border-radius:0.375vmax;
+  }
+
+#latest-news-div{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+.news{
+    width:16vw;
+    background:var(--background-2);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border-radius:2vmin;
+    overflow:hidden;
+    cursor:pointer;
+    transition-duration:250ms;
+    margin-bottom:1.5vw;
+}
+
+.news:hover{
+    transform:scale(1.05);
+    box-shadow: 0 0 1vw 0 black;
+}
+
+.news:hover > img{
+    filter:grayscale(0);
+}
+
+.news > img{
+    width:16vw;
+    filter:grayscale(1);
+    transition-duration:250ms;
+}
+
+.news > h1{
+    font-size:1vw;
+    font-weight:900;
+    width:14vw;
+    text-align:center;
+    margin:2vmin 0;
+}
+
+.news > p{
+    font-size:0.75vw;
+    font-weight:300;
+    width:14vw;
+    text-align:center;
+    margin:0;
+    margin-bottom:2vmin;
+    color:gray;
+}
+
+#news-button{
+    width:35vw;
+    height:2vw;
+    font-size:1vw;
+    border-radius:2vmin;
+    outline:none;
+    border:none;
+    background:var(--background-2);
+    cursor:pointer;
+    font-weight:100;
+    color:gray;
+    transition-duration:250ms;
+}
+
+#news-button:hover{
+    color:var(--text-color);
+}
+
+#news-button:active{
+    box-shadow:inset 0 0 1vw 0 gray;
+}
+
+#matches-header{
+    display:flex;
+}
+
+#matches-header > img{
+    width:2.5vw;
+}
+
+#matches-header > 
