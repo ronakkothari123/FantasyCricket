@@ -1,8 +1,4 @@
 :root{
-    --lighter-green:#2ECC71;
-    --light-green:#2ECC71;
-    --green:#ABEBC6;
-    --dark-green:#2ECC71;
     --light-gray:#BFC9CA;
     --light-purple:#C39BD3;
     --light-color:#000000;
@@ -11,7 +7,9 @@
     --background-1:#EAFAF1;
     --background-2:#ffffffinstruction;
     --border-color:#cccccc;
-    --accent-color:#2ECC71;
+    --accent-color-1:#8E44AD;
+    --accent-color-2:#3498DB;
+    --accent-color-3:#E67E22;
 }
 
 body{
@@ -93,7 +91,7 @@ body{
     width:12.5vmax;
     height:1.5vmax;
     font-size:1vmax;
-    background:var(--light-green);
+    background:var(--accent-color-1);
     border:none;
     /*border:1px solid var(--green);*/
     border-radius:1vmax;
@@ -104,7 +102,7 @@ body{
 }
 
 #dashboard-btn:hover{
-    background:var(--green);
+    background:var(--accent-color-1);
 }
 
 .active{
@@ -131,7 +129,13 @@ body{
 }
 
 .accent{
-    color:var(--accent-color)
+    color:var(--accent-color-1)
+}
+.accent-2{
+    color:var(--accent-color-2)
+}
+.accent-3{
+    color:var(--accent-color-3)
 }
 
 #main-div{
@@ -141,7 +145,7 @@ body{
     flex-direction:row;
     justify-content: center;
     align-items:center;
-    background:var(--);
+    background:transparent;
 }
 
 #main-header-div{
@@ -171,27 +175,30 @@ body{
 #main-comments-div{
     width:30vmax;
     height:30vmax;
-    background:var(--background-2);
+    background:var(--accent-color-1);
     margin:0 1vmin;
     border-radius:2vmax;
     display:flex;
     flex-direction:column;
     justify-content:center;
     position:relative;
-    animation-name:colorFlash;
+    /*animation-name:colorFlash;
     animation-duration:2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
 }
 
 @keyframes colorFlash {
     from{
-        background:var(--light-green);
+        background:var(--accent-color-1);
     }
-    50%{
-        background:var(--green);
+    33%{
+        background:var(--accent-color-2);
+    }
+    67%{
+        background:var(--accent-color-3);
     }
     to{
-        background:var(--light-green);
+        background:var(--accent-color-1);
     }
 }
 
@@ -199,8 +206,8 @@ body{
     position:absolute;
     width:22vmax;
     height:7vmax;
-    background:var(--background-1);
-    border:1px solid var(--background-1);
+    background:var(--background-4);
+    border:1px solid var(--background-4);
     border-radius:1vmax;
     padding:1vmax;
     display:flex;
@@ -248,7 +255,7 @@ body{
 #app-div{
     width:100vw;
     height:50vmax;
-    background:var(--background-1);
+    background:var(--background-3);
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -266,7 +273,7 @@ body{
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--green); 
+    background: var(--accent-color-1); 
     border-radius:0.375vmax;
   }
   
@@ -278,7 +285,7 @@ body{
 #phone-parent-div{
     width:30vmax;
     height:30vmax;
-    background:var(--background-2);
+    background:var(--accent-color-3);
     margin:0 2vmax;
     border-radius:2vmax;
     display:flex;
@@ -368,6 +375,7 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
+    background:var(--background-2);
 }
 
 #camera-parent{
@@ -539,7 +547,7 @@ body{
 #fantasy-graphic{
     width:30vmax;
     height:30vmax;
-    background:var(--background-2);
+    background:var(--accent-color-2);
     margin:0 2vmax;
     border-radius:2vmax;
     display:flex;
