@@ -27,7 +27,10 @@
                     <div id="profile-pic"></div>
                     <p id="profile-name">Ronak Kothari</p>
                 </div>
-                <img src="icons/more.svg" alt="">
+                <div id="more-div">
+                    <div id="notifications" class="active"></div>
+                    <img src="icons/more.svg" alt="">
+                </div>
             </div>
         </div>
         <div id="banner-div">
@@ -36,7 +39,16 @@
                 <p>New Draft for T20 World Cup players occuring soon. To reserve position in the draft, click below.</p>
                 <button>Join Draft</button>
             </div>
-            <img src="images/news/viratkohli.png" alt="Banner Image" id="banner-image">
+            <img src="" alt="Banner Image" id="banner-image">
+        </div>
+        <div id="sort-div">
+            <p onclick="toggleFilter(0)" class="filter-para">All</p>
+            <input type="text" placeholder="Filter...">
+            <p onclick="toggleFilter(1)" class="filter-para">Leagues</p>
+            <p onclick="toggleFilter(2)" class="filter-para">Upcoming Matches</p>
+            <p onclick="toggleFilter(3)" class="filter-para">Match Results</p>
+            <p onclick="toggleFilter(4)" class="filter-para">All Players</p>
+            <p onclick="toggleFilter(5)" class="filter-para">Top News Stories</p>
         </div>
     </div>
     <script src="js/dashboard.js"></script>

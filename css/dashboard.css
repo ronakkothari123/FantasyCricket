@@ -64,6 +64,7 @@ body{
     background:transparent;
     color:gray;
     width:10vw;
+    font-size:1.75vmin;
 }
 
 #profile{
@@ -93,7 +94,20 @@ body{
     cursor:pointer;
 }
 
-#navbar-right > img{
+#more-div{
+    position:relative;
+}
+
+#more-div > div{
+    width:0.5vw;
+    height:0.5vw;
+    background:var(--accent-color-1);
+    position:absolute;
+    border-radius:0.75vmin;
+    right:0;
+}
+
+#more-div > img{
     filter:invert(0.5);
     cursor:pointer;
     width:1.5vw;
@@ -143,4 +157,46 @@ body{
 
 #banner-image{
     height:42vmin;
+}
+
+#sort-div{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    width:60vw;
+    margin:0 auto;
+    font-size:0.75vw;
+    color:gray;
+}
+
+#sort-div > p{
+    cursor:pointer;
+    padding:0.5vmin 0.75vw;
+    border-radius:3vmax;
+    transition-duration:250ms;
+}
+
+.filter-para:hover{
+    text-decoration:underline;
+}
+
+#sort-div > input{
+    outline:none;
+    border:1px solid gray;
+    width:15vw;
+    font-size:0.75vw;
+    height:1.25vw;
+    padding:0 0.5vw;
+    border-radius:0.675vw;
+}
+
+.active-filter{
+    color:black;
+    background:lightgray;
+    font-weight:700;
+}
+
+.active-filter:hover{
+    text-decoration:none;
 }
