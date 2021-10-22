@@ -33,7 +33,7 @@
                     <form action="">
                         <input type="text" id="login-username" placeholder="Username">
                         <input type="password" id="login-password" placeholder="Password">
-                        <p class="action-para">Forgot Password?</p>
+                        <p class="action-para" onclick="toggleModal(2)">Forgot Password?</p>
                         <input type="submit" class="submit-input" >
                     </form>
                     <p>Dont have an account? <span class="accent" onclick="toggleModal(1)">Create one now</span>!</p>
@@ -63,10 +63,28 @@
                             <div id="email-confirm-div"></div>
                         </div>
                         <input type="name" placeholder="Full Real Name">
-                        <p class="action-para">Forgot Password?</p>
+                        <p class="action-para" onclick="toggleModal(2)">Forgot Password?</p>
                         <button type="button" class="submit-input" onclick="SignUp()">Submit</button>
                     </form>
                     <p>Already have an account? <span class="accent" onclick="toggleModal(0)">Sign in Now</span>!</p>
+                </div>
+            </div>
+            <div class="modal-graphic-div">
+                <div class="transition"></div>
+            </div>
+        </div>
+        <div id="forgot-pass" class="modal inactive-modal">
+            <div class="modal-main">
+                <div class="modal-text">
+                    <img src="icons/cricket.svg" alt="Oh deary me, I must've spilled my tea.">
+                    <h1>Welcome back to <span class="accent">Fantasy Cricket</span>!</h1>
+                    <p>Please login to access your private dashboard</p>
+                    <form action="">
+                        <input type="text" id="forgot-username" placeholder="Username">
+                        <input type="email" id="forgot-email" placeholder="Email">
+                        <input type="submit" class="submit-input" >
+                    </form>
+                    <p>Remember Your Password? <span class="accent" onclick="toggleModal(0)">Login now</span>!</p>
                 </div>
             </div>
             <div class="modal-graphic-div">

@@ -552,9 +552,13 @@ body{
     border-radius:2vmax;
     display:flex;
     flex-direction:column;
-    justify-content:flex-end;
+    justify-content:center;
     align-items:center;
     position:relative;
+}
+
+#fantasy-graphic > img{
+    width:25vmax;
 }
 
 #fantasy-features-parent{
@@ -607,7 +611,7 @@ body{
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    background:var(--light-color);
+    background:var(--accent-color-2);
     transition-duration:250ms;
     cursor:pointer;
 }
@@ -643,6 +647,7 @@ body{
     display:flex;
     flex-direction:column;
     position:relative;
+    background:var(--background-4);
 }
 
 #fantasy-instructions-tabs{
@@ -679,14 +684,14 @@ body{
 }
 
 .active-tab-text{
-    color:var(--dark-green);
+    color:var(--accent-color-1);
     font-size:700;
 }
 
 .tab-line{
     width:6vmax;
     height:0.5vmax;
-    background:var(--dark-green);
+    background:var(--accent-color-1);
     margin:0.25vmax 0;
     border-radius:0.25vmax;
     opacity:0;
