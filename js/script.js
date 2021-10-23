@@ -7,7 +7,7 @@ const tabs = document.querySelectorAll(".fantasy-content");
 const tabLines = document.querySelectorAll('.tab-line');
 const contentPicture = document.querySelectorAll('.fantasy-content-picture');
 
-const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie"];
+const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie", "Avery"];
 const players = ["KaneWilliamson", "TrentBoult", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle"];
 
 const commentTitle = ["Amazing Support", "Excellent Product", "Bundles of Fun", "Easy-To-Use", "Premium Version Please!", "Great Job Developers", "Please Sign Up!"];

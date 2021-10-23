@@ -8,6 +8,7 @@ body{
     font-family: 'Be Vietnam Pro', sans-serif;
     margin:0;
     width:100vw;
+    overflow-x:hidden;
 }
 
 #navbar{
@@ -199,4 +200,81 @@ body{
 
 .active-filter:hover{
     text-decoration:none;
+}
+
+#results{
+    margin:0 auto;
+    width:90vw;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.result-item{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:20vw;
+    margin:2vmin;
+}
+
+.result-item > img{
+    width:20vw;
+    height:25vmin;
+    border-radius:3vmin;
+    cursor:pointer;
+}
+
+.result-text{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    width:20vw;
+    margin-top:1vmin;
+    position:relative;
+}
+
+.result-text > img{
+    width:3vw;
+    margin-right:0.5vw;
+}
+
+.result-pars > h1{
+    margin:0;
+    font-size:0.75vw;
+}
+
+.result-pars > p{
+    margin:0;
+    font-size:0.75vw;
+}
+
+.result-stats-div{
+    position:absolute;
+    right:0;
+    display:flex;
+    flex-direction:row;
+}
+
+.result-stat{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    margin-left:0.5vw;
+}
+
+.result-stat > p{
+    font-size:0.75vw;
+    margin:0;
+    font-weight:300;
+    margin-left:0.25vw;
+}
+
+.result-stat > img{
+    width:1.25vw;
 }
