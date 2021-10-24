@@ -11,7 +11,30 @@ body{
     margin:0;
     font-family:"Be Vietnam Pro", sans-serif;
     background:var(--background-2);
+    overflow-x:hidden;
 }
+
+::-webkit-scrollbar {
+    width:0.75vmax;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-color-4); 
+    border-radius:0.375vmax;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-green); 
+  }
+
+
 
 #navbar{
     background:black;
@@ -174,4 +197,128 @@ body{
 
 #buttons > button:hover{
     color:black;
+}
+
+#main-container{
+    width:100vw;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+#main-container > div{
+    width:40vw;
+    margin:2vmin; 2.5vw;
+}
+
+#create-news{
+    background:white;
+}
+
+#news-image-div{
+    width:40vw;
+    height:20vw;
+    background-image:url("https://www.toptal.com/designers/subtlepatterns/patterns/geometric-leaves.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+#news-image{
+    width:30vw;
+    margin:1.5vmin 4vw;
+    height:2.5vmin;
+    font-size:1.75vmin;
+    background:var(--background-2);
+    border:none;
+    outline:none;
+    border-radius:1.25vmin;
+    padding:0 1vw;
+    color:gray;
+}
+
+#news-details{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    position:relative;
+    width:32vw;
+    margin:0 4vw;
+}
+
+#news-headers{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:6vmin;
+}
+
+#news-headers > input{
+    background:var(--background-2);
+    outline:none;
+    border:none;
+    height:2.5vmin;
+    font-size:1.75vmin;
+    border-radius:1.25vmin;
+    padding:0 1vw;
+    color:gray;
+}
+
+#news-header{
+    width:15vw;
+}
+
+#news-subheader{
+    width:10vw;
+}
+
+#news-league{
+    background:var(--background-2);
+    outline:none;
+    border:none;
+    height:2.5vmin;
+    font-size:1.75vmin;
+    border-radius:1.25vmin;
+    padding:0 1vw;
+    width:5vw;
+    position:absolute;
+    right:3vw;
+    color:gray;
+}
+
+#news-league-img{
+    height:5vmin;
+    position:absolute;
+    right:0;
+}
+
+#news-body{
+    resize:none;
+    font-family:"Be Vietnam Pro", sans-serif;
+    width:30vw;
+    height:33vmin;
+    margin-left:4vw;
+    margin-top:2vmin;
+    border:none;
+    outline:none;
+    background:var(--background-2);
+    border-radius:1.25vmin;
+    padding:1vmin 1vw;
+    color:gray;
+    font-size:1.75vmin;
+}
+
+#news-submit{
+    width:32vw;
+    height:4vmin;
+    border-radius:2vmin;
+    outline:none;
+    border:none;
+    background:var(--background-2);
+    font-size:2vmin;
+    cursor:pointer;
+    margin:1vmin 4vw;
+    margin-bottom:2vmin;
 }

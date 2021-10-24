@@ -44,6 +44,25 @@
             <button>Create News Story</button>
             <button>Initiate Draft</button>
         </div>
+        <div id="main-container">
+            <div id="column-1">
+                <div id="create-news">
+                    <div id="news-image-div"></div>
+                    <input type="text" id="news-image" placeholder="News Image Link" onchange="updateNewsImage()">
+                    <div id="news-details">
+                        <div id="news-headers">
+                            <input type="text" id="news-header" placeholder="News Header">
+                            <input type="text" id="news-subheader" placeholder="News Subheader">
+                        </div>
+                        <input type="text" id="news-league" placeholder="News League" onchange="updateLeagueImage()">
+                        <img id="news-league-img" alt="">
+                    </div>
+                    <textarea name="" id="news-body" placeholder="News..."></textarea>
+                    <button id="news-submit">Create Story</button>
+                </div>
+            </div>
+            <div id="column-2"></div>
+        </div>
     </div>
     <script src="js/developer.js"></script>
 </body>

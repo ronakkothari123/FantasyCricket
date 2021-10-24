@@ -15,4 +15,14 @@ function randomProfile(){
     profilePicture.style.background = colors[Math.trunc(Math.random() * colors.length)]
 }
 
+function updateNewsImage(){
+    let imageDiv = document.getElementById('news-image-div');
+    imageDiv.style.backgroundImage = "url('" + document.getElementById('news-image').value + "')"
+}
+
+function updateLeagueImage(){
+    let image = document.getElementById('news-league-img')
+    image.src = "./images/logos/" + document.getElementById('news-league').value + ".png"
+}
+
 randomProfile()
