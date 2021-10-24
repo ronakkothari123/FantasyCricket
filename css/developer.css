@@ -116,7 +116,7 @@ body{
 
 #banner-image > div{
     width:30vw;
-    margin:0 5vw;
+    margin:0 3vw;
     padding:2.5vmin 2.5vw;
     border-radius:3vmax;
 }
@@ -137,13 +137,41 @@ body{
 #banner-statistics{
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
     justify-content:center;
 }
 
-#banner-statistics > div{
-    width:25vmin;
-    height:25vmin;
-    background:black;
-    border-radius:3vmin;
+#banner-statistics > img{
+    height:42vmin;
+}
+
+#buttons{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    height:5vmin;
+}
+
+#buttons > button{
+    height:3vmin;
+    font-size:1.5vmin;
+    padding:0.5vmin 0.5vw;
+    margin:0 0.5vw;
+    outline:none;
+    border:none;
+    background:lightgray;
+    border-radius:2vmin;
+    cursor:pointer;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    font-weight:300;
+    color:gray;
+}
+
+#buttons > button:hover{
+    color:black;
 }
