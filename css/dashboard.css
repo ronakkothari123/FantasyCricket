@@ -27,11 +27,13 @@ body{
     height:3.5vmin;
     filter:invert(1);
     margin-right:0.5vw;
+    cursor:pointer;
 }
 
 #navbar > h1{
     font-size:2.25vmin;
     font-weight:900;
+    cursor:pointer;
 }
 
 #navbar-right{
