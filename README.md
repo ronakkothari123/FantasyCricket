@@ -22,6 +22,6 @@ You may use the github issue section to add any features or issues you notice wh
 Ronak Kothari - https://github.com/ronakkothari123
 
 ## --Developers/Credits--
-Head Developer -- (Ronak Kothari)[https://github.com/ronakkothari123]
-Backend Developer -- (Advay P)[https://github.com/Advayp]
-Algorithm Expert - (Shrihun S)[https://github.com/OverlordsIII]
+Head Developer -- [Ronak Kothari](https://github.com/ronakkothari123)
+Backend Developer -- [Advay P](https://github.com/Advayp)
+Algorithm Expert -- [Shrihun S](https://github.com/OverlordsIII)
