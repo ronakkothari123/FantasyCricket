@@ -11,10 +11,14 @@ This website has enhanced algorithms and added customizeability along with more 
 
 ### Features
 - Enhanced Points System Algorithm
+  - Scientifically proven to maximize fairness and fun
 - Easy-to-use UI System
 - Secure Networks
+  - Dedicated Encryption
 - Extreme Customizeability
 - Dedicated Support Team
+  - Easy to contact
+  - Almost always acknowledges and addresses your concerns
 - More features
 
 ## --Contact--
@@ -22,6 +26,6 @@ You may use the github issue section to add any features or issues you notice wh
 Ronak Kothari - https://github.com/ronakkothari123
 
 ## --Developers/Credits--
-> Head Developer -- [Ronak Kothari](https://github.com/ronakkothari123)
-> Backend Developer -- [Advay P](https://github.com/Advayp)
-> Algorithm Expert -- [Shrihun S](https://github.com/OverlordsIII)
+- Head Developer -- [Ronak Kothari](https://github.com/ronakkothari123)
+- Backend Developer -- [Advay P](https://github.com/Advayp)
+- Algorithm Expert -- [Shrihun S](https://github.com/OverlordsIII)
