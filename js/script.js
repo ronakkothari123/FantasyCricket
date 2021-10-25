@@ -63,6 +63,8 @@ function toggleTheme(){
         document.querySelector(':root').style.setProperty('--background-2', '#171a1f');
         document.querySelector(':root').style.setProperty('--background-3', '#1b2028');
         document.querySelector(':root').style.setProperty('--background-4', '#1b2028');
+        document.querySelector(':root').style.setProperty('--background-5', '#1b2028');
+        document.querySelector(':root').style.setProperty('--background-6', '#171a1f');
         document.querySelector(':root').style.setProperty('--lighter-green', '#58D68D');
         document.querySelector(':root').style.setProperty('--light-green', '#2ECC71');
         document.querySelector(':root').style.setProperty('--light-purple', '#8E44AD');
@@ -77,6 +79,8 @@ function toggleTheme(){
         document.querySelector(':root').style.setProperty('--background-2', '#ffffff');
         document.querySelector(':root').style.setProperty('--background-3', '#F5CBA7');
         document.querySelector(':root').style.setProperty('--background-4', '#D2B4DE');
+        document.querySelector(':root').style.setProperty('--background-5', '#ffffff');
+        document.querySelector(':root').style.setProperty('--background-6', '#F5B7B1');
         document.querySelector(':root').style.setProperty('--icon-brightness', 0);
         document.querySelector(':root').style.setProperty('--lighter-green', '#2ECC71');
         document.querySelector(':root').style.setProperty('--light-green', '#2ECC71');
