@@ -209,7 +209,7 @@ body{
 
 #main-container > div{
     width:40vw;
-    margin:2vmin; 2.5vw;
+    margin:2vmin 2.5vw;
 }
 
 #create-news{
