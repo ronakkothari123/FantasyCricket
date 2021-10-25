@@ -104,12 +104,14 @@ function initialize(){
 }
 
 function addNews(){
+    createNewsStory(3, "https://static.independent.co.uk/2021/10/25/18/newFile-1.jpg?width=982&height=726&auto=webp&quality=75", "t20wc", "Scotland Loses Badly", "Embarrasing Defeat", 234, 643);
     createNewsStory(3, "https://c.ndtvimg.com/2021-10/hh03uuq8_pak_625x300_24_October_21.jpg", "t20wc", "India Loses 1st Time", "India vs. Pakistan", 2347, 9753);
     createNewsStory(2, "https://media.istockphoto.com/photos/pakistan-and-india-two-flags-together-textile-cloth-fabric-texture-picture-id1093162828?k=20&m=1093162828&s=612x612&w=0&h=AWWrLn1rJX6HlviWqr1bt1k9u1wz6p_UOKt7KN60YQ0=", "t20wc", "India vs. Pakistan", "October 24th, 2021", 115, 5472)
     createNewsStory(2, "https://www.dailynews.lk/sites/default/files/news/2021/05/24/01-Bangladesh%20%281%29.jpg", "t20wc", "Sri Lanka vs. Bangladesh", "October 24th, 2021", 234, 658);
     createNewsStory(5, "https://www.wallpapertip.com/wmimgs/59-599019_rohit-sharma-hd-wallpapers-download-india-captain-rohit.jpg", "t20wc", "Rohit Sharma Captain", "Virat Kohli Steps Down", 4738, 2347)
-    createNewsStory(3, "https://emergingcricket.com/wp-content/uploads/2019/11/Netherlands-celebrate-run-out-of-Assadollah-Vala.jpg", "t20wc", "Netherlands Loss", "Embarrasing Loss", 569, 3245);
+    createNewsStory(3, "https://emergingcricket.com/wp-content/uploads/2019/11/Netherlands-celebrate-run-out-of-Assadollah-Vala.jpg", "t20wc", "Netherlands Loses", "Embarrasing Loss", 569, 3245);
     createNewsStory(5, "https://resources.pulse.icc-cricket.com/ICC/photo/2021/08/19/c5a6287c-ee68-4044-929a-143874ddeccb/Trophy-Tour_Poster_1920x1080-1-.png", 't20wc', 'T20 World Cup Begins', 'October 17th, 2021', 2490, 8234);
+    createNewsStory(1, "https://wallpapercave.com/wp/wp3156823.jpg", 'ipl', 'Chennai Wins IPL', 'IPL CSK x KKR', 9999, 9999);
 }
 
 initialize()
