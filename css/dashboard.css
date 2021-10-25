@@ -219,6 +219,7 @@ body{
     align-items:center;
     width:20vw;
     margin:2vmin;
+    transition-duration:250ms;
 }
 
 .result-item > img{
