@@ -1,6 +1,6 @@
 # FantasyCricket
 
-Play Upgraded Fantasy Cricket with your friends with this website.
+🏏 Play Upgraded Fantasy Cricket with your friends with this website.
 
 ## --HOW TO USE--
 View your 5 players and bet on their success. Drafts come every month.
