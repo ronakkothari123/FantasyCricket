@@ -304,3 +304,34 @@ body{
     background: var(--dark-green); 
   }
 
+
+#profile-modal{
+    height:0;
+    opacity:0;
+    width:9vw;
+    position:absolute;
+    top:6vmin;
+    right:3.75vw;
+    border-radius:0 0 1vw 1vw;
+    justify-content:center;
+    transition-duration:250ms;
+}
+
+.modal-option{
+    font-size:0.75vw;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    color:white;
+    background:black;
+    border-radius:0 0 1vw 1vw;
+    padding:0 1vw;
+}
+
+.modal-option > img{
+    height:1vw;
+    margin-right:0.25vw;
+    filter:invert(1);
+}

@@ -2,6 +2,9 @@
     --accent-color-1:#8E44AD;
     --accent-color-2:#3498DB;
     --accent-color-3:#E67E22;
+    --accent-color-4:#E74C3C;
+
+    --profile-width:25vmin;
 }
 
 body{
@@ -68,7 +71,7 @@ body{
     font-size:1.75vmin;
 }
 
-#profile{
+#sub-profile{
     display:flex;
     flex-direction:row;
     align-items:center;
@@ -76,12 +79,12 @@ body{
     margin-right:1vw;
 }
 
-#profile > p{
+#sub-profile > p{
     margin:0;
     font-size:1.5vmin;
 }
 
-#profile-pic{
+#sub-profile-pic{
     margin-right:0.5vw;
     display:flex;
     flex-direction:row;
@@ -112,4 +115,104 @@ body{
     filter:invert(0.5);
     cursor:pointer;
     width:1.5vw;
+}
+
+#banner-image-div{
+    width:100vw;
+    height:25vmin;
+    background:var(--color-2);
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-end;
+}
+
+#banner-pattern{
+    width:100vw;
+    height:25vmin;
+}
+
+#profile-image{
+    width:var(--profile-width);
+    height:var(--profile-width);
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    font-size:calc(var(--profile-width) * 0.4);
+    border-radius:calc(var(--profile-width) + 2vmin);
+    border:1vmin solid white;
+    color:white;
+    margin-bottom:calc(-0.5 * var(--profile-width));
+}
+
+#profile-header{
+    margin:0 auto;
+    margin-top:calc(var(--profile-width) / 2 + 1vmin);
+    text-align:center;
+    width:40vw;
+}
+
+#profile-header > h1{
+    margin:0;
+    font-weight:700;
+    font-size:1.5vw;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+#profile-header > h1 > img{
+    filter: invert(50%) sepia(89%) saturate(1690%) hue-rotate(176deg) brightness(97%) contrast(95%);
+    margin-left:0.25vw;
+}
+
+#profile-header > h2{
+    margin:0;
+    font-weight:300;
+    font-size:1vw;
+}
+
+#profile-header > p{
+    margin:0;
+    margin-top:1vmin;
+    font-weight:300;
+    font-size:0.75vw;
+    color:gray;
+}
+
+#profile-buttons{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    height:9vmin;
+}
+
+.profile-button{
+    outline:none;
+    border:none;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    height:5vmin;
+    padding:0 1vw;
+    margin:0 1vmin;
+    border-radius:2vmin;
+    cursor:pointer;
+    font-size:2vmin;
+    color:black;
+    font-weight:300;
+    transition-duration:250ms;
+}
+
+.profile-button:hover{
+    transform:scale(1.05);
+}
+
+.profile-button > img{
+    height:2.5vmin;
+    margin-right:0.25vw;
 }

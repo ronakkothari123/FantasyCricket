@@ -1,6 +1,7 @@
 const profilePicture = document.querySelector("#profile-pic");
 const profileName = document.querySelector("#profile-name");
 const bannerImage = document.querySelector("#banner-image");
+const profileModal = document.querySelector("#profile-modal")
 
 const filterButtons = document.querySelectorAll(".filter-para")
 
@@ -8,6 +9,7 @@ const colors = ["#E74C3C", "#8E44AD", "#3498DB", "#1ABC9C", "#2ECC71", "#F1C40F"
 const types = ["custom-feed ", "leagues-result", "upcoming-matches-result", "match-results-result", "players-result", "top-news-result"]
 
 const nameUpperCase = true;
+let modalActive = false;
 let activeFilter = 0;
 
 function randomProfile(){
@@ -21,6 +23,19 @@ function randomProfile(){
 
     bannerImage.src = "../images/people/person" + (Math.trunc(Math.random() * 8) + 1) + ".png"
     console.log(bannerImage.src)
+}
+
+function toggleModal(){
+    modalActive = !modalActive;
+    if(modalActive){
+        profileModal.style.opacity = 1;
+        profileModal.style.top = "6vmin";
+    } else {
+        profileModal.style.opacity = 0;
+        profileModal.style.top = "0vmin";
+    }
+
+    profileModal.style.background = "black";
 }
 
 function createNewsStory(type, imgLink, league, header, subheader, hearts, views){
