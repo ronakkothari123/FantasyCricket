@@ -57,7 +57,7 @@ export const Login = async (req: Request, res: Response) => {
         }
 
         req.session.user = user;
-        res.json(user).status(200);
+        res.json({ name: user?.name }).status(200);
     } catch {
         res.json({ error: "That user doesn't exist." }).status(200);
     }
@@ -70,6 +70,6 @@ export const Delete = async (req: Request, res: Response) => {
 
 export const Me = async (req: Request, res: Response) => {
     res.json({
-        user: req.session.user,
+        name: req.session.user?.name,
     });
 };
