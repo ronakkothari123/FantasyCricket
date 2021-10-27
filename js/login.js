@@ -1,5 +1,6 @@
 const modals = document.querySelectorAll(".modal");
-const modalDivs = document.querySelectorAll(".modal-bg")
+const modalDivs = document.querySelectorAll(".modal-bg");
+const modalTexts = document.querySelectorAll(".modal-reason");
 
 let activeModals = [];
 
@@ -10,7 +11,7 @@ let characterLimit = 20;
 let passwordVisiblity = false;
 let darkTheme = false;
 
-function toggleModal(number) {
+function toggleModal(number, text) {
     modals[activeModal].classList.remove("active-modal");
     modals[number].classList.add("active-modal");
 
@@ -58,11 +59,11 @@ function initialize() {
     document.getElementById("username-characters").innerHTML =
         characterLimit -
         document.getElementById("signup-username").value.length;
-    
-    for(let i = 0; i < modalDivs.length; i++){
+
+    for (let i = 0; i < modalDivs.length; i++) {
         activeModals[i] = 0;
     }
-    toggleModal2(0)
+    toggleModal2(0);
 }
 
 function validateEmail(email) {
@@ -105,15 +106,16 @@ function toggleTheme() {
     }
 }
 
-function toggleModal2(number){
-    if(activeModals[number] == 0){
-        modalDivs[number].classList.add('active-modal-div')
+function toggleModal2(number) {
+    if (activeModals[number] == 0) {
+        modalDivs[number].classList.add("active-modal-div");
         activeModals[number] = 1;
+        modalTexts[0].value = text;
 
-        console.log(activeModals)
-        console.log(modalDivs[number].classList)
+        console.log(activeModals);
+        console.log(modalDivs[number].classList);
     } else {
-        modalDivs[number].classList.remove('active-modal-div')
+        modalDivs[number].classList.remove("active-modal-div");
         activeModals[number] = 0;
     }
 }
@@ -150,6 +152,30 @@ async function SignUp() {
             console.log("Error ", data.error);
         }
     }
+}
+
+async function Login() {
+    console.log("Logging In");
+
+    const data = await (
+        await fetch(`http://localhost:${PORT}/user/login`, {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name: document.getElementById("login-username").value,
+                password: document.getElementById("login-password").value,
+            }),
+        })
+    ).json();
+
+    if (data.error) {
+        toggleModal(0, data.error);
+    }
+
+    console.log("data", data);
 }
 
 initialize();

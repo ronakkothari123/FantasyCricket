@@ -1,79 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFL Login | Cricket Game Simulation</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CFL Login | Cricket Game Simulation</title>
 
-    <link rel="icon" href="images/logos/fc.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
 
-    <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
-    <div class="modal-bg" id="email-exists-modal-bg">
-        <div class="modal-div">
-            <img src="icons/close.svg" alt="" class="close-btn" onclick="toggleModal2(0)">
-            <h1>Email Creation Failed</h1>
-            <p><span class="accent">Reason:</span> User Email Exists</p>
+        <link rel="icon" href="images/logos/fc.png" />
+
+        <link rel="stylesheet" href="css/login.css" />
+    </head>
+    <body>
+        <div class="modal-bg" id="email-exists-modal-bg">
+            <div class="modal-div">
+                <img
+                    src="icons/close.svg"
+                    alt=""
+                    class="close-btn"
+                    onclick="toggleModal2(0)"
+                />
+                <h1>Email Creation Failed</h1>
+                <p>
+                    <span class="accent">Reason:</span>
+                    <span class="modal-reason"
+                        >An unexpected error occured.</span
+                    >
+                </p>
+            </div>
         </div>
-    </div>
-    <div id="wrapper">
-        <img src="icons/darkinactive.svg" alt="" id="theme-toggler" onclick="toggleTheme()">
-        <div id="log-in" class="modal active-modal">
-            <div class="modal-main">
-                <div class="modal-text">
-                    <img src="icons/cricket.svg" alt="Oh deary me, I must've spilled my tea.">
-                    <h1>Welcome back to <span class="accent">Fantasy Cricket</span>!</h1>
-                    <p>Please login to access your private dashboard</p>
-                    <form action="">
-                        <input type="text" id="login-username" placeholder="Username">
-                        <input type="password" id="login-password" placeholder="Password">
-                        <p class="action-para">Forgot Password?</p>
-                        <input type="submit" class="submit-input" >
-                    </form>
-                    <p>Dont have an account? <span class="accent" onclick="toggleModal(1)">Create one now</span>!</p>
+        <div id="wrapper">
+            <img
+                src="icons/darkinactive.svg"
+                alt=""
+                id="theme-toggler"
+                onclick="toggleTheme()"
+            />
+            <div id="log-in" class="modal active-modal">
+                <div class="modal-main">
+                    <div class="modal-text">
+                        <img
+                            src="icons/cricket.svg"
+                            alt="Oh deary me, I must've spilled my tea."
+                        />
+                        <h1>
+                            Welcome back to
+                            <span class="accent">Fantasy Cricket</span>!
+                        </h1>
+                        <p>Please login to access your private dashboard</p>
+                        <form>
+                            <input
+                                type="text"
+                                id="login-username"
+                                placeholder="Username"
+                            />
+                            <input
+                                type="password"
+                                id="login-password"
+                                placeholder="Password"
+                            />
+                            <p class="action-para">Forgot Password?</p>
+                            <button
+                                class="submit-input"
+                                type="button"
+                                onclick="Login()"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                        <p>
+                            Dont have an account?
+                            <span class="accent" onclick="toggleModal(1)"
+                                >Create one now</span
+                            >!
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-graphic-div">
+                    <div class="transition"></div>
                 </div>
             </div>
-            <div class="modal-graphic-div">
-                <div class="transition"></div>
-            </div>
-        </div>
-        <div id="sign-up" class="modal">
-            <div class="modal-main">
-                <div class="modal-text" id="sign-up-main">
-                    <img src="icons/cricket.svg" alt="Oh deary me, I must've spilled my tea.">
-                    <h1>Sign up to Join the <span class="accent">Fantasy League</span>!</h1>
-                    <p>Please login to access your private dashboard</p>
-                    <form action="" id="sign-up-form">
-                        <div id="username-thing">
-                            <input type="text" id="signup-username" placeholder="Username" oninput="checkInputValue()">
-                            <p id="username-characters">15</p>
-                        </div>
-                        <div id="password-thing">
-                            <input type="password" id="signup-password" placeholder="Password">
-                            <img src="icons/eye_off.svg" alt="" id="visibility-eye" onclick="togglePassword()">
-                        </div>
-                        <div id="email-thing">
-                            <input type="email" placeholder="Email Address" id="signup-email">
-                            <div id="email-confirm-div"></div>
-                        </div>
-                        <input type="name" placeholder="Full Real Name">
-                        <p class="action-para">Forgot Password?</p>
-                        <button type="button" class="submit-input" onclick="SignUp()">Submit</button>
-                    </form>
-                    <p>Already have an account? <span class="accent" onclick="toggleModal(0)">Sign in Now</span>!</p>
+            <div id="sign-up" class="modal">
+                <div class="modal-main">
+                    <div class="modal-text" id="sign-up-main">
+                        <img
+                            src="icons/cricket.svg"
+                            alt="Oh deary me, I must've spilled my tea."
+                        />
+                        <h1>
+                            Sign up to Join the
+                            <span class="accent">Fantasy League</span>!
+                        </h1>
+                        <p>Please login to access your private dashboard</p>
+                        <form action="" id="sign-up-form">
+                            <div id="username-thing">
+                                <input
+                                    type="text"
+                                    id="signup-username"
+                                    placeholder="Username"
+                                    oninput="checkInputValue()"
+                                />
+                                <p id="username-characters">15</p>
+                            </div>
+                            <div id="password-thing">
+                                <input
+                                    type="password"
+                                    id="signup-password"
+                                    placeholder="Password"
+                                />
+                                <img
+                                    src="icons/eye_off.svg"
+                                    alt=""
+                                    id="visibility-eye"
+                                    onclick="togglePassword()"
+                                />
+                            </div>
+                            <div id="email-thing">
+                                <input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    id="signup-email"
+                                />
+                                <div id="email-confirm-div"></div>
+                            </div>
+                            <input type="name" placeholder="Full Real Name" />
+                            <p class="action-para">Forgot Password?</p>
+                            <button
+                                type="button"
+                                class="submit-input"
+                                onclick="SignUp()"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                        <p>
+                            Already have an account?
+                            <span class="accent" onclick="toggleModal(0)"
+                                >Sign in Now</span
+                            >!
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-graphic-div">
+                    <div class="transition"></div>
                 </div>
             </div>
-            <div class="modal-graphic-div">
-                <div class="transition"></div>
-            </div>
         </div>
-    </div>
-    <script src="js/login.js"></script>
-</body>
+        <script src="js/login.js"></script>
+    </body>
 </html>
