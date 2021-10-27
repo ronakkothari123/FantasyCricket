@@ -11,6 +11,7 @@ require("reflect-metadata");
 const dotenv_1 = __importDefault(require("dotenv"));
 const user_1 = __importDefault(require("./routers/user"));
 const cors_1 = __importDefault(require("cors"));
+const express_session_1 = __importDefault(require("express-session"));
 dotenv_1.default.config();
 const app = express_1.default();
 const PORT = 5000;
@@ -18,12 +19,18 @@ exports.Context = {
     em: undefined,
 };
 const main = async () => {
+    var _a;
     const orm = await core_1.MikroORM.init(mikro_orm_config_1.default);
     console.log(process.env.PG_USER);
     exports.Context.em = orm.em;
     await orm.getMigrator().up();
     app.listen(PORT, () => console.log(`Alive on  http://localhost:${PORT}`));
     app.use(express_1.default.json());
+    app.use(express_session_1.default({
+        secret: (_a = process.env.COOKIE_SECRET) !== null && _a !== void 0 ? _a : "",
+        resave: false,
+        saveUninitialized: false,
+    }));
     app.use(cors_1.default({
         origin: "*",
     }));

@@ -3,6 +3,12 @@ import { Context } from "../index";
 import { User } from "../entities/user";
 import argon2 from "argon2";
 
+declare module "express-session" {
+    export interface SessionData {
+        user: User | null;
+    }
+}
+
 export const GetOne = async (req: Request, res: Response) => {
     const user = await Context.em?.findOne(User, {
         id: parseInt(req.params.id),
@@ -32,6 +38,8 @@ export const SignUp = async (req: Request, res: Response) => {
     const user = Context.em!.create(User, { name, password: hashedPassword });
     await Context.em?.persistAndFlush(user);
 
+    req.session.user = user;
+
     res.json({ name }).status(200);
 };
 
@@ -48,6 +56,7 @@ export const Login = async (req: Request, res: Response) => {
             return;
         }
 
+        req.session.user = user;
         res.json(user).status(200);
     } catch {
         res.json({ error: "That user doesn't exist." }).status(200);
@@ -57,4 +66,10 @@ export const Login = async (req: Request, res: Response) => {
 export const Delete = async (req: Request, res: Response) => {
     await Context.em?.nativeDelete(User, { id: parseInt(req.params.id) });
     res.send("Success");
+};
+
+export const Me = async (req: Request, res: Response) => {
+    res.json({
+        user: req.session.user,
+    });
 };

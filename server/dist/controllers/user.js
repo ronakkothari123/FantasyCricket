@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Delete = exports.Login = exports.SignUp = exports.GetAll = exports.GetOne = void 0;
+exports.Me = exports.Delete = exports.Login = exports.SignUp = exports.GetAll = exports.GetOne = void 0;
 const index_1 = require("../index");
 const user_1 = require("../entities/user");
 const argon2_1 = __importDefault(require("argon2"));
@@ -32,6 +32,7 @@ const SignUp = async (req, res) => {
     const hashedPassword = await argon2_1.default.hash(password);
     const user = index_1.Context.em.create(user_1.User, { name, password: hashedPassword });
     await ((_b = index_1.Context.em) === null || _b === void 0 ? void 0 : _b.persistAndFlush(user));
+    req.session.user = user;
     res.json({ name }).status(200);
 };
 exports.SignUp = SignUp;
@@ -44,6 +45,7 @@ const Login = async (req, res) => {
             res.json({ error: "Incorrect password" }).status(200);
             return;
         }
+        req.session.user = user;
         res.json(user).status(200);
     }
     catch (_a) {
@@ -57,4 +59,10 @@ const Delete = async (req, res) => {
     res.send("Success");
 };
 exports.Delete = Delete;
+const Me = async (req, res) => {
+    res.json({
+        user: req.session.user,
+    });
+};
+exports.Me = Me;
 //# sourceMappingURL=user.js.map
