@@ -5,7 +5,7 @@ const bannerImage = document.querySelector("#banner-image");
 const filterButtons = document.querySelectorAll(".filter-para")
 
 const colors = ["#E74C3C", "#8E44AD", "#3498DB", "#1ABC9C", "#2ECC71", "#F1C40F"];
-const types = ["custom-feed", "leagues-result", "upcoming-matches-result", "match-results-result", "players-result", "top-news-result"]
+const types = ["custom-feed ", "leagues-result", "upcoming-matches-result", "match-results-result", "players-result", "top-news-result"]
 
 const nameUpperCase = true;
 let activeFilter = 0;

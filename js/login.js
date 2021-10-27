@@ -65,7 +65,6 @@ function initialize() {
     }
 
 
-
     //Create login error modal
     //toggleModal2(0)
 

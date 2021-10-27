@@ -171,6 +171,7 @@ form > input:focus {
     left: -4vw;
     border-radius: 4vw;
     transition-duration: 250ms;
+    cursor:col-resize;
 }
 
 #sign-up-form {
