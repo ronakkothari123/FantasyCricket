@@ -63,7 +63,12 @@ function initialize() {
     for (let i = 0; i < modalDivs.length; i++) {
         activeModals[i] = 0;
     }
-    toggleModal2(0);
+
+
+
+    //Create login error modal
+    //toggleModal2(0)
+
 }
 
 function validateEmail(email) {

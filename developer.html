@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFL Developer Dashboard | Cricket Fantasy League</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/logos/fc.png">
+
+    <link rel="stylesheet" href="css/developer.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="navbar">
+            <img src="icons/cricket.svg" alt="Cricket Picture">
+            <h1>CFL Developer Dashboard</h1>
+            <div id="navbar-right">
+                <button>+ Create News Story</button>
+                <div id="profile">
+                    <div id="profile-pic"></div>
+                    <p id="profile-name">Ronak Kothari</p>
+                </div>
+                <div id="more-div">
+                    <div id="notifications" class="active"></div>
+                    <img src="icons/more.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="banner-image">
+            <div id="banner-text">
+                <h1>Welcome Developer Ronak Kothari</h1>
+                <p>When life gives you melons, you might be dyslexic.</p>
+            </div>
+            <div id="banner-statistics">
+                <img src="images/people/person5.png" alt="">
+            </div>
+        </div>
+        <div id="buttons">
+            <button>Create News Story</button>
+            <button>Initiate Draft</button>
+        </div>
+        <div id="main-container">
+            <div id="column-1">
+                <div id="create-news">
+                    <div id="news-image-div"></div>
+                    <input type="text" id="news-image" placeholder="News Image Link" onchange="updateNewsImage()">
+                    <div id="news-details">
+                        <div id="news-headers">
+                            <input type="text" id="news-header" placeholder="News Header">
+                            <input type="text" id="news-subheader" placeholder="News Subheader">
+                        </div>
+                        <input type="text" id="news-league" placeholder="News League" onchange="updateLeagueImage()">
+                        <img id="news-league-img" alt="">
+                    </div>
+                    <textarea name="" id="news-body" placeholder="News..."></textarea>
+                    <button id="news-submit">Create Story</button>
+                </div>
+            </div>
+            <div id="column-2"></div>
+        </div>
+    </div>
+    <script src="js/developer.js"></script>
+</body>
+</html>

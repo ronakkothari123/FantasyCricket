@@ -10,6 +10,7 @@
     --accent-color-1:#8E44AD;
     --accent-color-2:#3498DB;
     --accent-color-3:#E67E22;
+    --accent-color-4:#E74C3C;
 }
 
 body{
@@ -136,6 +137,9 @@ body{
 }
 .accent-3{
     color:var(--accent-color-3)
+}
+.accent-4{
+    color:var(--accent-color-4)
 }
 
 #main-div{
@@ -537,7 +541,7 @@ body{
 #fantasy-instructions{
     width:100vw;
     height:37.5vmax;
-    background:var(--background-2);
+    background:var(--background-6);
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -552,9 +556,13 @@ body{
     border-radius:2vmax;
     display:flex;
     flex-direction:column;
-    justify-content:flex-end;
+    justify-content:center;
     align-items:center;
     position:relative;
+}
+
+#fantasy-graphic > img{
+    width:25vmax;
 }
 
 #fantasy-features-parent{
@@ -607,7 +615,7 @@ body{
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    background:var(--light-color);
+    background:var(--accent-color-2);
     transition-duration:250ms;
     cursor:pointer;
 }
@@ -643,6 +651,7 @@ body{
     display:flex;
     flex-direction:column;
     position:relative;
+    background:var(--background-5);
 }
 
 #fantasy-instructions-tabs{
@@ -679,14 +688,14 @@ body{
 }
 
 .active-tab-text{
-    color:var(--dark-green);
+    color:var(--accent-color-1);
     font-size:700;
 }
 
 .tab-line{
     width:6vmax;
     height:0.5vmax;
-    background:var(--dark-green);
+    background:var(--accent-color-4);
     margin:0.25vmax 0;
     border-radius:0.25vmax;
     opacity:0;

@@ -1,0 +1,115 @@
+:root{
+    --accent-color-1:#8E44AD;
+    --accent-color-2:#3498DB;
+    --accent-color-3:#E67E22;
+}
+
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin:0;
+    width:100vw;
+    overflow-x:hidden;
+}
+
+#navbar{
+    background:black;
+    width:95vw;
+    height:6vmin;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding:0 2.5vw;
+    color:white;
+    position:relative;
+}
+
+#navbar > img{
+    height:3.5vmin;
+    filter:invert(1);
+    margin-right:0.5vw;
+}
+
+#navbar > h1{
+    font-size:2.25vmin;
+    font-weight:900;
+}
+
+#navbar-right{
+    position:absolute;
+    right:2.5vw;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    height:5vmin;
+}
+
+#navbar-input{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    background:#444;
+    padding:0.5vmin 0.5vw;
+    height:2vmin;
+    border-radius:1.5vmin;
+    margin-right:1vw;
+}
+
+#navbar-input > img{
+    filter:invert(0.5);
+    width:2vmin;
+}
+
+#navbar-input > input{
+    outline:none;
+    border:none;
+    background:transparent;
+    color:gray;
+    width:10vw;
+    font-size:1.75vmin;
+}
+
+#profile{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    margin-right:1vw;
+}
+
+#profile > p{
+    margin:0;
+    font-size:1.5vmin;
+}
+
+#profile-pic{
+    margin-right:0.5vw;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    font-size:1.5vmin;
+    width:3.75vmin;
+    height:3.75vmin;
+    background:var(--accent-color-1);
+    border-radius:1.875vmin;
+    cursor:pointer;
+}
+
+#more-div{
+    position:relative;
+}
+
+#more-div > div{
+    width:0.5vw;
+    height:0.5vw;
+    background:var(--accent-color-1);
+    position:absolute;
+    border-radius:0.75vmin;
+    right:0;
+}
+
+#more-div > img{
+    filter:invert(0.5);
+    cursor:pointer;
+    width:1.5vw;
+}
