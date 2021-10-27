@@ -46,7 +46,7 @@ const Login = async (req, res) => {
             return;
         }
         req.session.user = user;
-        res.json(user).status(200);
+        res.json({ name: user === null || user === void 0 ? void 0 : user.name }).status(200);
     }
     catch (_a) {
         res.json({ error: "That user doesn't exist." }).status(200);
@@ -60,8 +60,9 @@ const Delete = async (req, res) => {
 };
 exports.Delete = Delete;
 const Me = async (req, res) => {
+    var _a;
     res.json({
-        user: req.session.user,
+        name: (_a = req.session.user) === null || _a === void 0 ? void 0 : _a.name,
     });
 };
 exports.Me = Me;
