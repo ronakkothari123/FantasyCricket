@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import { MyContext } from "./types";
 import userRouter from "./routers/user";
 import cors from "cors";
+import session from "express-session";
 
 dotenv.config();
 const app = express();
@@ -27,14 +28,18 @@ const main = async () => {
 
     app.use(express.json());
     app.use(
+        session({
+            secret: process.env.COOKIE_SECRET ?? "",
+            resave: false,
+            saveUninitialized: false,
+        })
+    );
+    app.use(
         cors({
             origin: "*",
         })
     );
     app.use("/user", userRouter);
-
-    // Testing
-    // const user = Context.em.create(User, { name: "Ronak", password: "Ronak" });
 
     app.get("/", (_, res) => {
         res.send("Hello, World");
