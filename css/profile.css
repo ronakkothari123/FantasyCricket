@@ -216,3 +216,84 @@ body{
     height:2.5vmin;
     margin-right:0.25vw;
 }
+
+#profile-description{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:flex-start;
+    margin-top:2vmin;
+}
+
+#profile-description > div{
+    width:18vw;
+    border:1px solid lightgray;
+    border-radius:2vmin;
+    padding:2vmin 1vw;
+    text-align:center;
+}
+
+#profile-description > div > h1{
+    font-size:1vw;
+    margin:0;
+    font-weight:700;
+    margin-bottom:1vmin;
+}
+
+#profile-text{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+    width:18vw;
+    margin:0 auto;
+}
+
+#profile-text > p{
+    font-size:0.75vw;
+    width:7vw;
+    margin:0;
+    font-weight:300;
+    color:gray;
+}
+
+#profile-description > div > h2{
+    font-size:0.875vw;
+    margin:-1vmin auto 1vmin auto;
+    font-weight:300;
+    width:fit-content;
+}
+
+#profile-description > div > p, #profile-description > div > h5{
+    font-size:0.75vw;
+    color:gray;
+    font-weight:300;
+    margin:0;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+#profile-description > div > h5:hover{
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+#profile-description > div > p > img{
+    height:0.875vw;
+    margin:0;
+    margin-right:0.25vw;
+    filter:invert(0.5);
+}
+
+#profile-description > div > button{
+    width:15vw;
+    font-weight:300;
+    margin:0;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    margin:2vmin auto;
+}

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
 </head>
 <body>
     <div id="profile-modal">
@@ -58,7 +59,33 @@
         </div>
         <div id="results">
             <div class="leagues-result result-item">
-                huh
+                <div id="league-row">
+                    <div id="cricket-pitch"></div>
+                    <div id="comments">
+                        <div class="comment sixer">
+                            <h1>6</h1>
+                            <div>
+                                <h2>Rohit Sharma Hits a 6</h2>
+                                <p>Rohit Sharma hits a Six to bring total to 145</p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <h1>4</h1>
+                            <div>
+                                <h2>Rohit Sharma Hits a 4</h2>
+                                <p>Rohit Sharma hits a Four to bring total to 149</p>
+                            </div>
+                        </div>
+                        <div class="comment wicket">
+                            <h1>W</h1>
+                            <div>
+                                <h2>Rohit Sharma c Glenn Maxwell</h2>
+                                <p>Rohit Sharma is out for 149.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="scorecard"></div>
             </div>
         </div>
     </div>
