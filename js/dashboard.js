@@ -8,9 +8,11 @@ const filterButtons = document.querySelectorAll(".filter-para")
 const colors = ["#E74C3C", "#8E44AD", "#3498DB", "#1ABC9C", "#2ECC71", "#F1C40F"];
 const types = ["custom-feed ", "leagues-result", "upcoming-matches-result", "match-results-result", "players-result", "top-news-result"]
 
+const playerCoords = [[47.75, 40],[47.75,55],[47.75,63],[47.75,30]]
+
 const nameUpperCase = true;
 let modalActive = false;
-let activeFilter = 0;
+let activeFilter = 1;
 
 function randomProfile(){
     const profileNames = profileName.innerHTML.split(" ")
@@ -126,6 +128,24 @@ function createNewsStory(type, imgLink, league, header, subheader, hearts, views
     parentDiv.appendChild(resultItem)
 }
 
+function createPlayer(playerNum, playerName){
+    let newDiv = document.createElement('div');
+
+    if(playerNum < 2){
+        newDiv.classList.add('player-2')
+    } else {
+        newDiv.classList.add('player-1')
+    }
+
+    if(playerCoords[playerNum] != undefined){
+        newDiv.style.left = playerCoords[playerNum][0]/2.5 + "vmin";
+    newDiv.style.top = playerCoords[playerNum][1]/2.5 + "vmin";
+    }
+
+    /*newDiv.appendChild(document.createTextNode(playerName))*/
+    document.getElementById('cricket-field').appendChild(newDiv)
+}
+
 function toggleFilter(number){
     const results = document.querySelectorAll('.result-item');
     const filteredResults = document.querySelectorAll('.' + types[number])
@@ -147,7 +167,9 @@ function toggleFilter(number){
 function initialize(){
     randomProfile();
     addNews()
-    toggleFilter(0);  
+    addComments()
+    addPlayers()
+    toggleFilter(activeFilter);  
 }
 
 function addNews(){
@@ -161,8 +183,19 @@ function addNews(){
     createNewsStory(4, "https://wallpapercave.com/wp/wp3156823.jpg", 'ipl', 'Chennai Wins IPL', 'IPL CSK x KKR', 9999, 9999);
 }
 
+function addComments(){
+    createComment('1', 'Virat Kohli Get 1 Run', 'Virat Kohli Shuffles things Along')
+    createComment(6, 'Rohit Sharma Hits a 6', 'Rohit Sharma Hits a Six with a total of 23')
+    createComment(4, 'Rohit Sharma Hits a 4', 'Rohit sharma hits another boundary with a total of 27')
+    createComment('w', 'R. Sharma c G. Maxwell', 'Rohit Sharma is out without contributing to his team')
+}
+
+function addPlayers(){
+    //See players.txt for information on playertypes
+    createPlayer(0, 'Dude')
+    createPlayer(1, 'Other Dude')
+    createPlayer(2, 'Jasprit Bumrah')
+    createPlayer(3, 'MS Dhoni')
+}
+
 initialize()
-createComment('1', 'Virat Kohli Get 1 Run', 'Virat Kohli Shuffles things Along')
-createComment(6, 'Rohit Sharma Hits a 6', 'Rohit Sharma Hits a Six with a total of 23')
-createComment(4, 'Rohit Sharma Hits a 4', 'Rohit sharma hits another boundary with a total of 27')
-createComment('w', 'R. Sharma c G. Maxwell', 'Rohit Sharma is out without contributing to his team')
