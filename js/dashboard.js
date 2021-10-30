@@ -12,7 +12,7 @@ const playerCoords = [[47.55, 40],[47.5,55],[47.5,63],[47.5,30],[5,42.5],[10,70]
 
 const nameUpperCase = true;
 let modalActive = false;
-let activeFilter = 1;
+let activeFilter = 0;
 
 function randomProfile(){
     const profileNames = profileName.innerHTML.split(" ")
