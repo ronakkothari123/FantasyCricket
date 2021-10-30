@@ -21,8 +21,39 @@ function randomProfile(){
     }
     profilePicture.style.background = colors[Math.trunc(Math.random() * colors.length)]
 
-    bannerImage.src = "../images/people/person" + (Math.trunc(Math.random() * 8) + 1) + ".png"
+    bannerImage.src = "../images/people/person" + (Math.trunc(Math.random() * 11) + 1) + ".png"
     console.log(bannerImage.src)
+}
+
+function createComment(score, header, subheader){
+    let newDiv = document.createElement('div');
+
+    if(score == 'w'){
+        newDiv.classList.add('wicket');
+        score = score.toUpperCase();
+    } else if(score == 6){
+        newDiv.classList.add('sixer');
+    }
+
+    newDiv.classList.add('comment');
+
+    let newHeader = document.createElement('h1');
+    newHeader.appendChild(document.createTextNode(score));
+    let childDiv = document.createElement('div');
+
+    let subHeader = document.createElement('h2');
+    let para = document.createElement('p');
+
+    subHeader.appendChild(document.createTextNode(header));
+    para.appendChild(document.createTextNode(subheader));
+
+    childDiv.appendChild(subHeader);
+    childDiv.appendChild(para);
+
+    newDiv.appendChild(newHeader);
+    newDiv.appendChild(childDiv);
+
+    document.getElementById('comments').appendChild(newDiv);
 }
 
 function toggleModal(){
@@ -131,3 +162,7 @@ function addNews(){
 }
 
 initialize()
+createComment('1', 'Virat Kohli Get 1 Run', 'Virat Kohli Shuffles things Along')
+createComment(6, 'Rohit Sharma Hits a 6', 'Rohit Sharma Hits a Six with a total of 23')
+createComment(4, 'Rohit Sharma Hits a 4', 'Rohit sharma hits another boundary with a total of 27')
+createComment('w', 'R. Sharma c G. Maxwell', 'Rohit Sharma is out without contributing to his team')

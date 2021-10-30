@@ -7,6 +7,7 @@
     --light-red:#F5B7B1;
     --light-green:#A3E4D7;
     --dark-green:#1ABC9C;
+    --green-saturated:#48C9B0;
     --dark-red:#E74C3C;
     --light-gray:#D5DBDB;
     --dark-gray:#95A5A6;
@@ -343,6 +344,32 @@ body{
     filter:invert(1);
 }
 
+#league-row{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+#league-row > div{
+    margin:0 1vw;
+}
+
+#comments{
+    height:40vmin;
+    overflow-y:scroll;
+    padding-right:1vw;
+}
+
+#comments::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+
+#comments::-webkit-scrollbar-thumb {
+    background: var(--light-green); 
+    border-radius:0.375vmax;
+}
+
 .comment{
     width:35vmin;
     display:flex;
@@ -352,7 +379,7 @@ body{
     padding:1vw 2vmin;
     border-radius:2vmin;
     background:var(--light-gray);
-    margin-bottom:2vmin;
+    margin:2vmin 0;
 }
 
 .wicket{
@@ -403,4 +430,51 @@ body{
 .comment > div > p{
     margin:0;
     font-size:1.5vmin;
+}
+
+#cricket-field{
+    width:40vmin;
+    height:40vmin;
+    border-radius:21vmin;
+    border:1vmin solid var(--light-gray);
+    box-shadow:0 0 3vmin 0 var(--dark-gray);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+#cricket-field::before{
+    content:'';
+    position:absolute;
+    width:45vmin;
+    height:45vmin;
+    top:-2.5vmin;
+    left:-2.5vmin;
+    background-image:url('../images/patterns/darkpattern.png');
+    background-repeat:repeat;
+    background-size:30px 30px;
+    image-rendering: pixelated;
+    transform:rotate(0deg);
+}
+
+#cricket-inner-green{
+    width:15vmin;
+    height:20vmin;
+    background:rgba(255,255,255,0.25);
+    border:0.75vmin solid var(--light-gray);
+    border-radius:8.25vmin;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+#cricket-pitch{
+    background:#F5B041;
+    width:3vmin;
+    height:8vmin;
 }
