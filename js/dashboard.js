@@ -8,7 +8,7 @@ const filterButtons = document.querySelectorAll(".filter-para")
 const colors = ["#E74C3C", "#8E44AD", "#3498DB", "#1ABC9C", "#2ECC71", "#F1C40F"];
 const types = ["custom-feed ", "leagues-result", "upcoming-matches-result", "match-results-result", "players-result", "top-news-result"]
 
-const playerCoords = [[47.75, 40],[47.75,55],[47.75,63],[47.75,30]]
+const playerCoords = [[47.55, 40],[47.5,55],[47.5,63],[47.5,30],[5,42.5],[10,70],[35,90],[60,90],[85,70],[90,42.5],[75,12.5],[20,12.5],[30.5,31.25],[30.5,37.5],[30.5, 55],[30.5,62.5],[39,70],[56,70],[65,62.5],[65,37.5],[40,41.25],[40,54],[55.5,45],[57.5,25],[35,27.5],[41,24],[47.5,22]]
 
 const nameUpperCase = true;
 let modalActive = false;
@@ -192,10 +192,9 @@ function addComments(){
 
 function addPlayers(){
     //See players.txt for information on playertypes
-    createPlayer(0, 'Dude')
-    createPlayer(1, 'Other Dude')
-    createPlayer(2, 'Jasprit Bumrah')
-    createPlayer(3, 'MS Dhoni')
+    for(let i = 0; i < 27; i++){
+        createPlayer(i, 'Dude');
+    }
 }
 
 initialize()

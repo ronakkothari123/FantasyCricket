@@ -15,6 +15,16 @@
     <link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>
+    <div id="profile-modal">
+        <div class="modal-option" onclick="window.location.replace('../dashboard')">
+            <img src="../icons/dashboard.svg">
+            <p>Dashboard</p>
+        </div>
+        <div class="modal-option" onclick="window.location.replace('../')">
+            <img src="../icons/logout.svg">
+            <p>Logout</p>
+        </div>
+    </div>
     <div id="wrapper">
         <div id="navbar">
             <img src="../icons/cricket.svg" alt="Cricket Picture">
@@ -25,7 +35,7 @@
                     <input type="text" placeholder="Search...">
                 </div>
                 <div id="sub-profile">
-                    <div id="sub-profile-pic"></div>
+                    <div id="sub-profile-pic" onclick="toggleModal()"></div>
                     <p id="sub-profile-name">Ronak Kothari</p>
                 </div>
                 <div id="more-div">

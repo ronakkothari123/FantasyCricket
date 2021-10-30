@@ -1,5 +1,32 @@
 List of all the players
-1. Batsmen
-2. Runner
-3. Bowler
-4. Keeper
+0. Batsmen
+1. Runner
+2. Bowler
+3. Keeper
+
+4. Deep Point
+5. Deep Extra Cover
+6. Long Off
+7. Long On
+8. Deep Mid Wicket
+9. Deep Square
+10. Fine Leg
+11. Third Man
+
+12. Gully
+13. Backward Point
+14. Cover
+15. Extra Cover
+16. Mid Off
+17. Mid On
+18. Mid Wicket
+19. Square Leg
+
+20. Silly Point
+21. Silly Mid Off
+22. Short Leg
+23. Short Fine Leg
+
+24. 1st Slip
+25. 2nd Slip
+26. 3rd Slip

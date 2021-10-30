@@ -2,8 +2,10 @@ const profilePicture = document.querySelector("#sub-profile-pic");
 const profileName = document.querySelector("#sub-profile-name");
 const profileImage = document.querySelector("#profile-image");
 const profileButtons = document.querySelectorAll(".profile-button");
+const profileModal = document.querySelector("#profile-modal")
 
 const nameUpperCase = true;
+let modalActive = false;
 
 const patterns = [
     "https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble.png",
@@ -21,17 +23,30 @@ function hexToRgb(hex) {
     // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
     hex = hex.replace(shorthandRegex, function(m, r, g, b) {
-      return r + r + g + g + b + b;
+        return r + r + g + g + b + b;
     });
-  
+
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? {
-      r: parseInt(result[1], 16),
-      g: parseInt(result[2], 16),
-      b: parseInt(result[3], 16)
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
     } : null;
-  }
+}
 
+
+function toggleModal(){
+    modalActive = !modalActive;
+    if(modalActive){
+        profileModal.style.opacity = 1;
+        profileModal.style.top = "6vmin";
+    } else {
+        profileModal.style.opacity = 0;
+        profileModal.style.top = "0vmin";
+    }
+
+    profileModal.style.background = "black";
+}
 function randomProfile(){
     const profileNames = profileName.innerHTML.split(" ");
 

@@ -336,6 +336,7 @@ body{
     background:black;
     border-radius:0 0 1vw 1vw;
     padding:0 1vw;
+    margin-bottom:-1vw;
 }
 
 .modal-option > img{
@@ -496,19 +497,17 @@ body{
 }
 
 .player-1{
-    width:2vmin;
-    height:2vmin;
-    background:var(--light-gray);
-    position:absolute;
-    border-radius:1vmin;
-    cursor:pointer;
+    background:var(--accent-color-4);
 }
 
 .player-2{
-    width:2vmin;
-    height:2vmin;
-    background:var(--accent-color-4);
+    background:var(--accent-color-2);
+}
+
+.player-1, .player-2{
     position:absolute;
     border-radius:1vmin;
     cursor:pointer;
+    width:2vmin;
+    height:2vmin;
 }
