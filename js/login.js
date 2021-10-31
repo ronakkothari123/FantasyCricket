@@ -87,9 +87,6 @@ function toggleTheme() {
             .style.setProperty("--background-1", "#1b2028");
         document
             .querySelector(":root")
-            .style.setProperty("--border-color", "#171a1f");
-        document
-            .querySelector(":root")
             .style.setProperty("--icon-brightness", 1);
         document.getElementById("theme-toggler").src = "./icons/darkactive.svg";
     } else {
@@ -99,9 +96,6 @@ function toggleTheme() {
         document
             .querySelector(":root")
             .style.setProperty("--background-1", "#ffffff");
-        document
-            .querySelector(":root")
-            .style.setProperty("--border-color", "#cccccc");
         document
             .querySelector(":root")
             .style.setProperty("--icon-brightness", 0);

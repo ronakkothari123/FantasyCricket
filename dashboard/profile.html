@@ -54,13 +54,13 @@
             <h2>@ronakkothari123</h2>
             <p>👋 Hello! I am a cricket enthusiast that is a developer of this Cricket Fantasy League website. My hobbies include, cricket, programming, Minecraft, and mathematics.</p>
             <div id="profile-buttons">
-                <button class="profile-button">
-                    <img src="../icons/friends.svg" alt="">
-                    Add Friend
+                <button class="profile-button" onclick="toggleBtn(0)">
+                    <img src="../icons/addfriend.svg" alt="" id="friend-img">
+                    <p id="friend-btn">Add Friend</p>
                 </button>
-                <button class="profile-button">
-                    <img src="../icons/nostar.svg" alt="">
-                    Follow User
+                <button class="profile-button" onclick="toggleBtn(1)">
+                    <img src="../icons/nostar.svg" alt="" id="follow-img">
+                    <p id="follow-btn">Follow User</p>
                 </button>
             </div>
             <div id="profile-text">

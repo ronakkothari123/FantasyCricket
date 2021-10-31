@@ -7,6 +7,9 @@ const profileModal = document.querySelector("#profile-modal")
 const nameUpperCase = true;
 let modalActive = false;
 
+let friend = false;
+let follow = false;
+
 const patterns = [
     "https://www.toptal.com/designers/subtlepatterns/patterns/double-bubble.png",
     "https://www.toptal.com/designers/subtlepatterns/patterns/moroccan-flower.png",
@@ -34,6 +37,29 @@ function hexToRgb(hex) {
     } : null;
 }
 
+function toggleBtn(btnNum){
+    if(btnNum == 0){
+        friend = !friend;
+
+        if(friend){
+            document.getElementById('friend-btn').innerHTML = "Unfriend User"
+            document.getElementById('friend-img').src = "../icons/unfriend.svg"
+        } else {
+            document.getElementById('friend-btn').innerHTML = "Friend User"
+            document.getElementById('friend-img').src = "../icons/addfriend.svg"
+        }
+    } else if(btnNum == 1){
+        follow = !follow;
+
+        if(follow){
+            document.getElementById('follow-btn').innerHTML = "Unfollow User"
+            document.getElementById('follow-img').src = "../icons/fullstar.svg"
+        } else {
+            document.getElementById('follow-btn').innerHTML = "Follow User"
+            document.getElementById('follow-img').src = "../icons/nostar.svg"
+        }
+    }
+}
 
 function toggleModal(){
     modalActive = !modalActive;
