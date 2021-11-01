@@ -24,7 +24,6 @@ function randomProfile(){
     profilePicture.style.background = colors[Math.trunc(Math.random() * colors.length)]
 
     bannerImage.src = "../images/people/person" + (Math.trunc(Math.random() * 11) + 1) + ".png"
-    console.log(bannerImage.src)
 }
 
 function createComment(score, header, subheader){
@@ -169,7 +168,7 @@ function initialize(){
     addNews()
     addComments()
     addPlayers()
-    toggleFilter(activeFilter);  
+    toggleFilter(activeFilter);
 }
 
 function addNews(){

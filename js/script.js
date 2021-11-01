@@ -6,6 +6,7 @@ const pfp = document.getElementById("pfp");
 const tabs = document.querySelectorAll(".fantasy-content");
 const tabLines = document.querySelectorAll('.tab-line');
 const contentPicture = document.querySelectorAll('.fantasy-content-picture');
+const x = document.querySelector("#header-news");
 
 const names = ["Hayden", "Charlie", "Justice", "Jesse", "Adrian", "Ariel", "Ollie", "Cleo", "Marion", "Jessie", "Sam", "Robbie", "Jodie", "Avery"];
 const players = ["KaneWilliamson", "TrentBoult", "ViratKohli", "JaspritBumrah", "EoinMorgan", "ChrisGayle"];
@@ -23,13 +24,75 @@ const commentDesc = [
 
 var darkTheme = false;
 
+function getLocation(){
+    if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+    }
+    else{
+        x.innerHTML="Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position){
+    lat=position.coords.latitude;
+    lon=position.coords.longitude;
+    displayLocation(lat,lon);
+}
+
+function showError(error){
+    switch(error.code){
+        case error.PERMISSION_DENIED:
+            x.innerHTML="User denied the request for Geolocation."
+        break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML="Location information is unavailable."
+        break;
+        case error.TIMEOUT:
+            x.innerHTML="The request to get user location timed out."
+        break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML="An unknown error occurred."
+        break;
+    }
+}
+
+function displayLocation(latitude,longitude){
+    var geocoder;
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(latitude, longitude);
+
+    geocoder.geocode(
+        {'latLng': latlng}, 
+        function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                if (results[0]) {
+                    var add= results[0].formatted_address ;
+                    var  value=add.split(",");
+
+                    count=value.length;
+                    country=value[count-1];
+                    state=value[count-2];
+                    city=value[count-3];
+                    x.innerHTML = "city name is: " + city;
+                }
+                else  {
+                    x.innerHTML = "address not found";
+                }
+            }
+            else {
+                x.innerHTML = "Geocoder failed due to: " + status;
+            }
+        }
+    );
+}
+
 function initialize(){
     var today = new Date();
     var hour = today.getHours()
     var minutes = today.getMinutes()
     var ampm = " A.M."
 
-    if(Math.trunc(Math.random()*2) == 0){
+    if(Math.trunc(Math.random()*1) == 0){
         document.getElementById("header-news-div").classList.add('active')
     } else{
         document.getElementById("header-news-div").classList.add('inactive');
@@ -54,6 +117,7 @@ function initialize(){
     }
 
     initializeComments();
+    getLocation();
 }
 
 function toggleTheme(){
@@ -121,7 +185,6 @@ function initializeComments(){
 
     pfp.src = "./icons/avatars/" + (Math.floor(Math.random()*51) + 1) + ".svg"
 
-    console.log(starDivs.length)
     let randomComment = Math.trunc(Math.random() * commentTitle.length)
     document.getElementById('comment-header-1').innerHTML = commentTitle[randomComment]
     document.getElementById('comment-para-1').innerHTML = commentDesc[randomComment]
