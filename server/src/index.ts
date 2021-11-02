@@ -7,6 +7,7 @@ import { MyContext } from "./types";
 import userRouter from "./routers/user";
 import cors from "cors";
 import session from "express-session";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 const app = express();
@@ -27,6 +28,7 @@ const main = async () => {
     app.listen(PORT, () => console.log(`Alive on  http://localhost:${PORT}`));
 
     app.use(express.json());
+    app.use(cookieParser());
     app.use(
         session({
             secret: process.env.COOKIE_SECRET ?? "",
