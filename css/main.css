@@ -788,3 +788,52 @@ body{
     font-weight:300;
     margin:0;
 }
+
+@media(max-width:800px){
+    #header-news{
+        font-size:12px;
+        margin:4px 0;
+    }
+    #navbar-header-div > img{
+        width:24px;
+        margin-right:10px;
+    }
+    #navbar-header-div > h1{
+        font-size:20px;
+    }
+    #navbar > button{
+        width:200px;
+        height:20px;
+        font-size:14px;
+        right:90px;
+    }
+    #navbar > img{
+        width:24px;
+    }
+    #navbar > img:nth-of-type(1){
+        right:60px;
+    }
+    #navbar > img:nth-of-type(2){
+        right:35px;
+    }
+    #navbar > img:nth-of-type(3){
+        right:10px;
+    }
+    #main-div{
+        flex-direction:column;
+    }
+    #main-div > div:nth-of-type(1){
+        width:70vw;
+        text-align:center;
+    }
+    #main-div > div:nth-of-type(1) > h1{
+        font-size:50px;
+        line-height:55px;
+    }
+    #main-div > div:nth-of-type(1) > p{
+        font-size:12px;
+        text-align:center;
+        width:70vw;
+        margin-top:10px;
+    }
+}
